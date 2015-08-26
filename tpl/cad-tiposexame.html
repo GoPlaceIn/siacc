@@ -1,0 +1,68 @@
+        <h3>@lng[Cadastro de exames]</h3>
+        <form name="frmTipoExames" id="frmTipoExames" method="post" action="actgrvaexames.php">
+            <div>
+                <label for="txtCodigo" id="lblCodigo" class="titulo-campo">
+                    @lng[Código]<br />
+                    <input type="text" name="txtCodigo" id="txtCodigo" readonly="readonly" class="campocurto campo" value="<!--txtCodigo-->" title="@lng[Código do exame]" />
+                </label>
+                
+                <br /><br />
+
+                <label for="txtDescricao" id="lblDescricao" class="titulo-campo">
+                    @lng[Descrição] *<br />
+                    <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo campo requerido" value="<!--txtDescricao-->" title="@lng[Descrição do exame]" maxlength="200" />
+                </label>
+                
+                <br /><br />
+                
+                <label for="txtMetodo" id="lblMetodo" class="titulo-campo">
+                    @lng[Método do exame]<br />
+                    <input type="text" name="txtMetodo" id="txtMetodo" class="campolongo campo" value="<!--txtMetodo-->" title="@lng[Método de realização do exame]" maxlength="3000" />
+                </label>
+                
+                <br /><br />
+
+                <label for="txtCondicao" id="lblCondicao" class="titulo-campo">
+                    @lng[Condições do exame]<br />
+                    <input type="text" name="txtCondicao" id="txtCondicao" class="campolongo campo" value="<!--txtCondicao-->" title="@lng[Condição de realização do exame]" maxlength="3000" />
+                </label>
+                
+                <br /><br />
+
+                <label for="txtInformacoes" id="lblInformacoes" class="titulo-campo">
+                    @lng[Outras informações]<br />
+                    <textarea class="campotexto campo" name="txtInformacoes" id="txtInformacoes"><!--txtInformacoes--></textarea>
+                </label>
+                
+                <br /><br />
+
+                <label for="txtConvervacao" id="lblConvervacao" class="titulo-campo">
+                    @lng[Conservação]<br />
+                    <textarea class="campotexto campo" name="txtConservacao" id="txtConservacao"><!--txtConservacao--></textarea>
+                </label>
+                
+                <br /><br />
+                
+                <label for="selComponentes" id="lblComponentes" class="titulo-campo">
+                    @lng[Tem componentes?] *<br />
+                    <select name="selComponentes" id="selComponentes" class="campo requerido">
+                        <!--selComponentes-->
+                    </select>
+                </label>
+                
+                <br /><br />
+
+                <label for="selAtivo" id="lblAtivo" class="titulo-campo">
+                    @lng[Ativo]<br />
+                    <select name="selAtivo" id="selAtivo" class="campo">
+                        <!--selAtivo-->
+                    </select>
+                </label>
+                
+                <br /><br />
+                
+                <input type="checkbox" name="chkImgs" id="chkImgs" class="campo" value="imgs" <!--chkImgs--> />@lng[Permite anexar imagens]<br />
+                <input type="checkbox" name="chkDocs" id="chkDocs" class="campo" value="docs" <!--chkDocs--> />@lng[Permite anexar documentos]<br />
+                <input type="checkbox" name="chkVals" id="chkVals" class="campo" value="vals" <!--chkVals--> />@lng[Permite lançar resultados]
+            </div>
+        </form>

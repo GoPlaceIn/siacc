@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+	<head>
+		<title>SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos</title>
+		<link type="text/css" href="css/padrao.css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+            <link rel="stylesheet" type="text/css" href="css/ie8menos.css" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.multi-ddm.css" />
+	    <link type="text/css" href="css/base/jquery.ui.all.css" rel="stylesheet" />
+	    <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js" language=javascript></script>
+        <script type='text/javascript' src='js/jquery.multi-ddm.js'></script>
+        <script type="text/javascript" src="js/jquery.tinymce.js" language="javascript"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.core.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.widget.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.mouse.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.button.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.draggable.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.position.js"></script>
+	    <!--script type="text/javascript" src="js/ui/jquery.ui.dialog.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.effects.core.js"></script-->
+		<script type="text/javascript" src="js/lang/lang.js"></script>
+		<script type="text/javascript" src="js/siacc.funcoes.js"></script>
+		<script type="text/javascript" src="js/siacc.perguntas.js"></script>
+		<script type="text/javascript" src="js/siacc.forms.js"></script>
+		<script type="text/javascript">
+		    jQuery.noConflict();
+		    jQuery(document).ready(function(){
+		        fntFormagaGrid();
+		        jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+		        InicializaListaAlternativas();
+		    });
+		</script>
+	</head>
+	<body class="sem-borda">
+	    <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+		    <h3>@lng[Alternativas da pergunta]</h3>
+	        <div>
+	            <input type="hidden" name="hidTipo" id="hidTipo" value="<!--hidtipo-->" />
+	            <input type="hidden" name="hidOcultar" id="hidOcultar" value="<!--hidocultar-->" />
+	            <div id="descpergunta" class="des-pergunta">
+    	            <label id="lblDescricaoPergunta">@lng[Pergunta]</label><br />
+	                <!--descricao-->
+	            </div>
+                
+                <div id="tipopergunta" class="des-pergunta">
+                    <label id="lblTipoPergunta">@lng[Tipo]</label><br />
+                    <!--tipo-->
+                </div>
+                
+                <div id="colesq">
+                    <!--alternativas-->
+                </div>	        
+
+                <div id="coldir">
+                    <div id="tipo-1">
+                        <div id="tabs">
+				            <ul>
+					            <li id="ffile"><a href="#tab-file">@lng[Selecionar arquivo]</a></li>
+					            <li id="fbco"><a href="#tab-banco">@lng[Do banco de imagens]</a></li>
+					            <!--<li id="fweb"><a href="#tab-net">Da Internet</a></li>-->
+				            </ul>
+				            <div id="tab-file">
+                                <form name="frmAlternativa-1" id="frmAlternativa-1" enctype="multipart/form-data">
+                                    <div id="add" class="box-alternativa-edit">
+                                        <input type="hidden" name="hdnOrigem" id="hdnOrigem" value="upload" />
+                                        <input type="hidden" name="hidSeq" id="hidSeq" value="<!--hidSeq-->" />
+	                                    <label>@lng[Escolher imagem]</label><br />
+	                                    <input type="text" id="fakeupload" name="fakeupload" class="fakeupload" value="<!--nomeimg-->" />
+                                        <input type="file" id="realupload" name="realupload" class="realupload" />
+
+                                        <br /><br />
+
+	                                    <label>@lng[Texto adicional (aparecerá sobre a imagem)]</label><br />
+	                                    <input type="text" name="txtTextoAdicional" id="txtTextoAdicional" class="campolongo" value="<!--txtTextoAdicional-->" />
+
+                                        <br /><br />
+
+	                                    <label>@lng[Correto]</label><br />
+	                                    <select name="selCorreta" id="selCorreta">
+	                                        <!--opcoescorreto-->
+	                                        <!--option value="1">Correta</option>
+	                                        <option value="0">Incorreta</option-->
+	                                    </select>
+                                        
+                                        <br /><br />
+
+	                                    <label for="txtExplicacao">
+	                                        @lng[Justificativa]<br />
+	                                        <textarea name="txtExplicacao" id="txtExplicacao" class="campotexto tinymce"><!--txtExplicacao--></textarea>
+	                                    </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="tab-banco">
+				                <div id="consultasbanco">
+				                    <div class="coluna-campo">
+				                        <label for="selTiposPesquisa">
+				                            @lng[Tipo de pesquisa]<br />
+				                            <select id="selTipos" name="selTipos" class="campo requerido"><option value="">@lng[Carregando...]</option></select>
+				                        </label>
+				                    </div>
+				                    
+				                    <div class="coluna-campo">
+				                        <label for="selTiposPesquisaItem">
+				                            @lng[Selecione o item]<br />
+				                            <select id="selSubTipos" name="selSubTipos" class="campo requerido">
+				                                <option value="">@lng[Selecione o tipo de pesquisa]</option>
+				                            </select>
+				                        </label>
+				                    </div>
+				                    
+				                    <br /><br /><br />
+			
+			                        <div class="coluna-campo">
+				                        <label for="txtPalavraChave">
+				                            @lng[Palavra chave]<br />
+				                            <input type="text" name="txtPalavraChave" id="txtPalavraChave" class="campo campomedio" />
+				                        </label>
+				                    </div>
+				                    
+				                    <div class="coluna-campo">
+				                        <label for="txtNResultados">
+				                            @lng[Nº máx. resultados]<br />
+				                            <input type="text" name="txtNResultados" id="txtNResultados" class="campo campocurto" value="6" />
+				                        </label>
+				                    </div>
+				                    
+				                    <input type="button" value="Procurar" id="btnProcurar" name="btnProcurar" class="btn-default marginTopAlinha" />
+				                    
+				                    <div id="divResultadoPesquisa">
+				                    </div>
+				                    <input type="hidden" name="hidSeqBanco" id="hidSeqBanco" value="<!--hidSeq-->" />
+				                    <br /><br />
+		
+		                            <label>@lng[Texto adicional (aparecerá sobre a imagem)]</label><br />
+		                            <input type="text" name="txtTextoAdicionalBanco" id="txtTextoAdicionalBanco" class="campolongo" value="<!--txtTextoAdicional-->" />
+	
+	                                <br /><br />
+	
+		                            <label>Correto</label><br />
+		                            <select name="selCorretaBanco" id="selCorretaBanco">
+		                                <!--opcoescorreto-->
+		                                <!--option value="1">Correta</option>
+		                                <option value="0">Incorreta</option-->
+		                            </select>
+	                                
+	                                <br /><br />
+	
+		                            <label for="txtExplicacaoBanco">
+		                                @lng[Justificativa]
+		                                <textarea name="txtExplicacaoBanco" id="txtExplicacaoBanco" class="campotexto tinymce"><!--txtExplicacao--></textarea>
+		                            </label>
+				                </div>
+				                <div id="erroconsulta" style="display:none;"></div>
+				            </div>
+				        </div>
+                    </div>
+                    <div id="tipo-2">
+                        <form name="frmAlternativa-2" id="frmAlternativa-2">
+                            <input type="hidden" name="hidSeq" id="hidSeq" value="<!--hidSeq-->" />
+                            <div class="box-alternativa-edit">
+                                <label for="txtAlternativa">
+                                    @lng[Alternativa] *<br />
+                                    <input type="text" name="txtAlternativa" id="txtAlternativa" value="<!--txtAlternativa-->" class="campolongo" />
+                                </label>
+                                
+                                <br /><br />
+                                
+                                <label for="selCorretoTxt">
+                                    @lng[Correto] *<br />
+                                    <select name="selCorretoTxt" id="selCorretoTxt">
+                                        <!--selcorretotxt-->
+                                    </select>
+                                </label>
+                                
+                                <br /><br />
+                                
+                                <label for="txtJustificativa">
+                                    @lng[Justificativa] *<br />
+                                    <textarea name="txtJustTxt" id="txtJustTxt" class="campotexto tinymce"><!--txtJustTxt--></textarea>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="find-window" style="display:none;">
+                    <strong>@lng[Filtros]</strong><br />
+                    <div id="divFiltros-lin-1">
+                        <div class="col-campo-filtro" id="col1">
+                            @lng[Tipo de pergunta]:<br />
+                            <select name="selTipoPergunta" id="selTipoPergunta">
+                                <!--tipospergunta-->
+                            </select>
+                        </div>
+                        
+                        <div class="col-campo-filtro" id="col2">
+                            @lng[Classe da pergunta]:<br />
+                            <select name="selClassePergunta" id="selClassePergunta">
+                                <!--classespergunta-->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="divFiltros-lin-2" style="clear:both;">
+                        @lng[Descricao]:<br />
+                        <input type="text" name="term" id="term" class="campolongo">
+                        <input type="button" name="cmdProcurar" id="cmdProcurar" value="Procurar" class="btn-default" />
+                    </div>
+                    <br /><br />
+                    
+                    <div id="ret">
+                    </div>
+                </div>
+	        </div>
+	    </div>
+	</body>
+</html>

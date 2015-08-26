@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/padrao.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="css/jquery.multi-ddm.css" media="screen" />
+
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/ui/jquery.ui.datepicker-pt-BR.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+                
+                fntInicializaConsultaAcessos();
+		    });
+        </script>
+
+    </head>
+    <body class="sem-borda">
+        <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+            <h3>@lng[Detalhes do acesso]</h3>
+            <form id="frmAcessos" method="post" action="vwacessos.php">
+                <input type="hidden" name="txtDtIni" id="txtDtIni" value="<!--txtDtIni-->" />
+                <input type="hidden" name="txtDtFin" id="txtDtFin" value="<!--txtDtFin-->" />
+                <input type="hidden" name="txtUsuario" id="txtUsuario" value="<!--txtUsuario-->" />
+                <input type="hidden" id="idusuario" name="idusuario" value="<!--id-usuario-->" />
+                <input type="hidden" name="hidPagina" id="hidPagina" value="<!--hidPagina-->" />
+
+                <div id="divDetalhes">
+                    @lng[Usuário]: <!--nome-usuario--><br />
+                    <!--acessos-detalhes-->
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

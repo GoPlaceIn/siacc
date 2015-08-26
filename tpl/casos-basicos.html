@@ -1,0 +1,141 @@
+            <div id="cdb">
+                <div id="caminho">
+                    <a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > @lng[Dados básicos]
+                </div>
+                <br />
+                <form method="post" action="actgravacaso.php" id="frmcaso" style="clear:both;">
+                    <div>
+                        <input type="hidden" id="etapa" name="etapa" value="basicos" class="campo" />
+                        
+                        <fieldset class="areatela">
+                            <legend>@lng[Privacidade]</legend>
+
+                            <div class="coluna-campo">
+                                <label for="chkPublico">
+                                    <input type="checkbox" name="chkPublico" id="chkPublico" class="campo" <!--chkPublico-->/>
+                                    @lng[Tornar este caso público]
+                                </label><br />
+								<span class="ui-state-highlight" style="margin-left: 40px; padding: 3px;">@lng[Ao marcar esta opção, outros usuários do sistema também poderão ver este caso de estudo]</span>
+								
+								<br /><br />
+								
+								<label for="chkExigeLogin">
+									<input type="checkbox" name="chkExigeLogin" id="chkExigeLogin" class="campo" onclick="fntURLCaso();" <!--chkExigeLogin-->/>
+									@lng[Este caso pode ser acessado sem se autenticar]
+								</label><br />
+								<span id="spnURL" style="margin-left: 40px; border: solid 1px #55f; background-color: #f5f5fd; padding: 3px;">URL: <span id="spnURLCaso"></span></span>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="areatela">
+                            <legend>@lng[Dados do caso de estudo]</legend>
+                        
+                            <div class="coluna-campo" style="clear:both;">
+	                            <label for="txtNome">
+	                                @lng[Nome do caso]<br />
+	                                <input type="text" name="txtNome" id="txtNome" class="campolongo campo requerido" value="<!--txtnome-->" />
+	                            </label>
+                            </div>
+                            
+                            <br /><br />
+                            
+                            <div class="coluna-campo" style="clear:both; margin-top: 10px;">
+	                            <label for="txtDescricao">
+	                                @lng[Descrição curta]<br />
+	                                <textarea name="txtDescricao" id="txtDescricao" class="campotexto campo requerido tinymce"><!--txtdescricao--></textarea>
+	                            </label>
+                            </div>
+                            
+                            <div class="coluna-campo" style="clear:both; margin-top: 10px;">
+                                <label for="selArea">
+                                    @lng[Área de conhecimento]<br />
+                                    <select name="selArea" id="selArea" class="campo requerido">
+                                        <!--opcoesarea-->
+                                    </select>
+                                </label>
+                            </div>
+                            
+                            <div class="coluna-campo" style="margin-top: 10px;">
+                                <label for="txtCid10">
+                                    @lng[Cid 10]<br />
+                                    <input type="text" name="txtCid10" id="txtCid10" class="campocurto campo" value="<!--txtcid10-->" />
+                                </label>
+                            </div>
+
+                            <div class="coluna-campo" style="margin-top: 10px;">
+                                <label for="selNivelDif">
+                                    @lng[Nível de dificuldade]<br />
+                                    <select name="selNivelDif" id="selNivelDif" class="campo requerido">
+                                        <!--opcoesnivel-->
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="coluna-campo" style="margin-top: 10px;">
+                                <label for="selAtivo">
+                                    @lng[Ativo]<br />
+                                    <select name="selAtivo" id="selAtivo" class="campo requerido">
+                                        <!--opcoesativo-->
+                                    </select>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="areatela">
+                            <legend>@lng[Dados do paciente]</legend>
+
+                            <div class="coluna-campo" style="clear:both;">
+                                <label for="txtNomePac">
+                                    @lng[Nome ou iniciais (opcional)]<br />
+                                    <input type="text" name="txtNomePac" id="txtNomePac" class="campomedio campo" value="<!--txtNomePac-->" />
+                                </label>
+                            </div>
+
+                            <div class="coluna-campo">
+                                <label for="txtIdade">
+                                    @lng[Idade]<br />
+                                    <input type="text" name="txtIdade" id="txtIdade" class="campocurto campo requerido" value="<!--txtidade-->" />
+                                </label>
+                            </div>
+                            
+                            <div class="coluna-campo">
+                                <label for="selSexo">
+                                    @lng[Sexo]<br />
+                                    <select name="selSexo" id="selSexo" class="campo requerido">
+                                        <!--opcoessexo-->
+                                    </select>
+                                </label>
+                            </div>
+                            
+                            <div class="coluna-campo">
+                                <label for="txtIdPaciente">
+                                    @lng[ID do paciente]<br />
+                                    <input type="text" name="txtIdPaciente" id="txtIdPaciente" class="campocurto campo" value="<!--txtidpaciente-->" />
+                                </label>
+                            </div>
+                            
+                            <div class="coluna-campo">
+                                <label for="selEtnia">
+                                    @lng[Etnia]<br />
+                                    <select name="selEtnia" id="selEtnia" class="campo requerido">
+                                        <!--opcoesetnia-->
+                                    </select>
+                                </label>
+                            </div>
+                            
+                            <div class="coluna-campo">
+                                <label for="selImagem">
+                                    @lng[Imagem]<br />
+                                    <select name="selImagem" id="selImagem" class="campo">
+                                        <!--opcoesimagem-->
+                                    </select>
+                                </label>
+                            </div>
+                        </fieldset>
+                        
+                        <br /><br />
+                        
+                    </div>
+                </form>
+                <script type="text/javascript">fntURLCaso();</script>
+            </div>

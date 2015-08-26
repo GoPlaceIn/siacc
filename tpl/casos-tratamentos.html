@@ -1,0 +1,75 @@
+            <input type="hidden" name="etapa" id="etapa" value="tratamentos" class="campo" />
+            <div id="caminho">
+                <a href="javascript:void(0);" onclick="fntTelaInicial();">@lng[Caso]</a> > @lng[Tratamentos]
+            </div>
+			<div id="ctra" class="pri">
+                <div id="tratcad" style="clear:both;" class="itenscad">
+                    <!--tabtratamentos-->
+                </div>
+                <!-- div id="perguntatratamentos" class="pergnorteadora">
+                    <label for="txtPerguntaGuia">
+                        Texto ou Pergunta norteadora (sobre o que o aluno deve refletir)<br />
+                        <textarea name="txtPerguntaGuia" id="txtPerguntaGuia" class="campo requerido tinymce"></textarea>
+                    </label>
+                </div -->
+                <div id="dlg-add-tratamentos" class="dlg">
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-b">@lng[Dados]</a></li>
+				            <li><a href="#tabs-j">@lng[Justificativa]</a></li>
+				            <li><a href="#tabs-c">@lng[Complemento]</a></li>
+				            <!-- li><a href="#tabs-r">Relações</a></li -->
+                        </ul>
+                        <div id="tabs-b">
+                        	<div style="float: left;">
+	                            <label for="txtTitulo" id="lblTitulo">
+	                                @lng[Título]<br />
+	                                <input type="text" name="txtTitulo" id="txtTitulo" class="campolongo campo requerido" />
+	                            </label>
+	                        </div>
+	                        <div style="float: left; margin-left:10px;">
+	                            <label for="selCorreto">
+	                                @lng[Correto]<br />
+	                                <select name="selCorreto" id="selCorreto" class="campo requerido">
+	                                    <!--opcoescorreto-->
+	                                </select>
+	                            </label>
+	                        </div>
+                            <br clear="all" /><br />
+                            
+                            <label for="txtDescricao" id="lblDescricao">
+                                @lng[Descrição]<br />
+                                <textarea name="txtDescricao" id="txtDescricao" class="campotexto campo tinymce requerido"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtDescricao');">@lng[Ações]</a>
+                            
+                            <br /><br />
+                            
+                        </div>
+                        <div id="tabs-j">
+                            <label for="txtJustificativa" id="lblJustificativa">
+                                @lng[Justificativa]<br />
+                                <textarea name="txtJustificativa" id="txtJustificativa" class="campotexto campo tinymce requerido"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtJustificativa');">@lng[Ações]</a>
+                        </div>
+                        <div id="tabs-c">
+                            <label for="txtAdicional" id="lblAdicional">
+                                @lng[Informações complementares]<br />
+                                <textarea name="txtAdicional" id="txtAdicional" class="campotexto campo tinymce"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtAdicional');">@lng[Ações]</a>
+                        </div>
+                        <!-- div id="tabs-r">
+			                <h4>Marque abaixo para quais Diagnósticos este tratamento deve ser apresentado como opção de escolha.</h4>
+			                <div id="divRelacoes" class="campo"></div>
+			            </div -->
+                    </div>
+                </div>
+            </div>
+            <div id="cexa-detalhes" class="sec"></div>
+            <script type="text/javascript">
+                //fntInicializaEditor(300, 180);
+                //fntInicializaAbas();
+                //fntInicializaDialogo("Adicionar/editar Tratamento");
+            </script>

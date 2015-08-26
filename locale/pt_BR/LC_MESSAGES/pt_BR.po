@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: idioma\n"
+"POT-Creation-Date: 2012-10-17 00:05-0300\n"
+"PO-Revision-Date: 2012-10-17 00:05-0300\n"
+"Last-Translator: Regis Leandro Sebastiani <regis_sebastiani@yahoo.com.br>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../../..\n"
+
+#: ../../../index.php:12
+msgid "Usuario"
+msgstr "Usuário"
+
+#: ../../../index.php:13
+msgid "Senha"
+msgstr "Senha"
+
+#: ../../../index.php:14
+msgid "Enviar"
+msgstr "Enviar"
+
+#: ../../../index.php:15
+msgid "Quero me cadastrar"
+msgstr "Quero me cadastrar"
+
+#~ msgid "My name is Regis"
+#~ msgstr "Meu nome é Regis"
+
+#~ msgid "This is another text"
+#~ msgstr "Este é outro texto"
+
+#~ msgid "A beautiful name"
+#~ msgstr "Um nome bonito"
+
+#~ msgid "some text hear"
+#~ msgstr "algum texto aqui"

@@ -1,0 +1,16 @@
+body
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-color: #eaeaea;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 10pt;
+}
+
+#content
+{
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	border: solid 3px #dadada;
+}

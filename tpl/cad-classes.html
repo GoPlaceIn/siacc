@@ -1,0 +1,19 @@
+        <h3>@lng[Cadastro de Classificações de exercícios]</h3>
+        <form name="frmClasses" id="frmClasses" method="post" action="classificacoes.php">
+            <div>
+                <label for="txtCodigo" id="lblCodigo">
+                    @lng[Código]<br />
+                    <input type="text" name="txtCodigo" id="txtCodigo" class="campo campocurto" value="##txtCodigo##" readonly="readonly" title="@lng[Código da classe de perguntas]" />
+                </label>
+                <br /><br />
+                <label for="txtDescricao" id="lblDescricao">
+                    @lng[Descrição] *<br />
+                    <input type="text" name="txtDescricao" id="txtDescricao" class="campo campomedio requerido" value="##txtDescricao##" title="@lng[Descrição da classe de perguntas]" maxlength="100" />
+                </label>
+                <br /><br />
+                <label for="txtComplemento" id="lblComplemento">
+                    @lng[Complemento]<br />
+                    <input type="text" name="txtComplemento" id="txtComplemento" class="campo campolongo" value="##txtComplemento##" title="@lng[Informações relevantes sobre a classificação]" maxlength="200" />
+                </label>
+            </div>
+        </form>

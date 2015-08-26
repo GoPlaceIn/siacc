@@ -1,0 +1,52 @@
+	<div id="divFormPass" style="display:none;">
+		<label for="txtSenhaAtual">
+			@lng[Senha atual]<br />
+			<input type="password" name="txtSenhaAtual" id="txtSenhaAtual" />
+		</label>
+		
+		<br /><br />
+		
+		<label for="txtNovaSenha">
+			@lng[Nova senha]<br />
+			<input type="password" name="txtNovaSenha" id="txtNovaSenha" />
+		</label>
+		
+		<br /><br />
+
+		<label for="txtNovaSenha2">
+			@lng[Repetir senha]<br />
+			<input type="password" name="txtNovaSenha2" id="txtNovaSenha2" />
+		</label>			
+	</div>
+    <div id="barraSup">
+        <div class="cont-sup">
+            @lng[Olá] <strong><!--Usuario--></strong>. @lng[Seu ultimo acesso foi] <!--UltimoAcesso-->.
+            <div style="float: right">
+				<div style="float:left;">
+                <span id="working">
+					<img src="img/ajax_loading.gif" alt="@lng[Aguarde]" title="@lng[Aguarde]" />&nbsp;&nbsp;
+				</span>
+				<a href="interna.php" title="@lng[Volta para a tela inicial do sistema]">@lng[Home]</a> | 
+				<!--<a href="actatualizasecao.php" title="@lng[Atualizar a seção atual]">@lng[Atualizar seção]</a> | 
+				<a href="actlogoff.php" title="@lng[Sair do sistema]">@lng[Sair]</a> | -->
+				<a href="javascript:void(0);" onclick="fntMostraAcoes('optsConta');">
+					@lng[Ações]
+				</a>
+				<div id="optsConta" class="optacoes">
+					<ul>
+						<li><a href="javascript:fntTrocaSenhaInterna();">@lng[Trocar senha]</a></li>
+						<li><a href="actlogoff.php" title="@lng[Sair do sistema]">@lng[Sair]</a></li>
+					</ul>
+				</div>
+				<span>
+					<img src="img/tema/azul/config_down.png" style="margin-top:3px; float: right" />&nbsp;
+				</span>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div id="divOpcoes">
+        <div class="cont-sup">
+            <!--Menu-->
+        </div>
+    </div>

@@ -1,0 +1,15 @@
+.boxUpload
+{
+	position: absolute;
+	top: 450px;
+	left: 50%;
+	margin-left: -25%;
+}
+
+.propriedade-alternativa
+{
+	text-align: right;
+	width: 95px;
+	padding: 2px;
+	float: none!important;
+}

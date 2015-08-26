@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+<head>
+<title>@lng[Cadastro de perguntas]</title>
+<link rel="Stylesheet" href="css/padrao.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="js/siacc.perguntas.js"></script>
+<script type="text/javascript">
+		    jQuery.noConflict();
+		    jQuery(document).ready(function(){
+		        InicializaFormPerguntaE2(<!--CodTipo-->);
+		    });
+		</script>
+</head>
+<body class="sem-borda">
+    <!--telatopo-->
+    <div id="toolbar">
+            <ul>
+                <!--itens-toolbar-->
+            </ul>
+    </div>
+    <div id="divConteudo">
+        <h3>@lng[Cadastro das alternativas]</h3>
+        <form name="frmPergunta" id="frmPergunta" method="post">
+            <div>
+                <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="oculto" />
+                
+                @lng[Descrição]:<br />
+                <div name="txtDescricao" id="txtDescricao"><!--TextoPergunta--></div>
+
+                <div id="MontaTipoPergunta">
+                </div>
+
+                <input type="button" name="cmdGravar" id="cmdGravar" value="@lng[Avançar]" class="btn-default" />
+            </div>
+        </form>
+        <div id="ret"></div>
+    </div>
+</body>
+</html>

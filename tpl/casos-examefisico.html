@@ -1,0 +1,111 @@
+            <div id="ca">
+                <div id="caminho">
+                    
+                </div>
+                <br />
+                <form method="post" action="actgravacaso.php" id="frmcaso" style="clear:both;">
+                    <div>
+                        <input type="hidden" name="etapa" id="etapa" value="examefisico" class="campo" />
+                        <input type="hidden" name="selAtual" id="selAtual" />
+                        <input type="hidden" name="midGeral" id="midGeral" value="<!--midGeral-->" class="campo" />
+                        <input type="hidden" name="midCabeca" id="midCabeca" value="<!--midCabeca-->" class="campo" />
+                        <input type="hidden" name="midPescoco" id="midPescoco" value="<!--midPescoco-->" class="campo" />
+                        <input type="hidden" name="midAusPulmonar" id="midAusPulmonar" value="<!--midAusPulmonar-->" class="campo" />
+                        <input type="hidden" name="midAusCardiaca" id="midAusCardiaca" value="<!--midAusCardiaca-->" class="campo" />
+                        <input type="hidden" name="midAbdomen" id="midAbdomen" value="<!--midAbdomen-->" class="campo" />
+                        <input type="hidden" name="midExtrem" id="midExtrem" value="<!--midExtrem-->" class="campo" />
+                        <input type="hidden" name="midPele" id="midPele" value="<!--midPele-->" class="campo" />
+                        <input type="hidden" name="midSinVit" id="midSinVit" value="<!--midSinVit-->" class="campo" />
+                        
+                        <div class="campo-geral">
+                            <label id="lblExaFisGeral" for="txtExaFisGeral">
+                                @lng[Estado geral]<br />
+                                <textarea name="txtExaFisGeral" id="txtExaFisGeral" class="campotexto810 campo"><!--txtExaFisGeral--></textarea>
+                            </label>
+                            <br /><br />
+                        </div>
+                        <div class="coluna-campos">
+                            <label for="txtExaFisCabeca">
+                                @lng[Cabeça]<br />
+                                <textarea name="txtExaFisCabeca" id="txtExaFisCabeca" class="campotextopequeno campo"><!--txtExaFisCabeca--></textarea>
+                            </label>
+                            <br /><br />
+
+                            <label for="txtExaFisAusPulmonar">
+                                @lng[Ausculta pulmonar]<br />
+                                <textarea name="txtExaFisAusPulmonar" id="txtExaFisAusPulmonar" class="campotextopequeno campo"><!--txtExaFisAusPulmonar--></textarea>
+                            </label>
+                            <br /><br />
+                            
+                            <label for="txtExaFisAbdomen">
+                                @lng[Abdomen]<br />
+                                <textarea name="txtExaFisAbdomen" id="txtExaFisAbdomen" class="campotextopequeno campo"><!--txtExaFisAbdomen--></textarea>
+                            </label>
+                            <br /><br />
+                            
+                            <label for="txtExaFisPele">
+                                @lng[Pele]<br />
+                                <textarea name="txtExaFisPele" id="txtExaFisPele" class="campotextopequeno campo"><!--txtExaFisPele--></textarea>
+                            </label>
+                            <br /><br />
+                        </div>
+                        <div class="coluna-corpo">
+                            <div id="marca-corpo"></div>
+                            <div id="marca-cabeca"></div>
+                            <div id="marca-pescoco"></div>
+                            <div id="marca-coracao"></div>
+                            <div id="marca-pulmao"></div>
+                            <div id="marca-abdomen"></div>
+                            <div id="marca-extremidades-1"></div>
+                            <div id="marca-extremidades-2"></div>
+                            <div id="marca-extremidades-3"></div>
+                            <div id="marca-pele-1"></div>
+                            <div id="marca-pele-2"></div>
+                            <div id="marca-pele-3"></div>
+                            <div id="marca-pele-4"></div>
+                            <div id="marca-pele-5"></div>
+                            <div id="marca-pele-6"></div>
+                            <div id="marca-pele-7"></div>
+                            <div id="marca-sinais-1"></div>
+                            <div id="marca-sinais-2"></div>
+                        </div>
+                        <div class="coluna-campos">
+                            <label for="txtExaFisPescoco">
+                                @lng[Pescoço]<br />
+                                <textarea name="txtExaFisPescoco" id="txtExaFisPescoco" class="campotextopequeno campo"><!--txtExaFisPescoco--></textarea>
+                            </label>
+                            <br /><br />
+                            
+                            <label for="txtExaFisAusCardiaca">
+                                @lng[Ausculta cardíaca]<br />
+                                <textarea name="txtExaFisAusCardiaca" id="txtExaFisAusCardiaca" class="campotextopequeno campo"><!--txtExaFisAusCardiaca--></textarea>
+                            </label>
+                            <br /><br />
+                            
+                            <label for="txtExaFisExtrem">
+                                @lng[Extremidades]<br />
+                                <textarea name="txtExaFisExtrem" id="txtExaFisExtrem" class="campotextopequeno campo"><!--txtExaFisExtrem--></textarea>
+                            </label>
+                            <br /><br />
+                            
+                            <label for="txtExaFisSinVit">
+                                @lng[Sinais vitais]<br />
+                                <textarea name="txtExaFisSinVit" id="txtExaFisSinVit" class="campotextopequeno campo"><!--txtExaFisSinVit--></textarea>
+                            </label>
+                            <br /><br />
+                        </div>
+                    </div>
+                </form>
+                <div id="Mídias" style="clear:both; border:solid 1px #bababa; width: 790px; margin-bottom: 20px; padding: 0px 10px 5px 10px;">
+                    <h3 id="titmidias">@lng[Mídias]</h3>
+                    <div id="instrucoes">
+                        @lng[Clique na caixa de texto do item ao qual deseja vincular alguma mídia (imagem, vídeo ou áudio)]
+                    </div>
+                    <div id="disponiveis">
+                        <!--midias-->
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    fntInstanciaEfeitosExameFisico();
+                </script>
+            </div>

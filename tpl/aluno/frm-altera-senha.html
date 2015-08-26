@@ -1,0 +1,26 @@
+            <div id="sup">
+                <h4 style="float:left;">Alteração de senha</h4>
+            </div>
+            <br /><br />
+            <p class="res-ok">
+                Informe a nova senha nos campos abaixo.
+            </p>
+            <form name="frmSenha" id="frmSenha" method="post" action="aluno.php">
+                <!--localmensagem-->
+                <label id="lblSenha1" for="txtSenha1">
+                    Nova senha<br />
+                    <input type="password" name="txtSenha1" id="txtSenha1" class="campo requerido campomedio" />
+                </label>
+                
+                <br /><br />
+                
+                <label id="lblSenha2" for="txtSenha2">
+                    Confirmar senha<br />
+                    <input type="password" name="txtSenha2" id="txtSenha2" class="campo requerido campomedio" />
+                </label>
+                
+                <br /><br />
+                
+                <input type="button" name="btnEnviar" id="btnEnviar" value="Enviar" class="btn-default" onclick="javascript:frmSenha_btnEnviar_click();" />
+                <input type="button" name="btnCancelar" id="btnCancelar" value="Cancelar" class="btn-default" onclick="javascript:frmSenha_btnCancelar_click();" />
+            </form>

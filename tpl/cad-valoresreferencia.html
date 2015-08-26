@@ -1,0 +1,66 @@
+        <div id="tudo-componente">
+            <form name="frmValores" id="frmValores" method="post">
+                <div>
+                    <input type="hidden" name="hdnCodigoExame" id="hdnCodigoExame" class="campo" value="<!--hdnCodigoExame-->" />
+                    <input type="hidden" name="hdnCodigoCompo" id="hdnCodigoCompo" class="campo" value="<!--hdnCodigoCompo-->" />
+                    
+                    <h4>@lng[Valores de referência do] <!--tipo--> : <!--nomeexame--></h4>
+                    
+                    <label for="chkSemAgrupador">
+                        <input type="checkbox" name="chkSemAgrupador" id="chkSemAgrupador" onclick="javascript:fntTestaAgrupador();" class="campo" <!--chkmarcado--> />
+                        @lng[Não possui agrupador]
+                    </label>
+                    <div id="divAgrupador">
+                        <label for="txtAgrupador" id="lblAgrupador" class="titulo-campo">
+                            @lng[Agrupador] *<br />
+                            <input type="text" name="txtAgrupador" id="txtAgrupador" class="campolongo campo" value="<!--txtAgrupador-->" title="@lng[Agrupador]" maxlength="200" />
+                        </label>
+                    </div>
+                    
+                    <br /><br />
+                    
+                    <div id="linha" style="float:left; width:100%">
+                        <div class="coluna-campo">
+                            <label for="txtTipoVal" id="lblTipoVal" class="titulo-campo">
+                                @lng[Tipo] *<br />
+                                <select name="selTipoValor" id="selTipoValor" onchange="javascript:fntTestaTipoValor();" class="campo">
+                                    <!--opcoestipovalor-->
+                                </select>
+                            </label>
+                        </div>
+                        
+                        <div class="coluna-campo" id="cmpValMin">
+                            <label for="txtValMin" id="lblValMin" class="titulo-campo">
+                                @lng[Valor Mínimo] *<br />
+                                <input type="text" name="txtValMin" id="txtValMin" class="campocurto campo" value="<!--txtValMin-->" title="@lng[Valor de referência mínimo]" maxlength="150" />
+                            </label>
+                        </div>
+                        
+                        <div class="coluna-campo" id="cmpValMax">
+                            <label for="txtValMax" id="lblValMax" class="titulo-campo">
+                                @lng[Valor Máximo] *<br />
+                                <input type="text" name="txtValMax" id="txtValMax" class="campocurto campo" value="<!--txtValMax-->" title="@lng[Valor de referência máximo]" maxlength="150" />
+                            </label>
+                        </div>
+
+                        <div class="coluna-campo" id="cmpValIgual" style="display:none;">
+                            <label for="txtValIgual" id="lblValIgual" class="titulo-campo">
+                                @lng[Valor] *<br />
+                                <input type="text" name="txtValIgual" id="txtValIgual" class="campocurto campo" value="<!--txtValIgual-->" title="@lng[Valor de referência máximo]" maxlength="150" />
+                            </label>
+                        </div>
+
+                        <div class="coluna-campo">
+                            <label for="txtUnidMedida" id="lblUnidMedida" class="titulo-campo">
+                                @lng[Unid. Medida]<br />
+                                <input type="text" name="txtUnidMedida" id="txtUnidMedida" class="campocurto campo" value="<!--txtUnidMedida-->" title="@lng[Unidade de medida]" maxlength="50" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="divtabela" style="overflow:auto; clear:both;">
+                <!--tabela-->
+            </div>
+        </div>
+        

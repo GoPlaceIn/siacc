@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/padrao.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="css/jquery.multi-ddm.css" media="screen" />
+
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.forms.js"></script>
+        <script type="text/javascript" src="js/siacc.casos.js"></script>
+    </head>
+    <body class="sem-borda">
+        <div id="divConteudo">
+            <h3>@lng[Vincular conteudos ao exame selecionado]</h3>
+            <input type="hidden" name="etapa" id="etapa" value="exames" class="campo requerido" />
+            <form id="frmContExames" method="post" action="actgravacontexames.php">
+                <div>
+                    <label for="selExames">
+                        @lng[Algum exame específico?]<br />
+                        <select name="selExames" id="selExames" class="campo requerido">
+                            <!--selExames-->
+                        </select>
+                    </label>
+
+                    <br /><br />
+
+                    <label for="selConteudos">
+                        @lng[Conteúdos]<br />
+                        <select name="selConteudos" id="selConteudos" class="campo">
+                            <!--selConteudos-->
+                        </select>
+                    </label>
+                </div>
+            </form>
+            <div id="divResultado">
+                <!--jaVinculados-->
+            </div>
+        </div>
+    </body>
+</html>

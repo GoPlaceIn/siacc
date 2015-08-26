@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="Stylesheet" type="text/css" href="css/padrao.css" media="screen" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.multi-ddm.css" />
+
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tinymce.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+		<script type="text/javascript" src="js/lang/lang.js"></script>
+        <script type="text/javascript" src="js/siacc.forms.js"></script>
+		<script type="text/javascript" src="js/siacc.funcoes.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+		        jQuery.noConflict();
+		        jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+		        <!--javaonload-->
+		    });
+		</script>
+    </head>
+    <body class="sem-borda">
+        <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+            ##Formulario##
+        </div>
+    </body>
+</html>

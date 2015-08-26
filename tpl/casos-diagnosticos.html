@@ -1,0 +1,65 @@
+            <input type="hidden" name="etapa" id="etapa" value="diagnosticos" class="campo" />
+            <div id="caminho">
+                <a href="javascript:void(0);" onclick="fntTelaInicial();">@lng[Caso]</a> > @lng[Diagnósticos]
+            </div>
+            <div id="chip" class="pri">
+                <div id="diacad" style="clear:both;" class="itenscad">
+                    <!--tabdiagnosticos-->
+                </div>
+                <!-- div id="perguntadiagnosticos" class="perguntadiagnosticos">
+                    <label for="txtPerguntaGuia">
+                        Texto ou Pergunta norteadora (sobre o que o aluno deve refletir)<br />
+                        <textarea name="txtPerguntaGuia" id="txtPerguntaGuia" class="campo requerido tinymce"></textarea>
+                    </label>
+                </div -->
+                <div id="dlg-add-diagnosticos" class="dlg">
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-b">@lng[Dados]</a></li>
+				            <li><a href="#tabs-j">@lng[Justificativa]</a></li>
+				            <li><a href="#tabs-c">@lng[Complemento]</a></li>
+				            <!-- li><a href="#tabs-r">Relações</a></li -->
+                        </ul>
+                        <div id="tabs-b">
+                            <label for="txtDescricao" id="lblDescricao">
+                                @lng[Descrição]<br />
+                                <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo campo" value="" />
+                            </label>
+                            
+                            <br /><br />
+                            
+                            <label for="selCorreto">
+                                @lng[Correto]<br />
+                                <select name="selCorreto" id="selCorreto" class="campo">
+                                    <!--opcoescorreto-->
+                                </select>
+                            </label>
+                        </div>
+                        <div id="tabs-j">
+                            <label for="txtJustificativa" id="lblJustificativa">
+                                @lng[Justificativa]<br />
+                                <textarea name="txtJustificativa" id="txtJustificativa" class="campotexto campo tinymce"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtJustificativa');">@lng[Ações]</a>
+                        </div>
+                        <div id="tabs-c">
+                            <label for="txtAdicional" id="lblAdicional">
+                                @lng[Informações complementares]<br />
+                                <textarea name="txtAdicional" id="txtAdicional" class="campotexto campo tinymce"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtAdicional');">@lng[Ações]</a>
+                        </div>
+			            <!-- div id="tabs-r">
+			                <h4>Marque abaixo quais exames/resultados de exames este diagnóstico deve ser apresentado como opção de escolha.</h4>
+			                <div id="divRelacoes" class="campo"></div>
+			            </div -->
+                    </div>
+                </div>
+			</div>
+            <div id="cexa-detalhes" class="sec"></div>
+            <script type="text/javascript">
+                //fntInicializaAbas();
+                //fntInicializaEditor(300, 180);
+                //fntInicializaDialogo("Adicionar/editar Diagnóstico");
+            </script>
+            

@@ -1,0 +1,74 @@
+#efiPopupContainer
+{
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+    max-width: 310px;
+    z-index: 20000;
+}
+
+.efiPopupPopup
+{
+}
+
+#efiPopupContent
+{
+    background-color: #FFF;
+    min-width: 175px;
+    min-height: 50px;
+    max-width: 300px;
+}
+
+.efiPopupPopup .efiPopupImage
+{
+    margin: 5px;
+    margin-right: 15px;
+}
+
+.efiPopupPopup .corner 
+{
+    width: 19px;
+    height: 15px;
+}
+    
+.efiPopupPopup .topLeft 
+{
+    background: url(../../img/tool-tip/balloon_topLeft.png) no-repeat;
+}
+    
+.efiPopupPopup .bottomLeft 
+{
+    background: url(../../img/tool-tip/balloon_bottomLeft.png) no-repeat;
+}
+    
+.efiPopupPopup .left 
+{
+    background: url(../../img/tool-tip/balloon_left.png) repeat-y;
+}
+    
+.efiPopupPopup .right 
+{
+    background: url(../../img/tool-tip/balloon_right.png) repeat-y;
+}
+    
+.efiPopupPopup .topRight 
+{
+    background: url(../../img/tool-tip/balloon_topRight.png) no-repeat;
+}
+    
+.efiPopupPopup .bottomRight 
+{
+    background: url(../../img/tool-tip/balloon_bottomRight.png) no-repeat;
+}
+    
+.efiPopupPopup .top 
+{
+    background: url(../../img/tool-tip/balloon_top.png) repeat-x;
+}
+    
+.efiPopupPopup .bottom 
+{
+    background: url(../../img/tool-tip/balloon_bottom.png) repeat-x;
+    text-align: center;
+}

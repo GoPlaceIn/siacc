@@ -1,0 +1,53 @@
+		<h3>@lng[Cadastro de usuários]</h3>
+		<form name="frmUsuarios" id="frmUsuarios" method="post" action="actgravausuario.php">
+		    <div>
+			    <label id="lblCodigo" for="txtCodigo">
+			        @lng[Código]<br />
+				    <input type="text" name="txtCodigo" id="txtCodigo" value="##txtCodigo##" readonly="readonly" class="campocurto campo" title="@lng[Código do usuário]" />
+			    </label>
+                <br /><br />
+			    <label id="lblNome" for="txtNome">
+			        @lng[Nome completo] *<br />
+			        <input type="text" name="txtNome" id="txtNome" value="##txtNome##" class="campolongo campo requerido" title="@lng[Nome completo do usuário]" />
+			    </label>
+                <br /><br />
+			    <label id="lblUsuario" for="txtUsuario">
+			        @lng[Usuário] *<br />
+			        <input type="text" name="txtUsuario" id="txtUsuario" value="##txtUsuario##" class="campolongo campo requerido" title="@lng[Nome de usuário]" />
+			    </label>
+                <br /><br />
+			    <label id="lblEmail" for="txtEmail">
+			        @lng[E-mail] *<br />
+			        <input type="text" name="txtEmail" id="txtEmail" value="##txtEmail##" class="campolongo campo requerido" title="@lng[E-mail do usuário]" />
+			    </label>
+                <br /><br />
+                <label id="lblInstituicao" for="selInstituicao">
+                    @lng[Instituição] *<br />
+                    ##selInstituicao##
+                </label>
+                <br /><br />
+                <label id="lblIdioma" for="selIdioma">
+                    @lng[Idioma] *<br />
+                    ##selIdioma##
+                </label>
+                <br /><br />
+			    <label id="lblSenha" for="txtSenha">
+			        @lng[Senha] *<br />
+			        <input type="password" name="txtSenha" id="txtSenha" value="##txtSenha##" class="campomedio campo requerido" title="@lng[Senha do usuário]" />
+			    </label>
+                <br /><br />
+			    <label id="lblConfirmarSenha" for="txtSenhaDois">
+			        @lng[Confirmar senha] *<br />
+			        <input type="password" name="txtSenhaDois" id="txtSenhaDois" value="##txtSenha##" class="campomedio campo requerido" title="@lng[Senha do usuário]" />
+			    </label>
+                <br /><br />
+			    <label id="lblAtivo" for="selAtivo">
+			        @lng[Ativo]<br />
+			        <select name="selAtivo" id="selAtivo" class="campo requerido">
+			            <option value="">:: @lng[Selecione] ::</option>
+			            <option value="1" ##selAtivo1##>@lng[Sim]</option>
+			            <option value="0" ##selAtivo2##>@lng[Não]</option>
+			        </select>
+			    </label>
+		    </div>
+		</form>

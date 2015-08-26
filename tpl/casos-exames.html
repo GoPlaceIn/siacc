@@ -1,0 +1,102 @@
+            <div id="caminho">
+                <!--caminho-->
+            </div>
+            <div id="cexa" class="pri">
+                <input type="hidden" name="etapa" id="etapa" value="exames" class="campo" />
+                <div id="exacad" style="clear:both;" class="itenscad">
+                    <!--tabexames-->
+                </div>
+                <!--
+                <div id="perguntaexames" class="pergnorteadora">
+                    <label for="txtPerguntaGuia">
+                        Texto ou Pergunta norteadora (sobre o que o aluno deve refletir)<br />
+                        <textarea name="txtPerguntaGuia" id="txtPerguntaGuia" class="tinymce"></textarea>
+                    </label>
+                </div>
+                -->
+                <div id="dlg-add-exames" class="dlg">
+		            <div id="tabs">
+			            <ul>
+				            <li><a href="#tabs-b">@lng[Dados]</a></li>
+				            <li><a href="#tabs-j">@lng[Justificativa]</a></li>
+				            <li><a href="#tabs-c">@lng[Complemento]</a></li>
+				            <!-- li><a href="#tabs-r">Relações</a></li -->
+			            </ul>
+			            <div id="tabs-b">
+                            <label for="selTipoExame">
+                                @lng[Tipo de exame]<br />
+                                <select id="selTipoExame" name="selTipoExame" class="campo requerido">
+                                    <!--opcoesexames-->
+                                </select>
+                                <input type="button" name="cmdPadrao" id="cmdPadrao" onclick="javascript:fntCopiaDescricaoPadrao();" value="@lng[Copiar para descrição]" class="btn-default" style="margin-top:0px;" />
+                            </label>
+                            <br /><br />
+			                <label for="txtDescricao">
+                                @lng[Descrição]<br />
+                                <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo campo requerido" value="<!--txtdescricao-->" />
+                            </label>
+                            <br /><br />
+                            <div id="linha3" style="height: 48px;">
+                                <div class="coluna-campo">
+                                    <label for="selCorreto">
+                                        @lng[Correto]<br />
+                                        <select name="selCorreto" id="selCorreto" class="campo requerido">
+                                            <!--opcoescorreto-->
+                                        </select>
+                                    </label>
+                                </div>
+                                <!--
+                                <div class="coluna-campo">
+                                    <label for="txtBateria">
+                                        Bateria<br />
+                                        <input type="text" name="txtBateria" id="txtBateria" class="campocurto" value="" title="Coloque o número da bateria do exame" />
+                                    </label>
+                                </div>
+                                <div class="coluna-campo">
+                                    <label for="selMostraQuando">
+                                        Mostrar este exame<br />
+                                        <select name="selMostraQuando" id="selMostraQuando">
+                                        </select>
+                                    </label>
+                                </div>
+                                -->
+                            </div>
+                            <!--
+                            <div id="linha4" style="height: 48px;">
+                                <label for="chkMostraIsolado">
+                                    <input type="checkbox" name="chkMostraIsolado" id="chkMostraIsolado" value="1" /> Mostrar o resultado deste exame de forma isolada
+                                </label>
+                            </div>
+                            -->
+			            </div>
+			            <div id="tabs-j">
+                            <label for="txtJustificativa" style="clear:both;">
+                                @lng[Justificativa]<br />
+                                <textarea name="txtJustificativa" id="txtJustificativa" class="campotexto campo tinymce"><!--txtjustificativa--></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtJustificativa');">@lng[Ações]</a>
+			            </div>
+			            <div id="tabs-c">
+                            <label for="txtAdicional">
+                                @lng[Informações complementares]<br />
+                                <textarea name="txtAdicional" id="txtAdicional" class="campotexto campo tinymce"><!--txtadicional--></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtAdicional');">@lng[Ações]</a>
+			            </div>
+			            <!-- div id="tabs-r">
+			                <h4>Marque abaixo em quais hipóteses diagnósticas este exame deve ser apresentado como opção.</h4>
+			                <div id="divRelacoes" class="campo"></div>
+			            </div -->
+		            </div>
+                </div>
+                <!--div id="dlg-rel-exames" class="rels">
+                    <h4>Marque abaixo em quais hipóteses diagnósticas este exame deve ser apresentado como opção.</h4>
+                </div-->
+            </div>
+            <div id="cexa-detalhes" class="sec"></div>
+            <script type="text/javascript">
+                //fntInicializaAbas();
+                //fntInicializaEditor(300, 160);
+                //fntInicializaDialogo("Adicionar novo exame");
+                //fntInicializaDlgRelacoes("Relação Exame x Hipótese diagnóstica");
+            </script>

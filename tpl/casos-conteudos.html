@@ -1,0 +1,96 @@
+            <input type="hidden" name="etapa" id="etapa" value="conteudos" class="campo" />
+            <div id="caminho"><!--caminho--></div>
+            <div id="cobj" class="pri">
+                <div id="concad" style="clear:both;" class="itenscad">
+                    <!--tabconteudos-->
+                </div>
+                <div id="dlg-add-conteudos" class="dlg">
+                    <label for="txtDescricao">
+                        @lng[Descrição] *<br />
+                        <input type="text" name="txtDescricao" id="txtDescricao" class="campo campolongo requerido" />
+                    </label>
+                    
+                    <br /><br />
+	                
+	                <label for="txtTexto">
+                        @lng[Conteúdo] *<br />
+                        <textarea class="campotextofulldlg campo requerido tinymce" name="txtTexto" id="txtTexto"></textarea>
+                    </label>
+                    <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtTexto');">Ações</a>
+                </div>
+                <div id="boxUpload" class="boxUpload" style="display:none;">
+                    <div class="titlebar">
+                        <span class="titulo">@lng[Adicionar imagem ao caso]</span>
+                        <span><a href="javascript:void(0);" onclick="fntFechaUP('boxUpload');"><img src="img/fechar_janela.png" alt="@lng[Fechar esta janela]" title="@lng[Fechar esta janela]"></a></span>
+                    </div>
+                    <div class="boxContent">
+                        <iframe id="upImagem" src="vwuploaddetalhe.php?type=img&o=1" style="width:100%;height:85%;border:solid 1px #bababa;margin-bottom:5px;">
+                        </iframe>
+                        <div id="tools" class="tools">
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntLimpaCamposUP();">@lng[Limpar]</a> 
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntCarregaImagemSistema();">@lng[Cadastrar]</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="boxUploadAudio" class="boxUpload" style="display:none;">
+                    <div class="titlebar">
+                        <span class="titulo">@lng[Adicionar áudio ao caso]</span>
+                        <span><a href="javascript:void(0);" onclick="fntFechaUP('boxUploadAudio');"><img src="img/fechar_janela.png" alt="@lng[Fechar esta janela]" title="@lng[Fechar esta janela]"></a></span>
+                    </div>
+                    <div class="boxContent">
+                        <iframe id="upAudio" src="vwuploaddetalhe.php?type=som" style="width:100%;height:85%;border:solid 1px #bababa;margin-bottom:5px;">
+                        </iframe>
+                        <div id="tools-audio" class="tools">
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntLimpaCamposUPAudio();">@lng[Limpar]</a> 
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntCarregaAudioSistema();">@lng[Cadastrar]</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="boxUploadVideo" class="boxUpload" style="display:none;">
+                    <div class="titlebar">
+                        <span class="titulo">@lng[Adicionar vídeo ao caso]</span>
+                        <span><a href="javascript:void(0);" onclick="fntFechaUP('boxUploadVideo');"><img src="img/fechar_janela.png" alt="@lng[Fechar esta janela]" title="@lng[Fechar esta janela]"></a></span>
+                    </div>
+                    <div class="boxContent">
+                        <iframe id="upVideo" src="vwuploaddetalhe.php?type=vid" style="width:100%;height:85%;border:solid 1px #bababa;margin-bottom:5px;">
+                        </iframe>
+                        <div id="tools-video" class="tools">
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntLimpaCamposUPVideo();">@lng[Limpar]</a> 
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntCarregaVideoSistema();">@lng[Cadastrar]</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="boxUploadDocumento" class="boxUpload" style="display:none;">
+                    <div class="titlebar">
+                        <span class="titulo">@lng[Adicionar documento ao caso]</span>
+                        <span><a href="javascript:void(0);" onclick="fntFechaUP('boxUploadDocumento');"><img src="img/fechar_janela.png" alt="@lng[Fechar esta janela]" title="@lng[Fechar esta janela]"></a></span>
+                    </div>
+                    <div class="boxContent">
+                        <iframe id="upDocumento" src="vwuploaddetalhe.php?type=doc&o=1" style="width:100%;height:85%;border:solid 1px #bababa;margin-bottom:5px;">
+                        </iframe>
+                        <div id="tools-documento" class="tools">
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntLimpaCamposUPDocumento();">@lng[Limpar]</a> 
+                            <a class="link-paginacao" href="javascript:void(0);" onclick="fntCarregaDocumentoSistema();">@lng[Cadastrar]</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="boxViewImagem" class="boxView" style="display:none;">
+                    <div id="content"></div>
+                    <div id="opts-view-img" class="tools">
+                        <a class="link-paginacao" href="javascript:void(0);" onclick="fntFechaViewImagem();">@lng[Fechar]</a>
+                    </div>
+                </div>
+                <div id="boxAtualizaMidia" class="boxUpload" style="display:none;">
+                    <div id="content"></div>
+                    <div id="tools-atualiza-midia" class="tools">
+                        <a class="link-paginacao" href="javascript:void(0);" onclick="fntLimpaCamposUPMidia();">@lng[Limpar]</a> 
+                        <a class="link-paginacao" href="javascript:void(0);" onclick="fntAtualizaMidiaSistema();">@lng[Atualizar]</a>
+                        <a class="link-paginacao" href="javascript:void(0);" onclick="fntFechaUP('boxAtualizaMidia');">@lng[Fechar]</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cexa-detalhes" class="sec"></div>
+            <script type="text/javascript">
+                //fntInicializaDialogo("Adicionar conteúdo");
+                //fntInicializaEditor(350, 140);
+            </script>

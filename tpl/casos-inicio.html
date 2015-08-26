@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" >
+    <head>
+        <title>@lng[Casos de estudo]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" type="text/css" href="css/padrao.css" />
+		<!--[if lt IE 9]>
+            <link rel="stylesheet" type="text/css" href="css/ie8menos.css" />
+        <![endif]-->
+		<!--[if lt IE 8]>
+            <link rel="stylesheet" type="text/css" href="css/ie7menos.css" />
+        <![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="css/jquery.multi-ddm.css" media="screen" />
+
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery.tinymce.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+        <script type="text/javascript" src="js/jquery.selectboxes.js"></script>
+        <script type="text/javascript" src="js/flowplayer-3.2.8.min.js"></script>
+		<script type="text/javascript" src="js/lang/lang.js"></script>
+        <script type="text/javascript" src="js/siacc.forms.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.casos.js"></script>
+
+        <script type="text/javascript">
+            $(function(){
+                $('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+                <!--javaonload-->
+		    });
+        </script>
+    </head>
+    <body class="sem-borda">
+        <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+            <h3>@lng[Cadastro de caso clínico]</h3>
+            <div id="divMsg">
+                <!--Mensagem-->
+            </div>
+            <div id="dinamico">
+                <div id="itens-casos">
+                    <fieldset class="etapacad">
+                        <legend>@lng[1 - Dados sobre o caso de estudo]</legend>
+
+                        <div class="caso-item left" onclick="javascript:fntLoadTela('basicos');">
+                            <img src="img/basicos.png" /><span class="txt-caso">@lng[Dados básicos]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('colaborador');">
+                            <img src="img/colaboradores.png" /><span class="txt-caso">@lng[Colaboradores]</span>
+                        </div>
+
+                        <div style="display:none;" class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('configs');">
+                            <img src="img/configuracoes.png" /><span class="txt-caso">@lng[Configurações]</span>
+                        </div>
+                    </fieldset>
+                        
+                    <fieldset caso-estilo class="etapacad">
+                        <legend>@lng[2 - Etapas do caso de estudo]</legend>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('objetivos');">
+                            <img src="img/objetivos.png" /><span class="txt-caso">@lng[Objetivos]</span>
+                        </div>
+
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('anamnese');">
+                            <img src="img/anamnese.png" /><span class="txt-caso">@lng[Anamnese]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo  onclick="javascript:fntLoadTela('examefisico');">
+                            <img src="img/examefisico.png" /><span class="txt-caso">@lng[Exame físico]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo  onclick="javascript:fntLoadTela('hipoteses');">
+                            <img src="img/hipoteses.png" /><span class="txt-caso">@lng[Hipóteses diagnósticas]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('exames');">
+                            <img src="img/exames.png" /><span class="txt-caso">@lng[Exames]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('diagnosticos');">
+                            <img src="img/diagnostico.png" /><span class="txt-caso">@lng[Diagnóstico]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('tratamentos');">
+                            <img src="img/tratamento.png" /><span class="txt-caso">@lng[Tratamento]</span>
+                        </div>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('desfechos');">
+                            <img src="img/desfecho.png" /><span class="txt-caso">@lng[Desfecho]</span>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset caso-estilo class="etapacad">
+                        <legend>@lng[3 - Outras informações]</legend>
+                        
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('exercicios');">
+                            <img src="img/exercicios.png" /><span class="txt-caso">@lng[Exercícios]</span>
+                        </div>
+
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntLoadTela('conteudos');">
+                            <img src="img/conteudo.png" /><span class="txt-caso">@lng[Conteúdos extras]</span>
+                        </div>
+
+                        <div class="caso-item left" caso-estilo onclick="javascript:fntRedirect('montagem');">
+                            <img src="img/montagem.png" /><span class="txt-caso">@lng[Montagem]</span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="divOpcoesAcao" style="display:none;">
+                <label for="selAcoes">
+                    @lng[Quando]<br />
+                    <select name="selAcoes" id="selAcoes">
+                        <option value="">@lng[Selecione]</option>
+                        <option value="click">@lng[Clicar no texto selecionado]</option>
+                    </select>
+                </label>
+                <br /><br />
+                <label for="selURL">
+                    @lng[Exibir]<br />
+                    <select name="selURL" id="selURL">
+                        <!--optionsURL-->
+                    </select>
+                </label>
+                <br /><br />
+                <input type="button" onclick="fntAddAcaoTexto()" class="btn-default" value="OK" />
+                <input type="button" onclick="$('#divOpcoesAcao').toggle();" class="btn-default" value="Cancelar" />
+                <input type="hidden" name="hdnSelectedTextArea" id="hdnSelectedTextArea" value="" />
+                <input type="hidden" name="hdnCodCaso" id="hdnCodCaso" value="<!--CodCaso-->" />
+            </div>
+            <div id="divTipoPreview" style="display:none;">
+                <p>@lng[Você deseja visualizar o caso]:</p>
+                <input type="radio" name="rdoTipoPreview" id="rdoTipoPreviewIni" value="I" checked="checked" /> @lng[Do Início]<br />
+                <input type="radio" name="rdoTipoPreview" id="rdoTipoPreviewUlt" value="U" /> @lng[Do último conteúdo acessado]
+            </div>
+        </div>
+    </body>
+</html>

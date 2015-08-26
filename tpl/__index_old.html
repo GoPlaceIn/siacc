@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="Stylesheet" type="text/css" href="css/padrao.css" media="screen" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="js/siacc.funcoes.js"></script>
+		<script type="text/javascript" src="js/siacc.login.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+		        jQuery.noConflict();
+		        jQuery("#txtUsuario").focus();
+		        
+		        jQuery("#selIdioma").change(function(){
+		            fntMudaIdioma();
+		        });
+		    });
+		</script>
+    </head>
+    <body class="fundo-azul">
+        <div id="titulo" class="inicial">
+            <div id="inicial-content">
+                <img src="img/logo.jpg" alt="SIACC - UFCSPA" title="SIACC - UFCSPA" />
+                <span>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br /></span><br />
+            </div>
+        </div>
+        <div id="conteudologin">
+            
+            <div id="colesq">
+                <form id="frmLogin" name="frmLogin" method="post" action="actvalidalogin.php">
+                    <div id="frmInfosLogin" class="caixalogin">
+                        <label id="lblUsuario" for="txtUsuario">@lng[Usuário]<br />
+                            <input type="text" name="txtUsuario" id="txtUsuario" class="campomedio" />
+                        </label>
+                        
+                        <br /><br />
+
+                        <label id="lblSenha" for="txtSenha">@lng[Senha]<br />
+                            <input type="password" name="txtSenha" id="txtSenha" class="campomedio" />
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <input type="submit" name="btnEnviar" id="btnEnviar" value="@lng[Enviar]" class="btn-default" />
+                        <input type="button" name="btnRegistrar" id="btnRegistrar" value="@lng[Quero me cadastrar]" class="btn-default" onclick="javascript:fntNovoCadastro();" />
+                        <br /><br />
+                        <a href="ressetsenha.php" title="@lng[Recuparar senha]">@lng[Esqueceu sua senha?]</a>
+                        <br /><br />
+                        <!--Mensagem-->
+                    </div>
+                </form>
+            </div>
+            <div id="coldirlogin">
+                <ul id="welcome">
+                    <li class="bold">
+                        @lng[Sistema desenvolvido pelo acadêmico Regis Leandro Sebastiani, com supervisão da orientadora Prof. Dra. Cecília Dias Flores e da co-orientadora Prof. Dra. Alessandra Dahmer]
+                    </li>
+                    <li class="bold">
+                        @lng[Desenvolvido como projeto de mestrado em Ciências da Saúde no Programa de Pós-graduação em Ciências da Saúde da Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA).]
+                    </li>
+                    <li class="bold">
+                        @lng[Este sistema tem caráter educacional, desenvolvido para ser utilizado em sala de aula por professores dos diversos cursos da área da saúde.]
+                    </li>
+                </ul>
+            </div>
+            <div class="rodape-login">
+                <div id="divDadosRodape" style="float:left;">
+                    @lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br />
+                    @lng[Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA]
+                </div>
+                <div id="divIdioma" style="float:right;">
+                    <!--selIdioma-->
+                </div>
+            </div>
+        </div>
+		<!--analytics-->
+    </body>
+</html>

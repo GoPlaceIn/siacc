@@ -1,0 +1,19 @@
+		<h3>@lng[Cadastro de Agrupadores de perguntas]</h3>
+		<form name="frmAgrupadorPergunta" id="frmAgrupadorPergunta" method="post" action="actagrupadores.php">
+		    <div>
+			    <label id="lblCodigo" for="txtCodigo">
+			        @lng[Código]<br />
+				    <input type="text" name="txtCodigo" id="txtCodigo" class="campocurto campo" value="<!--txtCodigo-->" readonly="readonly" title="@lng[Código do agrupador]" />
+			    </label>
+                <br /><br />
+			    <label id="lblTexto" for="txtTexto">
+			        @lng[Texto]<br />
+			        <input type="text" name="txtTexto" id="txtTexto" class="campolongo campo requerido" value="<!--txtTexto-->" title="@lng[Escreva o agrupador. Pode ser uma pergunta macro.]" />
+			    </label>
+			    <br /><br />
+			    <label id="lblExplicacao" for="txtExplicacao">
+			        @lng[Explicação]<br />
+			        <textarea name="txtExplicacao" id="txtExplicacao" class="campotexto campo tinymce" title="@lng[Informe uma explicação geral para o grupo de perguntas.]"><!--txtExplicacao--></textarea>
+			    </label>
+		    </div>
+		</form>

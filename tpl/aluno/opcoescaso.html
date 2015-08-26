@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>Caso de estudo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="Stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css" />
+        <link rel="Stylesheet" type="text/css" href="css/aluno/estilo.css" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/siacc.aluno.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var largtela = $(window).width();
+                var largobj = $("#content").width();
+                var marginleft = parseInt(((largtela - largobj)/2), 10);
+
+                $("#content").css("margin-left", marginleft+"px");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="sup">
+                <h4 style="float:left;">Resolução de caso de estudo UFCSPA</h4>
+                <a href="actlogoff.php" title="Sair do sistema"><img src="img/sair.png" title="Sair do sistema" alt="Sair do sistema" style="float:right;border:none;" /></a>
+                <a href="aluno.php" title="Início"><img src="img/home.png" style="float:right;border:none;" title="Início" alt="Início" /></a>
+            </div>
+            <br /><br />
+            <div class="sit-caso caso-nao-res">
+                <!--titulocaso-->
+            </div>
+            <p class="res-ok">
+                Você já resolveu este caso. Escolha o que você deseja fazer.
+            </p>
+            <div class="center-opts">
+                <a class="lnk-opt" href="vwresolucao-offline.php?c=<!--codcaso-->&re=true"><div class="link-opcao">Resolver o caso novamente</div></a><br />
+                <a class="lnk-opt" href="vwresumo.php"><div class="link-opcao">Visualizar o resultado da ultima resolução</div></a><br />
+            </div>
+        </div>
+    </body>
+</html>

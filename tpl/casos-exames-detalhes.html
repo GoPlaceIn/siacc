@@ -1,0 +1,34 @@
+            <div id="cexadet">
+                <div id="caminho"></div>
+                <div id="val-ref-item">
+                    <div id="val-ref-top">
+                        <span style="float:left;">@lng[Valores de referência]</span> <a href="javascript:void(0);" onclick="javascript:fntFechaValoresReferencia();">X</a>
+                    </div>
+                    <div id="val-ref-content"></div>
+                </div>
+                <form method="post" action="actgravacaso.php" id="frmcaso" name="frmcaso" style="clear:both;">
+                    <div id="divfilho">
+                        <!--listaimagens-->
+                        <!--listadocs-->
+                        <!--lancavaloresrefexame-->
+                        <div id="divLaudo">
+                            <h4>@lng[Laudo do exame]</h4>
+                            <label>
+                                @lng[Laudo]<br />
+                                <textarea id="txtLaudo" name="txtLaudo" class="campotexto campo"><!--laudo--></textarea>
+                            </label>
+                        </div>
+                        <br /><br />
+                    </div>
+                </form>
+            </div>
+            <div id="divUploadExame" class="dlg-upload-exame" style="display:none;">
+                <iframe id="frameup" src="vwuploaddetalhe.php" scrolling="no"></iframe>
+            </div>
+            <div id="divUploadDocExame" class="dlg-upload-exame" style="display:none;">
+                <iframe id="frameupdoc" src="vwuploaddetalhe.php?type=doc" scrolling="no"></iframe>
+            </div>
+            <script type="text/javascript">
+                fntInicializaDialogoUPImagens();
+                fntInicializaDialogoUPDocumentos();
+            </script>

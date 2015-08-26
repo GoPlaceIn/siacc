@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/aluno/estilo.css" />
+        <link rel="Stylesheet" type="text/css" href="css/aluno/tool-tip.css" />
+        <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="js/skin-vista/ui.dynatree.css" >
+
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dynatree.min.js" ></script>
+        <script type="text/javascript" src="js/flowplayer-3.2.8.min.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.aluno.js"></script>
+        <script type="text/javascript" src="js/siacc.montagem.js"></script>
+        <script type="text/javascript" src="js/siacc.resolucao.js"></script>
+        <script type="text/javascript">
+            //jQuery.noConflict();
+            $(document).ready(function(){
+                var largtela = $(window).width();
+                var largobj = $("#content").width();
+                var marginleft = parseInt(((largtela - largobj)/2), 10);
+
+                $("#content").css("margin-left", marginleft+"px");
+                $("#content").css("margin-bottom", "20px");
+
+                $("#tree").dynatree({
+                    minExpandLevel: 1
+                });
+                <!--javascriptload-->
+		    });
+        </script>
+
+    </head>
+    <body lang="pt-br" xml:lang="pt-br">
+        <input type="hidden" name="hdnstart" id="hdnstart" value="<!--hdnstart-->" />
+        <input type="hidden" name="hdnend" id="hdnend" value="N" />
+        <input type="hidden" name="hdnsave" id="hdnsave" value="N" />
+        <div id="content">
+            <div id="barra-acoes">
+                <span style="float:left;" id="menusec">
+                    <!--menusecao-->
+                </span>
+                <span style="float:right;">
+                    <a href="javascript:void(0);" onclick="javascript:fntHome();"><img src="img/home.png" class="botao" id="btnHome" title="@lng[Início]" alt="@lng[Início]" /></a>
+                    <a href="javascript:void(0);" onclick="javascript:fntSair();"><img src="img/sair.png" class="botao" title="@lng[Sair]" alt="@lng[Sair]" /></a>
+                </span>
+            </div>
+            <h4 id="titcas"><!--titulocaso--></h4>
+            <div class="secao" id="titsec"><!--titulosecao--></div>
+            <div id="contsec">
+                <!--conteudosecao-->
+            </div>
+        </div>
+        <div id="arvore" style="display:none;">
+            <!--arvore-->
+        </div>
+        <div id="exibir">
+        </div>
+        <input type="hidden" class="campolongo" name="hdnAtual" id="hdnAtual" />
+        <div id="divSaibaMais" style="display:none;">
+        	<div id="divFechaSaibaMais" onclick="$('#divSaibaMais').toggle();">@lng[Fechar]</div>
+        	<div id="divSaibaMaisResultado"></div>        	        
+        </div>
+        <div id="divRespostas" style="display:none;">
+            <div id="divFechaRespostas" onclick="$('#divRespostas').toggle();"><img src="img/fechar.png" title="@lng[Fechar]" alt="@lng[Fechar]" /></div>
+            <div id="divRespostasResultado"></div>
+        </div>
+        <div id="divPopUpConteudo" style="display:none;">
+            <table border="0" cellspacing="0" cellpadding="0" align="center" class="efiPopupPopup">
+                <tr>
+                    <td class="corner topLeft"></td>
+                    <td class="top"></td>
+                    <td class="corner topRight"></td>
+                </tr>
+                <tr>
+                    <td class="left repeat">&nbsp;</td>
+                    <td class="repeat right" colspan="2"><span style="padding-right: 15px; font-weight: bold;"><a href="javascript:void(0);" onclick="javascript:jQuery('#divPopUpConteudo').toggle();">@lng[Fechar]</span></td>
+                </tr>
+                <tr>
+                    <td class="left">&nbsp;</td>
+                    <td><div id="divPopUpContent"></div></td>
+                    <td class="right">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="corner bottomLeft">&nbsp;</td>
+                    <td class="bottom">&nbsp;</td>
+                    <td class="corner bottomRight"></td>
+                </tr>
+            </table>
+        </div>
+        <!--region_close_preview-->
+    </body>
+</html>

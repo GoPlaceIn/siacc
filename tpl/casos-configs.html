@@ -1,0 +1,78 @@
+            <div id="ccf">
+                <div id="caminho">
+                    <a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > @lng[Configurações]
+                </div>
+                <br />
+                <form method="post" action="actgravacaso.php" id="frmcaso" style="clear:both;">
+                    <div>
+                        <input type="hidden" id="etapa" name="etapa" value="configs" class="campo" />
+
+                        <div class="divlocalcampo">
+                            <div class="divlabel">
+                                <label for="selFeedback">
+                                    @lng[O aluno recebe a resposta imediatamente?] *
+                                </label>
+                            </div>
+                            <div>
+                                <select name="selFeedback" id="selFeedback" class="campo requerido">
+                                    <!--opcoesfeed-->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="divlocalcampo">
+                            <div class="divlabel">
+                                <label for="hipoteses_TipoResp">
+                                    @lng[Tipo de resposta das hipóteses diagnósticas] *
+                                </label>
+                            </div>
+                            <div class="divcampo">
+                                <select name="hipoteses_TipoResp" id="hipoteses_TipoResp" class="campo requerido">
+                                    <!--hipoteses_TipoResp-->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="divlocalcampo">
+                            <div class="divlabel">
+                                <label for="exames_TipoResp">
+                                    @lng[Tipo de resposta dos exames] *
+                                </label>
+                            </div>    
+                            <div>
+                                <select name="exames_TipoResp" id="exames_TipoResp" class="campo requerido">
+                                    <!--exames_TipoResp-->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="divlocalcampo">
+                            <div class="divlabel">
+                                <label for="diagnosticos_TipoResp">
+                                    @lng[Tipo de resposta dos diagnósticos] *
+                                 </label>
+                            </div>
+                            <div class="divcampo">
+                                <select name="diagnosticos_TipoResp" id="diagnosticos_TipoResp" class="campo requerido">
+                                    <!--diagnosticos_TipoResp-->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="divlocalcampo">
+                            <div class="divlabel">
+                                <label for="tratamentos_TipoResp" class="label-campo-esq">
+                                    @lng[Tipo de resposta dos tratamentos] *
+                                </label>
+                            </div>
+                            <div class="divcampo">
+                                <select name="tratamentos_TipoResp" id="tratamentos_TipoResp" class="campo requerido">
+                                    <!--tratamentos_TipoResp-->
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <script type="text/javascript">fntInicializaEditor();</script>
+            </div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js" language="javascript"></script>
+        <script type="text/javascript" src="js/siacc.login.js" language="javascript"></script>
+
+        <link rel="stylesheet" href="css/padrao.css" type="text/css" />
+    </head>
+    <body class="fundo-azul">
+        <div id="titulo" class="inicial">
+            <div id="inicial-content">
+                <img src="img/logo.jpg" alt="SIACC - UFCSPA" title="SIACC - UFCSPA" />
+                <span>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br /></span><br />
+            </div>
+        </div>
+        <div id="conteudologin">
+            <h3>@lng[Não lembra mais a sua senha?]</h3>
+            <h4>@lng[Informe os dados abaixo e uma nova senha será gerada e enviada para você]</h4>
+            <div class="caixalogin">
+                <form method="post" id="frmnovousuario" action="ressetsenha.php">
+                    <div>
+                        <label id="lblEmail" for="txtEmail">
+                            @lng[Endereço de e-mail]<br />
+                            <input type="text" name="txtEmail" id="txtEmail" class="campolongo campo req" value="<!--txtEmail-->" />
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <label id="lblNome" for="txtNome">
+                            @lng[Nome completo]<br />
+                            <input type="text" name="txtNome" id="txtNome" class="campolongo campo req" value="<!--txtNome-->" />
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <label id="lblPergunta" for="txtResposta">
+                            @lng[Qual o resultado da operação matemática]<br />
+                            <span style="font-size:14pt;font-weight:bold"><!--operacao--></span><br />
+                            <input type="text" name="txtResposta" id="txtResposta" class="campocurto campo req" />&nbsp;
+                            <span style="color:#f00; font-weight:bold;"><!--mensagem--></span>
+                        </label>
+
+                        <br /><br />
+
+                        <input type="submit" name="cmdReset" id="cmdReset" value="@lng[Enviar]" class="btn-default" />
+                        <input type="button" name="cmdCancelar" id="cmdCancelar" value="@lng[Cancelar]" class="btn-default" onclick="fntCancela();" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

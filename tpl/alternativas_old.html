@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+	<head>
+		<title>Cadastro de perguntas</title>
+		<link type="text/css" href="css/padrao.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.multi-ddm.css" />	    <link type="text/css" href="css/base/jquery.ui.all.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js" language=javascript></script>
+        <script type='text/javascript' src='js/jquery.multi-ddm.js'></script>        <script type="text/javascript" src="js/jquery.tinymce.js" language="javascript"></script>
+	    <!--script type="text/javascript" src="js/ui/jquery.ui.core.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.widget.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.mouse.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.button.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.draggable.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.position.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.ui.dialog.js"></script>
+	    <script type="text/javascript" src="js/ui/jquery.effects.core.js"></script-->
+		<script type="text/javascript" src="js/siacc.funcoes.js"></script>
+		<script type="text/javascript" src="js/siacc.perguntas.js"></script>
+		<script type="text/javascript">
+		    jQuery.noConflict();
+		    jQuery(document).ready(function(){
+		        fntFormagaGrid();
+		        jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+		        InicializaListaAlternativas();
+		    });
+		</script>
+	</head>
+	<body class="sem-borda">
+	    <!--telatopo-->
+        <div id="toolbar">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+        </div>
+        <div id="divConteudo">
+		    <h3>Alternativas da pergunta</h3>
+	        <div>
+	            <div id="descpergunta" class="des-pergunta">
+    	            <label id="lblDescricaoPergunta">Pergunta</label><br />
+	                <!--descricao-->
+	            </div>
+                
+                <div id="tipopergunta" class="des-pergunta">
+                    <label id="lblTipoPergunta">Tipo</label><br />
+                    <!--tipo-->
+                </div>
+                
+                <div id="colesq">
+                    <!--alternativas-->
+                </div>	        
+
+                <div id="coldir" class="box-oculto">
+                    <form name="frmAlternativa" id="frmAlternativa" enctype="multipart/form-data">
+                        <div id="add" class="box-alternativa-edit">
+                            <input type="hidden" name="hidSeq" id="hidSeq" value="" />
+	                        <label>Escolher imagem</label><br />
+	                        <input type="text" id="fakeupload" name="fakeupload" class="fakeupload" />
+                            <input type="file" id="realupload" name="realupload" class="realupload" />
+
+                            <br /><br />
+
+	                        <label>Texto adicional (aparecer� sobre a imagem)</label><br />
+	                        <input type="text" name="txtTextoAdicional" id="txtTextoAdicional" class="campolongo" />
+
+                            <br /><br />
+
+	                        <label>Caracter�stica</label><br />
+	                        <select name="selCorreta" id="selCorreta">
+	                            <option value="1">Correta</option>
+	                            <option value="0">Incorreta</option>
+	                        </select>
+                            
+                            <br /><br />
+
+	                        <label for="txtExplicacao">
+	                            Justificativa
+	                            <textarea name="txtExplicacao" id="txtExplicacao" class="campotexto tinymce"></textarea>
+	                        </label>
+        	                
+	                        <br /><br />
+        	                
+    	                    <label for="selConsequencia">
+    	                        Se o aluno escolher esta alternativa, o que deve acontecer?<br />
+    	                        <select name="selConsequencia" id="selConsequencia">
+    	                            <!--selConsequencia-->
+    	                            <!--option value="1">Seguir com o fluxo normal do question�rio</option>
+        	                        <option value="2">Apontar para uma pergunta em espec�fico</option>
+        	                        <option value="3">Mostrar ajuda para o aluno</option-->
+    	                        </select>
+    	                    </label>
+
+	                        <br /><br />
+        	                
+    	                    <div id="conseq" style="display:none;">
+    	                        <label>Qual</label><br />
+    	                        <select name="selValorConsequencia" id="selValorConsequencia">
+    	                            <!--selValorConsequencia-->
+    	                            <!--option value="-1">Selecione</option>
+    	                            <option value="-2">Pesquisar</option>
+    	                            <option value="0">Informarei posteriormente</option-->
+    	                        </select>
+        	                    <br /><br />
+    	                    </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="find-window" style="display:none;">
+                    <strong>Filtros</strong><br />
+                    <div id="divFiltros-lin-1">
+                        <div class="col-campo-filtro" id="col1">
+                            Tipo de pergunta:<br />
+                            <select name="selTipoPergunta" id="selTipoPergunta">
+                                <!--tipospergunta-->
+                            </select>
+                        </div>
+                        
+                        <div class="col-campo-filtro" id="col2">
+                            Classe da pergunta:<br />
+                            <select name="selClassePergunta" id="selClassePergunta">
+                                <!--classespergunta-->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="divFiltros-lin-2" style="clear:both;">
+                        Descricao:<br />
+                        <input type="text" name="term" id="term" class="campolongo">
+                        <input type="button" name="cmdProcurar" id="cmdProcurar" value="Procurar" class="btn-default" />
+                    </div>
+                    <br /><br />
+                    
+                    <div id="ret">
+                    </div>
+                </div>
+	        </div>
+	    </div>
+	</body>
+</html>

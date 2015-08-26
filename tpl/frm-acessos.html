@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/padrao.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="css/jquery.multi-ddm.css" media="screen" />
+
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+                
+                fntInicializaConsultaAcessos();
+		    });
+        </script>
+
+    </head>
+    <body class="sem-borda">
+        <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+            <h3>@lng[Consultar acessos ao sistema]</h3>
+            <form id="frmAcessos" method="post" action="vwacessos.php">
+                <input type="hidden" name="hidPagina" id="hidPagina" value="<!--hidPagina-->" />
+                <input type="hidden" name="hidAcesso" id="hidAcesso" value="" />
+                <div id="filtros">
+                    <div class="coluna-campo">
+                        <label for="txtDtIni">
+                            @lng[Data Inicial]<br />
+                            <input type="text" name="txtDtIni" id="txtDtIni" class="campo requerido campocurto" value="<!--txtDtIni-->" />
+                        </label>
+                    </div>
+
+                    <div class="coluna-campo">
+                        <label for="txtDtFin">
+                            @lng[Data Final]<br />
+                            <input type="text" name="txtDtFin" id="txtDtFin" class="campo requerido campocurto" value="<!--txtDtFin-->" />
+                        </label>
+                    </div>
+                    
+                    <div class="coluna-campo">
+                        <label for="txtUsuario">
+                            @lng[Usuário]<br />
+                            <input type="text" name="txtUsuario" id="txtUsuario" class="campo campomedio" value="<!--txtUsuario-->" />
+                        </label>
+                    </div>
+                    <input type="hidden" id="idusuario" name="idusuario" value="<!--id-usuario-->" />
+                </div>
+                <div style="clear:both;">
+                    <label>@lng[Deixe o campo Usuário em branco para buscar todos]</label>
+                </div>
+            </form>
+            <div id="divResultado">
+                <!--acessos-usuarios-->
+            </div>
+        </div>
+    </body>
+</html>

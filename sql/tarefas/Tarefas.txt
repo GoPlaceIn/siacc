@@ -1,0 +1,10 @@
+Coisas a fazer no projeto
+=========================
+
+Validar se todas as baterias de exames que tenham exames que são mostradas como perguntas tem uma pergunta cadastrada
+
+Colocar um aviso que os exames ou hipóteses foram modificado pós-processamento
+
+Criar a interface para cadastrar a sequencia das hipóteses diagnósticas
+
+Verificar se todas as sequencias tem uma pergunta guia associada

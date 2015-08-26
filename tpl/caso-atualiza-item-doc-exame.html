@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[Upload imagem]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/padrao.css" />
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.casos.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                //fntInicializaAbas();
+                
+                fntListaArquivos();
+            });
+            
+            function fntChamaAtualizacao()
+            {
+                fntFazAtualizacaoItemExame();
+            }
+            function fntExibeRetorno(par1, par2)
+            {
+                if (par1 == "OK")
+                {
+                    window.parent.fntLoadItemDetalhes('exames', par2);
+                }
+                else
+                {
+                    alert(par2);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="enviando" style="display:none;">
+            <span id="content">
+                <img src="img/loader.gif" alt="@lng[Carregando]" title="@lng[Carregando]" />&nbsp;@lng[Carregando]
+            </span>
+        </div>
+        <div id="divUpload">
+            <form id="frmAtualizaImage" method="post" action="actatualizaitemexame.php?type=doc">
+                <input type="hidden" name="txtOrigem" id="txtOrigem" value="upload" />
+                <input type="hidden" name="hdnTipo" id="hdnTipo" value="<!--tipo-->" />
+                <div id="divDadosImagem">
+                    <div id="dadosimgatual">
+                        <label for="txtDescricaoArquivo">
+                            @lng[Descrição do arquivo]<br />
+                            <input type="text" id="txtDesArquivo" name="txtDesArquivo" class="campo campo400" value="<!--txtDesArquivo-->" />
+                        </label>
+                        
+                        <br /><br />
+
+                        <label for="txtComplementoImagem">
+                            @lng[Informações complementares]<br />
+                            <textarea id="txtComplementoImagem" name="txtComplementoImagem" class="campotextomenor campo"><!--txtComplementoImagem--></textarea>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <script type="text/javascript">
+                <!--retornoacao-->
+            </script>
+        </div>
+    </body>
+</html>

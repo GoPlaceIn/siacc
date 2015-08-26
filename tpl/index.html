@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Login - SIACC</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="ADD AUTHOR INFORMATION">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+        <link rel="icone-siacc" href="img/icone_siacc.png">
+		<link rel="shortcut icon" href="img/siacc.ico">
+
+		<!-- Bootstrap Core CSS file -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!-- Conditional comment containing JS files for IE6 - 8 -->
+		<!--[if lt IE 9]>
+			<script src="js/html5.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!-- Navigation -->
+	    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://siacc.regisls.net">SIACC</a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="http://www.ufcspa.edu.br" target="_blank">UFCSPA</a></li>
+						<li><a href="http://www.feevale.br" target="_blank">Feevale</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /.navbar -->
+
+		<!-- Page Content -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="page-header">
+						<h1>SIACC</h1>
+                        Sistema Interdisciplinar de Análise de Casos Clínicos
+					</div>
+				</div>
+			</div>
+
+
+			<!-- /.row -->
+
+			<div class="row">
+				<div class="col-sm-8">
+                    <h3>O que é o projeto SIACC</h3>
+					<p>É um sistema web que tem como principal objetivo o desenvolvimento de casos de estudo para as ciências médicas, dentre as quais, Medicina, Farmácia, Psicologia, Nutrição e Enfermagem. Foi desenvolvido como um projeto de mestrado na Universidade Federal de Ciências da Saúde de Porto Alegre, através da parceria com a Universidade Feevale, unindo ciências da saúde e ciências exatas.</p>
+					<p>O projeto é destinado a Universidades interessadas em utilizar recursos computacionais em sala de aula, para prover aos alunos de forma simulada, situações do cotidiano dos profissionais da saúde.</p>
+					<p>Este projeto conta com o apoio de:</p>
+                    <div class="row">
+                        <div class="col-md-6 col-centered">
+                            <a href="http://www.ufcspa.edu.br" target="_blank">
+                                <img src="img/ufcspa.jpg" class="img-responsive center-block" style="width:250px" />
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-centered">
+                            <a href="http://www.feevale.br" target="_blank">
+                                <img src="img/feevale.jpg" class="img-responsive center-block" style="width:250px" />
+                            </a>
+                        </div>
+                    </div>
+					<hr>
+
+				</div>
+				<div class="col-sm-4">
+					<!-- Login -->
+					<div class="well">
+						<h4 class="margin-t-0">Acessar o software</h4>
+                        <form class="form-horizontal" method="post" action="actvalidalogin.php">
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-12" for="txtUsuario">Usuário</label>
+                                <div class="col-md-12">
+                                    <input id="txtUsuario" name="txtUsuario" type="text" placeholder="usuário do SIACC" class="form-control input-md" required="">
+
+                                </div>
+                            </div>
+
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-12" for="txtSenha">Senha</label>
+                                <div class="col-md-12">
+                                    <input id="txtSenha" name="txtSenha" type="password" placeholder="digite sua senha" class="form-control input-md" required="">
+
+                                </div>
+                            </div>
+
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <label class="col-md-2" for="btnEnviar"></label>
+                                <div class="col-md-12">
+                                    <button id="btnEnviar" name="btnEnviar" class="btn btn-primary">Enviar</button>
+                                    <button id="btnRegistrar" name="btnRegistrar" class="btn btn-default" onclick="javascript:fntNovoCadastro();">Quero me registrar</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <a href="ressetsenha.php" title="Recuperar senha" class="col-md-12">Esqueceu sua senha?</a>
+                            </div>
+
+                            <!--Mensagem-->
+                        </form>
+					</div>
+
+                	<!-- Panel -->
+					<!--<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">Idioma</h4>
+						</div>
+						<div class="panel-body">
+							<p>Selecione outro idioma</p>
+                            <select>
+                                <option value="pt_br">Portugues</option>
+                                <option value="en_us">Inglês</option>
+                                <option value="es_es">Espanhol</option>
+                            </select>
+						</div>
+					</div>-->
+
+				</div>
+			</div>
+			<!-- /.row -->
+
+			<hr>
+			<footer class="margin-tb-3">
+				<div class="row">
+					<div class="col-lg-12">
+                        <p>SIACC - Sistema Interdisciplinar de análise de casos clínicos</p>
+                        <p>Copyright &copy; SIACC 2015</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- /.container-fluid -->
+
+		<!-- JQuery scripts -->
+        <script src="js/jquery-1.11.2.min.js"></script>
+
+		<!-- Bootstrap Core scripts -->
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/funcoes.js"></script>
+        <script src="js/fn-login.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                jQuery.noConflict();
+                jQuery("#txtUsuario").focus();
+
+                //jQuery("#selIdioma").change(function () {
+                //    fntMudaIdioma();
+                //});
+            });
+        </script>
+        <!--analytics-->
+  </body>
+</html>
+

@@ -1,0 +1,44 @@
+            <input type="hidden" name="etapa" id="etapa" value="desfechos" class="campo" />
+            <div id="caminho">
+                <a href="javascript:void(0);" onclick="fntTelaInicial();">@lng[Caso]</a> > @lng[Desfechos]
+            </div>
+            <div id="cdes" class="pri">
+                <div id="tratcad" style="clear:both;" class="itenscad">
+                    <!--tabdesfechos-->
+                </div>
+                <!-- div id="perguntatratamentos" class="pergnorteadora">
+                    <label for="txtPerguntaGuia">
+                        Texto de reflexão<br />
+                        <textarea name="txtPerguntaGuia" id="txtPerguntaGuia" class="campo requerido tinymce"></textarea>
+                    </label>
+                </div -->
+                <div id="dlg-add-desfechos" class="dlg">
+                    <!-- div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-d">Descrição</a></li>
+				            <li><a href="#tabs-r">Relações</a></li>
+                        </ul>
+                        <div id="tabs-d" -->
+                            <label for="txtTitulo" id="lblTitulo">
+                                @lng[Título]<br />
+                                <input type="text" id="txtTitulo" name="txtTitulo" class="campolongo campo requerido" />
+                            </label>
+                            <br /><br />
+                            <label for="txtDesfecho" id="lblDescricao">
+                                @lng[Desfecho]<br />
+                                <textarea name="txtDesfecho" id="txtDesfecho" class="campotexto campo tinymce requerido"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtDesfecho');">Ações</a>
+                        <!-- /div>
+                        <div id="tabs-r">
+                            <div id="divRelacoes" class="campo"></div>
+                        </div>
+                    </div -->
+                </div>
+            </div>
+            <div id="cexa-detalhes" class="sec"></div>
+            <script type="text/javascript">
+                //fntInicializaEditor(300, 180);
+                //fntInicializaAbas();
+                //fntInicializaDialogo();
+            </script>

@@ -1,0 +1,61 @@
+            <div id="chip" class="pri">
+                <input type="hidden" name="etapa" id="etapa" value="hipoteses" class="campo" />
+                <div id="caminho">
+                    <a href="javascript:void(0);" onclick="fntTelaInicial();">@lng[Caso]</a> > @lng[Hipóteses diagnósticas]
+                </div>
+                <div id="hipcad" style="clear:both;" class="itenscad">
+                    <!--tabhipoteses-->
+                </div>
+                <!--
+                <div id="perguntahipoteses" class="pergnorteadora">
+                    <label for="txtPerguntaGuia">
+                        Texto ou Pergunta norteadora (sobre o que o aluno deve refletir)<br />
+                        <textarea name="txtPerguntaGuia" id="txtPerguntaGuia" class="tinymce"></textarea>
+                    </label>
+                </div>
+                -->
+                <div id="dlg-add-hipoteses" class="dlg">
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-b">@lng[Dados]</a></li>
+				            <li><a href="#tabs-j">@lng[Justificativa]</a></li>
+				            <li><a href="#tabs-c">@lng[Complemento]</a></li>
+                        </ul>
+                        <div id="tabs-b">
+                            <label for="txtDescricao" id="lblDescricao">
+                                @lng[Descrição]<br />
+                                <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo campo" value="" />
+                            </label>
+                            
+                            <br /><br />
+                            
+                            <label for="selCorreto">
+                                @lng[Correto]<br />
+                                <select name="selCorreto" id="selCorreto" class="campo">
+                                    <!--opcoescorreto-->
+                                </select>
+                            </label>
+                        </div>
+                        <div id="tabs-j">
+                            <label for="txtJustificativa" id="lblJustificativa">
+                                @lng[Justificativa]<br />
+                                <textarea name="txtJustificativa" id="txtJustificativa" class="campotexto campo tinymce"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtJustificativa');">@lng[Ações]</a>
+                        </div>
+                        <div id="tabs-c">
+                            <label for="txtAdicional" id="lblAdicional">
+                                @lng[Informações complementares]<br />
+                                <textarea name="txtAdicional" id="txtAdicional" class="campotexto campo tinymce"></textarea>
+                            </label>
+                            <a href="javascript:void(0);" onclick="javascript:fntMostraAcaoTexto('txtAdicional');">@lng[Ações]</a>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    //fntInicializaDialogo();
+                    //fntInicializaAbas();
+                    //fntInicializaEditor(300, 180);
+                </script>
+            </div>
+            <div id="chip-detalhes" class="sec"></div>

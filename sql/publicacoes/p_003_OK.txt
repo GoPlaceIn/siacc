@@ -1,0 +1,26 @@
+
+  Publicação 003
+  ==============
+
+  ajaxexamefisico.php
+  resolve.php
+
+  cls/examefisico.class.php
+  cls/caso.class.php
+  cls/tratamento.class.php
+
+  css/aluno/tool-tip.css
+  css/aluno/estilo.css
+
+  tpl/aluno/exame-fisico.html
+
+
+                        <div class="coluna-campo">
+                            <label for="selFeedback">
+                                Resposta imediata?<br />
+                                <select name="selFeedback" id="selFeedback" class="campo requerido">
+                                    <!--opcoesfeed-->
+                                </select>
+                            </label>
+                        </div>
+                        

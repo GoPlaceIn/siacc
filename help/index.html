@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SIACC - HELP</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.dynatree.min.js"></script>
+        <link rel="Stylesheet" type="text/css" href="../js/skin-vista/ui.dynatree.css" />
+		<link rel="Stylesheet" type="text/css" href="../css/padrao.css" media="screen" />
+        <link rel="Stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+        <script type="text/javascript">
+            jQuery.noConflict();
+            jQuery(document).ready(function(){
+                jQuery("#nav").dynatree({
+                    title: "Dynatree",
+                    clickFolderMode: 3,
+                    onClick: function(node){
+                        jQuery("#ifrconteudo").attr("src", (node.data.key + ".html"));
+                    },
+                    onActivate: function(node){
+                        jQuery('iframe').load(function() {
+                            var iframeId = jQuery(this).attr("id");
+                            var iframeHeight = jQuery(this).contents().find("body").height()+20;
+                            jQuery(this).height(iframeHeight);
+                        });
+                    }
+                });
+            });
+        </script>
+        
+    </head>
+    <body class="fundo-azul">
+        <div id="titulo" class="inicial">
+            <div id="inicial-content">
+                <img src="../img/logo.jpg" alt="SIACC - UFCSPA" title="SIACC - UFCSPA" />
+                <span>SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos<br /></span><br />
+            </div>
+        </div>
+        <div id="container">
+            <div id="center" class="column">
+                <iframe id="ifrconteudo" scrolling="auto" src="bemvindo.html" frameborder="0" style="width: 95%;">
+                </iframe>
+            </div>
+            <div id="left" class="column">
+                <div id="nav">
+                    <ul>
+                        <li id="bemvindo">Bem vindo ao SIACC</li>
+                        <li id="oque">O que é o SIACC</li>
+                        <li id="paraquem">Para quem é o SIACC</li>
+                        <li id="sobre">Sobre o sistema</li>
+                        <li id="topicos">
+                            Tópicos de ajuda
+                            <ul>
+                                <li id="inicio">Iniciando</li>
+                                <li>Como se cadastrar</li>
+                                <li>Fazendo Login</li>
+                                <li>
+                                    Outro item
+                                    <ul>
+                                        <li>Terceiro nivel</li>
+                                        <li>Outro item</li>
+                                    </ul>
+                                </li>
+                                <li>Voltando um nível</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div id="right" class="column">
+                conteudo
+            </div>-->
+        </div>
+    </body>
+</html>

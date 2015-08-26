@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[Upload imagem]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/padrao.css" />
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.casos.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                fntInicializaAbas();
+                
+                jQuery("#realupload").change(function(){
+                    fntPreview();
+                });
+                <!--Listararquivos-->
+                fntListaArquivos('S');
+            });
+            
+            function fntChamaUp()
+            {
+                fntFazUploadImagem();
+            }
+            
+            function fntCarregaVideoSistemaInterna()
+            {
+                fntCarregaVideoSistemaBase();
+            }
+            
+            function fntSetaTipoVideo(tipo)
+            {
+                jQuery("#txtTipo").val(tipo);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="enviando" style="display:none;">
+            <span id="content">
+                <img src="img/loader.gif" alt="Carregando" title="Carregando" />&nbsp;@lng[Carregando]
+            </span>
+        </div>
+        <div id="divUpload" class="dlg">
+            <h4>@lng[Selecionar arquivo]</h4>
+            <div id="find-file">
+                <form id="frmUploadVideo" method="post" action="actuploadvideo.php" enctype="multipart/form-data">
+                    <input type="hidden" name="txtOrigem" id="txtOrigem" value="conteudo" />
+                    <input type="hidden" name="txtTipo" id="txtTipo" value="cont" />
+                    <label for="fakeupload">
+                        @lng[Arquivo]<br />
+                        <input type="text" id="fakeupload" name="fakeupload" class="fakeupload campo" />
+                    </label>
+                    <input type="file" id="realupload" name="realupload" class="realupload campo" />
+                    
+                    <br /><br />
+                    
+                    <label for="txtDescricaoArquivo">
+                        @lng[Descrição do arquivo]<br />
+                        <input type="text" id="txtDesArquivo" name="txtDesArquivo" class="campo campolongo w98" />
+                    </label>
+                    
+                    <br /><br />
+                    
+                    <label for="txtComplementoVideo">
+                        @lng[Informações complementares]<br />
+                        <textarea id="txtComplementoVideo" name="txtComplementoVideo" class="campotextomenor campo"></textarea>
+                    </label>
+                    
+                    <br /><br />
+                    
+                    <div class="coluna-campo">
+                        <label for="txtLargura">
+                            @lng[Largura]<br />
+                            <input type="text" name="txtLargura" id="txtLargura" class="campo campocurto" />
+                        </label>
+                    </div>
+
+                    <div class="coluna-campo">
+                        <label for="txtAltura">
+                            @lng[Altura]<br />
+                            <input type="text" name="txtAltura" id="txtAltura" class="campo campocurto" />
+                        </label>
+                    </div>
+                    
+                    <div class="coluna-campo">
+                        <br />
+                        @lng[Estas informações podem ser obtidas nas propriedades do arquivo]
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

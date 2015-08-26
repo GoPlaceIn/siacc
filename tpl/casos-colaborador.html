@@ -1,0 +1,48 @@
+            <div id="caminho">
+                <!--caminho-->
+            </div>
+            <div id="ccf" class="pri">
+                <br />
+                <form method="post" action="actgravacaso.php" id="frmcaso" style="clear:both;">
+                    <div>
+                        <input type="hidden" id="etapa" name="etapa" value="colaborador" class="campo" />
+
+                        <label for="selGrupos" id="lblGrupos">
+				            @lng[Grupo]<br />
+				            <select id="selGrupos">
+				                ##OptsGrupos##
+				            </select>
+				        </label>
+				        <br /><br />
+				        <div id="divUsuarios">
+				            <div id="todos" class="caixasel">
+				                <label for="selTU" id="lblTU">
+				                    @lng[Todos]<br />
+				                    <select name="selTU" id="selTU" multiple="multiple" class="selmultiplo">
+				                        ##OptsTU##
+				                    </select>
+				                </label>
+				                <br /><br />
+				            </div>
+				            <div id="botoes" class="caixaselpeq">
+				                <input type="button" name="addUser" id="addUser" value=" > " class="btn-default" /><br />
+				                <input type="button" name="remUser" id="remUser" value=" < " class="btn-default" /><br />
+				                <input type="button" name="addAllUser" id="addAllUser" value=">>" class="btn-default" /><br />
+				                <input type="button" name="remAllUser" id="remAllUser" value="<<" class="btn-default" /><br />
+				            </div>
+				            <div id="dogrupo" class="caixasel">
+				                <label for="selUDG" id="lblUDG">
+				                    @lng[Selecionados]<br />
+				                    <select name="selUDG" id="selUDG" multiple="multiple" class="selmultiplo">
+				                        ##OptsUDG##
+				                    </select>
+				                </label>
+				                <br /><br />
+				            </div>
+				        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div id="cexa-detalhes" class="sec"></div>
+            <script type="text/javascript">fntInitUsuariosColaborador();</script>

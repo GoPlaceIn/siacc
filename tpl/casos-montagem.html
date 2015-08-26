@@ -1,0 +1,22 @@
+            <div id="cobj">
+                <input type="hidden" name="etapa" id="etapa" value="montagem" class="campo" />
+                <div id="caminho"></div>
+                <div id="execad" style="clear:both;">
+                    <p>@lng[Reordene os quadros abaixo conforme necessário para elaborar as etapas do caso clínico. Os cinco primeiros itens não podem ser movidos.]</p>
+                    <p>@lng[Serão exibidos todos os itens da primeira linha <strong>da esquerda para a direita</strong>, depois os da segunda linha da esquerda para a direita e assim sucessivamente.]</p>
+                    <ul id="sortable">
+                        <!--montagemcaso-->
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                jQuery("#sortable").sortable({
+			        /*placeholder: 'ui-state-highlight',
+			        items: 'li:not(.ui-state-default)',
+			        cancel: '.ui-state-default'*/
+			        paceholder: 'ui-state-highlight',
+			        items: 'li:not(.ui-state-default)',
+			        cancel: '.ui-state-default'
+		        });
+		        jQuery("#sortable").disableSelection();
+            </script>

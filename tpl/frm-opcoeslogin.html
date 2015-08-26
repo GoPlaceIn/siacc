@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/padrao.css" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/siacc.login.js"></script>
+    </head>
+    <body class="fundo-azul">
+        <div id="titulo" class="inicial">
+            <div id="inicial-content">
+                <img src="img/logo.jpg" alt="SIACC - UFCSPA" title="SIACC - UFCSPA" />
+                <span>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br /></span><br />
+            </div>
+        </div>
+        <div id="conteudologin">
+            <h3>@lng[Selecione o perfil com o qual deseja acessar o sistema]</h3>
+            <form id="frmPerfil" action="vwopcoeslogin.php" method="post">
+                <label for="selPerfil">
+                    @lng[Perfil]<br />
+                    <!--Perfis-->
+                </label>
+                <br /><br />
+                <input type="submit" name="btnOK" id="btnOK" value="@lng[OK]" class="btn-default" title="@lng[OK]" />
+            </form>
+            <div class="rodape-login">
+                @lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br />
+                @lng[Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA]
+            </div>
+        </div>
+    </body>
+</html>

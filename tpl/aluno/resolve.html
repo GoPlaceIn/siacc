@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>Caso de estudo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="Fri, 31 Dec 1999 12:00:00 GMT" />
+        <link rel="Stylesheet" type="text/css" href="css/aluno/estilo.css" />
+        <link rel="Stylesheet" type="text/css" href="css/aluno/tool-tip.css" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.aluno.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var largtela = $(window).width();
+                var largobj = $("#content").width();
+                var marginleft = parseInt(((largtela - largobj)/2), 10);
+
+                $("#content").css("margin-left", marginleft+"px");
+                $("#content").css("margin-bottom", "20px");
+                $("#navega").val("n");
+                <!--javascriptload-->
+            });
+        </script>
+    </head>
+    <body lang="pt-br" xml:lang="pt-br">
+        <form id="frmResolucao" method="post" action="resolve.php" onsubmit="javascript:fntVerificaEnvio();">
+        <div id="content">
+            <input type="hidden" name="hdnk" id="hdnk" value="<!--chave-->" />
+            <input type="hidden" name="d" id="d" value="f" />
+            <input type="hidden" name="hdnof" id="hdnof" value="<!--of-->" />
+            <input type="hidden" name="hdnaf" id="hdnaf" value="N" />
+            <div id="barra-acoes">
+                <span style="float:left;">
+                    <!--menusecao-->
+                </span>
+                <span style="float:right;">
+                    <a href="javascript:void(0);" onclick="javascript:fntHome();"><img src="img/home.png" class="botao" title="Início" alt="Início" /></a>
+                    <a href="javascript:void(0);" onclick="javascript:fntSair();"><img src="img/sair.png" class="botao" title="Sair" alt="Sair" /></a>
+                </span>
+            </div>
+            <h4><!--titulocaso--></h4>
+            <div class="secao"><!--titulosecao--></div>
+            <!--conteudosecao-->
+        </div>
+        </form>
+    </body>
+</html>

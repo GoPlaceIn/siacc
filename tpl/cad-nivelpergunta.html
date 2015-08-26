@@ -1,0 +1,14 @@
+        <h3>@lng[Cadastro de Níveis de dificuldade]</h3>
+        <form name="frmNiveis" id="frmNiveis" method="post" action="actgravanivelpergunta.php">
+            <div>
+                <label id="lblCodigo" for="txtCodigo">
+                    @lng[Código]<br />
+                    <input type="text" name="txtCodigo" id="txtCodigo" class="campocurto campo" value="##txtCodigo##" readonly="readonly" title="@lng[Código do nínvel de dificuldade]" />
+                </label>
+                <br /><br />
+                <label id="lblDescricao" for="txtDescricao">
+                    @lng[Descrição] *<br />
+                    <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo campo requerido" value="##txtDescricao##" title="@lng[Descrição do nível de dificuldade]" />
+                </label>
+            </div>
+        </form>

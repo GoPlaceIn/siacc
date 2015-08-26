@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="js/jquery-1.7.min.js" language="javascript"></script>
+    <script type="text/javascript" src="js/jquery.toChecklist.min.js" language="javascript"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js" language="javascript"></script>
+    <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.toChecklist.min.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/jquery.multi-ddm.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/padrao.css" media="screen" type="text/css" />
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            jQuery.noConflict();
+            jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+            jQuery('#selPermissoes').toChecklist();
+            
+            fntInitGerenciaGrupo();
+		});
+    </script>
+</head>
+<body class="sem-borda">
+    <!--telatopo-->
+    <div id="toolbar">
+        <div class="cont-sup">
+            <ul>
+                <!--itens-toolbar-->
+            </ul>
+        </div>
+    </div>
+    <div id="divConteudo">
+        <label for="selGrupos" id="lblGrupos">
+            @lng[Grupos]<br />
+            <select id="selGrupos" class="selmultiplo largo" size="10">
+                ##OptsGrupos##
+            </select>
+        </label>
+        <br /><br />
+        <label for="selPermissoes" id="lblPemissoes">
+            @lng[Permissões]<br />
+        </label>
+        <div id="divPermissoes">
+            <select id="selPermissoes" name="selPermissoes" class="selmultiplo largo" size="10" multiple="multiple">
+                ##OptsPermissoes##
+            </select>
+        </div>
+    </div>
+    
+    <div id="divMsg">
+        ##Mensagem##
+    </div>
+</body>
+</html>

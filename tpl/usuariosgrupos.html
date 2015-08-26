@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Cados Clínicos]</title>
+    <script type="text/javascript" src="js/jquery-1.7.min.js" language="javascript"></script>
+    <script type="text/javascript" src="js/jquery.selectboxes.js" language="javascript"></script>
+    <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+    <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.multi-ddm.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/padrao.css" media="screen" type="text/css" />
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+            jQuery.noConflict();
+            fntInitUsuariosGrupos();
+		});
+    </script>
+</head>
+<body class="sem-borda">
+    <!--telatopo-->
+    <div id="toolbar">
+        <div class="cont-sup">
+            <ul>
+                <!--itens-toolbar-->
+            </ul>
+        </div>
+    </div>
+    <div id="divConteudo">
+        <h3>@lng[Usuários X Grupos e usuários]</h3>
+        <label for="selGrupos" id="lblGrupos">
+            @lng[Grupo]<br />
+            <select id="selGrupos">
+                ##OptsGrupos##
+            </select>
+        </label>
+        <br /><br />
+        <div id="divUsuarios">
+            <div id="todos" class="caixasel">
+                <label for="selTU" id="lblTU">
+                    @lng[Todos]<br />
+                    <select name="selTU" id="selTU" multiple="multiple" class="selmultiplo">
+                        ##OptsTU##
+                    </select>
+                </label>
+                <br /><br />
+            </div>
+            <div id="botoes" class="caixaselpeq">
+                <input type="button" name="addUser" id="addUser" value=" > " class="btn-default" /><br />
+                <input type="button" name="remUser" id="remUser" value=" < " class="btn-default" /><br />
+                <input type="button" name="addAllUser" id="addAllUser" value=">>" class="btn-default" /><br />
+                <input type="button" name="remAllUser" id="remAllUser" value="<<" class="btn-default" /><br />
+            </div>
+            <div id="dogrupo" class="caixasel">
+                <label for="selUDG" id="lblUDG">
+                    @lng[Selecionados]<br />
+                    <select name="selUDG" id="selUDG" multiple="multiple" class="selmultiplo">
+                        ##OptsUDG##
+                    </select>
+                </label>
+                <br /><br />
+            </div>
+        </div>
+        <div id="divMsg">
+            <!--Mensagem-->
+        </div>
+    </div>
+</body>
+</html>

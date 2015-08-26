@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/padrao.css" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/siacc.login.js"></script>
+    </head>
+    <body class="fundo-azul">
+        <div id="titulo" class="inicial">
+            <div id="inicial-content">
+                <img src="img/logo.jpg" alt="SIACC - UFCSPA" title="SIACC - UFCSPA" />
+                <span>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br /></span><br />
+            </div>
+        </div>
+        <div id="conteudologin">
+            <h3>@lng[Bem vindo ao SIACC]</h3>
+            <h4>@lng[O SIACC é um sistema educacional que visa facilitar o desenvolvimento de material didático e facilitar o]<br /> 
+            @lng[aprendizado nos cursos da saúde. Realize seu cadastro para ter acesso aos recursos disponíveis no sistema.]</h4>
+            <div id="frmCadNewUsu" class="caixalogin">
+                <form method="post" id="frmnovousuario" action="vwnovousuario.php">
+                    <div>
+                        <input type="hidden" name="oc" value="2" class="campo" />
+                        <label id="lblNome" for="txtNome">
+                            @lng[Nome completo] *<br />
+                            <input type="text" name="txtNome" id="txtNome" class="campolongo campo requerido" />
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <label id="lblUsuario" for="txtUsuario">
+                            @lng[Usuário] *<br />
+                            <input type="text" name="txtUsuario" id="txtUsuario" class="campolongo campo requerido" />
+                        </label>
+
+                        <br /><br />
+                        
+                        <label id="lblEmail" for="txtEmail">
+                            @lng[E-mail] *<br />
+                            <input type="text" name="txtEmail" id="txtEmail" class="campolongo campo requerido" />
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <label id="lblInstituicao" for="selInstituicao">
+                            @lng[Instituição de ensino]<br />
+                            <!--selInstituicao-->
+                        </label>
+
+                        <br /><br />
+                        
+                        <label id="lblIdioma" for="selIdioma">
+                            @lng[Idioma]<br />
+                            <!--selIdioma-->
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <label id="lblSenha" for="txtSenha">
+                            @lng[Senha] *<br />
+                            <input type="password" name="txtSenha" id="txtSenha" class="campomedio campo requerido" />
+                        </label>
+                        
+                        <br /><br />
+                        
+                        <label id="lblRepetirSenha" for="txtRepetirSenha">
+                            @lng[Repetir Senha] *<br />
+                            <input type="password" name="txtRepetirSenha" id="txtRepetirSenha" class="campomedio campo requerido" />
+                        </label>
+
+                        <br /><br />
+
+                        <input type="button" name="cmdCadastrar" id="cmdCadastrar" value="@lng[Enviar]" class="btn-default" onclick="javascript:fntSendForm();" />
+                        <input type="button" name="cmdLimpar" id="cmdLimpar" value="@lng[Limpar]" class="btn-default" onclick="javascript:fntLimpaForm();" />
+                        <input type="button" name="cmdCancelar" id="cmdCancelar" value="@lng[Cancelar]" class="btn-default" onclick="javascript:fntCancela();" />
+                    </div>
+                </form>
+            </div>
+            <div class="rodape-login">
+                @lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]<br />
+                @lng[Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA]
+            </div>
+        </div>
+    </body>
+</html>

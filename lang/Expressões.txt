@@ -1,0 +1,43 @@
+Lista de Áreas de conhecimento
+Área principal
+Casos de estudo cadastrados
+Nível Dif.
+Lista de Classificações de exercícios
+Dt. Cadastro
+Desfechos cadastrados
+Diagnósticos cadastradas
+Exames cadastrados
+Conteudos já vinculados aos exames
+Exame
+Mídias já vinculadas aos exames
+Lista de Grupos de Usuários do sistema
+Lista de agrupadores de pergunta
+Hipóteses cadastradas
+Lista de Instituições de ensino
+Responsável
+Ações realizadas
+Data/Hora
+Destino
+Item
+Destino
+Condição
+Prior.
+Lista de níveis de dificuldade do sistema
+Objetivos cadastrados
+Objetivo
+Lista de Execícios
+Autor
+Lista de Permissões do sistema
+Tipos de exames cadastrados
+Lista de Tipos de pergunta
+Tratamentos cadastrados
+Indicação (ordem)
+Lista de Usuarios do sistema
+Novos cadastros pendentes de aprovação
+Data Cad.
+Componentes cadastrados
+Hipótese diagnóstica
+Núm. Alternativas
+Núm. exercícios
+Acessos ao sistema
+Núm. Acesso

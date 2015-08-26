@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+<head>
+<title>@lng[Cadastro de perguntas]</title>
+<link rel="Stylesheet" href="css/padrao.css" type="text/css" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/jquery.multi-ddm.css" />
+
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+<script type="text/javascript" src="js/lang/lang.js"></script>
+<script type="text/javascript" src="js/siacc.funcoes.js"></script>
+<script type="text/javascript" src="js/siacc.perguntas.js"></script>
+<script type="text/javascript">
+		    jQuery.noConflict();
+		    jQuery(document).ready(function(){
+		        jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+		    });
+		</script>
+</head>
+<body class="sem-borda">
+    <!--telatopo-->
+    <div id="toolbar">
+        <div class="cont-sup">
+            <ul>
+                <!--itens-toolbar-->
+            </ul>
+        </div>
+    </div>
+    <div id="divConteudo">
+        <h3>@lng[Cadastro de perguntas]</h3>
+        <form name="frmPergunta" id="frmPergunta" method="post" action="perguntas.php">
+            <div>
+                <input type="hidden" name="act" id="act" value="" />
+                <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="oculto" />
+                <label id="lblTexto" for="txtDescricao">
+                    @lng[Descrição]<br />
+                    <textarea name="txtDescricao" id="txtDescricao" class="campotextofull"><!--TextoPergunta--></textarea>
+                </label>
+                
+                <br /><br />
+
+                <div id="campo1" class="coluna-campo">
+                    <label id="lblClasse" for="selClasse">
+                        @lng[Classe]<br />
+                        <select name="selClasse" id="selClasse" class="campo requerido">
+	                        <!--ListaClasses-->
+                        </select>
+                    </label>
+                </div>
+                
+                <div id="campo2" class="coluna-campo">
+                    <label id="lblNivel" for="selNivel">
+                        @lng[Nível]<br />
+                        <select name="selNivel" id="selNivel" class="campo requerido">
+	                        <!--ListaNiveis-->
+                        </select>
+                    </label>
+                </div>
+                
+                <div id="campo3" class="coluna-campo">
+                    <label id="lblAtivo" for="selAtivo">
+                        @lng[Ativo]<br />
+                        <select name="selAtivo" id="selAtivo" class="campo requerido">
+	                        <!--ListaAtivo-->
+                        </select>
+                    </label>
+                </div>
+                
+                <div id="campo4" class="coluna-campo">
+                    <label id="lblTipo" for="selTipo">
+                        @lng[Tipo]<br />
+                        <select name="selTipo" id="selTipo" class="campo requerido">
+	                        <!--ListaTipos-->
+                        </select>
+                    </label>
+                </div>
+                <br /><br />
+                <br /><br />
+                <div id="campo5">
+                    <label for="txtExplicacaoGeral">
+                        @lng[Explicação geral. Se você não deseja informar uma justificativa para cada alternativa, preencha este campo]<br />
+                        <textarea id="txtExplicacaoGeral" name="txtExplicacaoGeral" class="campo campotextofull"><!--txtExplicacaoGeral--></textarea>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="ret"></div>
+</body>
+</html>

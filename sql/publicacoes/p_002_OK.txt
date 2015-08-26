@@ -1,0 +1,23 @@
+
+  Publicação 001
+  ==============
+
+  cls/usuario.class.php
+  cls/log.class.php
+  cls/caminhos.class.php
+  cls/caso.class.php
+  cls/area.class.php
+  cls/hipoteses.class.php
+  js/funcoes.js
+  css/padrao.css
+  vwacessos.php
+  ajaxcasosacoesextras.php
+  actvalidalogin.php
+  inc/comuns.inc.php
+  tpl/frm-acessos.html
+  tpl/frm-acessos-detalhes.html
+  tpl/casos-inicio-2.html
+  tpl/casos-inicio.html
+  tpl/casos-configs.html
+
+  Exclusão de usuário adicionada

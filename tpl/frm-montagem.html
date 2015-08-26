@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>@lng[SIACC - Sistema Interdisciplinar de Análise de Casos Clínicos]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/padrao.css" />
+        <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="css/jquery.multi-ddm.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="js/skin-vista/ui.dynatree.css" >
+
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+        <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+		<script type="text/javascript" src="js/lang/lang.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.casos.js"></script>
+        <script type="text/javascript" src="js/siacc.forms.js"></script>
+        <script type="text/javascript" src="js/siacc.montagem.js"></script>
+        <script type="text/javascript">
+            jQuery.noConflict();
+            jQuery(document).ready(function(){
+                jQuery('#multi-ddm').dropDownMenu({timer: 1000, parentMO: 'parent-hover', childMO: 'child-hover1'});
+                
+                jQuery('.accordion').accordion({
+                    heightStyle: "content"
+                });
+                
+                jQuery('#detnodos').dialog({
+                    autoOpen: false,
+                    width: 600,
+                    height: 500,
+                    title: 'Selecione os itens que deseja incluir',
+                    buttons: {
+                        "OK": function(){
+                            fntAddFolha();
+                            jQuery(this).dialog("close");
+                        },
+                        "Cancelar": function() { 
+                            jQuery(this).dialog("close");
+                        }
+                    }
+                });
+                
+                jQuery("#tree").dynatree({
+                    selectMode: 1,
+                    minExpandLevel: 1,
+                    onActivate: function(node) {
+                        jQuery("#configs").hide();
+                    },
+                    onDblClick: function(node, event){
+                        fntBuscaDetalhesNodo(node.data.key, 'detnodos');
+                    },
+                    onKeydown: function(node, event){
+                        if (event.keyCode == 46)
+                        {
+                            fntRemoverItemMontagem();
+                        }
+                    },
+                    dnd: {
+                        onDragStart: function(node) {
+                            jQuery("#posAtual").val(fntIrmaosMaisVelhos(node.parent, node));
+                            
+                            if (node.data.key.substr(0, 4) != 'raiz')
+                                return true;
+                            else
+                                return false;
+                        },
+                        onDragEnter: function(node, sourceNode) {
+                            if(node.parent !== sourceNode.parent)
+                                return false;
+                            
+				            return ["after"];
+                        },
+                        onDrop: function(node, sourceNode, hitMode, ui, draggable) {
+                            sourceNode.move(node, hitMode);
+                            jQuery("#posNova").val(fntIrmaosMaisVelhos(sourceNode.parent, sourceNode));
+                            fntAtualilzaPosicao(sourceNode.data.key, sourceNode.parent.data.key);
+                        }
+                    }
+                });
+                jQuery("#tree").dynatree("getRoot").visit(function(node){
+                    node.expand(true);
+                });
+		    });
+        </script>
+
+    </head>
+    <body class="sem-borda" onload="fntInicializaConfigs()">
+        <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+            <input type="hidden" id="posAtual" name="posAtual" />
+            <input type="hidden" id="posNova" name="posNova" />
+            <input type="hidden" id="hidOpcao" name="hidOpcao" />
+            <h3>@lng[Montagem do caso clínico]</h3>
+
+            <p>@lng[Clique em um item da árvore e então clique nas opções abaixo para adiciona-las ao item já selecionado.]<br />
+            @lng[Para inserir conteúdos como opções de exame, exercícios, imagens e outros, de um duplo clique sobre o item já adicionado a árvore.]</p>
+            
+            <div id="mont-left">
+                <div class="accordion">
+                    <h3>@lng[Anamnese]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('an')">@lng[Identificação]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('aninv')">@lng[Investigação]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Exame físico]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('exfis')">@lng[Exame físico]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Hipóteses diagnósticas]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('hip')">@lng[Hipóteses diagnósticas]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Exames complementares]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('optex')">@lng[Opções]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('resex')">@lng[Resultados]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Diagnósticos]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('diag')">@lng[Diagnósticos]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Tratamentos]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('trat')">@lng[Tratamentos]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Desfecho]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('des')">@lng[Desfecho]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Conteúdos]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('html')">@lng[Hipertexto]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('img')">@lng[Imagem]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('vid')">@lng[Vídeo]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('aud')">@lng[Áudio]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('doc')">@lng[Documento]</a></li>
+                        </ul>
+                    </div>
+                    <h3>@lng[Exercícios]</h3>
+                    <div>
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('perg')">@lng[Exercício]</a></li>
+                            <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('grupo-perg')">@lng[Agrupamento]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="itens-montagem" style="display:none;">
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('an')">Anamnese (identificação)</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('aninv')">Anamnese (investigação)</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('exfis')">Exame físico</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('hip')">Hipóteses diagnósticas</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('optex')">Exame compl. - opções</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('resex')">Exame compl. - resultado</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('diag')">Diagnósticos - opções</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('trat')">Tratamentos - opções</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('des')">Desfecho</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('html')">Conteudo HTML</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('img')">Imagem</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('vid')">Vídeo</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('aud')">Áudio</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('doc')">Documento</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('perg')">Exercício</a></li>
+                <li><a href="javascript:void(0)" onclick="javascript:fntAddItemMontagem('grupo-perg')">Grupo de exercícios</a></li>
+            </ul>  
+            <div id="center" class="mont-arvore" style="padding:5px;">
+                <div class="easyui-layout">
+                    <div id="arvore">
+                        <!--arvore-->
+                    </div>
+                    <div id="detnodos" style="display:none;">
+                    </div>
+                    <div id="configs" style="display:none;">
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#tab-configs">@lng[Configurações]</a></li>
+                                <li><a href="#tab-saltos">@lng[Desvios condicionais]</a></li>
+                                <li><a href="#tab-anexos">@lng[Materiais complementares]</a></li>
+                            </ul>
+                            <div id="tab-configs">
+                                <div id="conf-1" class="caixa-config">
+                                    <label for="selConfig_1">
+                                        @lng[Tipo de escolha]<br />
+                                        <select name="selConfig_1" id="selConfig_1" class="campo">
+                                            <option value="">@lng[Selecione]</option>
+                                            <option value="1">@lng[Várias opções]</option>
+                                            <option value="2">@lng[Somente uma opção]</option>
+                                        </select>
+                                    </label>
+                                    <br /><br />
+                                </div>
+                                <div id="conf-5" class="caixa-config">
+                                    <label for="txtConfig_5">
+                                        @lng[Título do item]<br />
+                                        <input type="text" name="txtConfig_5" id="txtConfig_5" class="campo campomedio" />
+                                    </label>
+                                    <br /><br />
+                                </div>
+                                <div id="conf-2" class="caixa-config">
+                                    <label for="txtConfig_2">
+                                        @lng[Reflexão (sobre o que o aluno deve pensar)]<br />
+                                        <textarea name="txtConfig_2" id="txtConfig_2" class="campo campotextomedio"></textarea>
+                                    </label>
+                                    <br /><br />
+                                </div>
+                                <div id="conf-3" class="caixa-config">
+                                    <label for="chkConfig_3">
+                                        @lng[Mostrar somente os resultados dos exames selecionados no item]<br /><br />
+                                        <a href="javascript:void(0);" onclick="javascript:fntArvoreExames();" class="link-paginacao">@lng[Clique para selecionar]</a><span id="nomeconf3"></span>
+                                        <input type="hidden" name="txtConfig_3" id="txtConfig_3" class="campo" />
+                                    </label>
+                                    <br /><br />
+                                </div>
+                                <div id="conf-4" class="caixa-config">
+                                    <label for="chkConfig_4">
+                                        <input type="checkbox" name="chkConfig_4" id="chkConfig_4" class="campo" style="border:none;" />@lng[Fim do caso (se o aluno visualizar este item, terminar o caso)]
+                                    </label>
+                                    <br /><br />
+                                </div>
+                                <div id="conf-6" class="caixa-config">
+                                    <label for="chkConfig_6">
+                                        <input type="checkbox" name="chkConfig_6" id="chkConfig_6" class="campo" style="border:none;" />@lng[O caso não termina (continua depois deste conteúdo)]
+                                    </label>
+                                </div>
+                                <div id="conf-7" class="caixa-config">
+                                    <label for="chkConfig_7">
+                                        <input type="checkbox" name="chkConfig_7" id="chkConfig_7" class="campo" style="border:none;" />@lng[O aluno poderá ver a resposta imediatamente]
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="tab-saltos">
+                                @lng[Após visualisar o conteúdo do item selecionado] (<span id="nomenodoatual"></span>) @lng[o aluno deve ser direcionado para o seguinte item]
+                                <br /><br />
+                                <a href="javascript:void(0);" onclick="javascript:fntArvoreSalto('des');" class="link-paginacao">@lng[Clique para selecionar]</a><span id="nomenododes"></span>
+                                <input type="hidden" id="nodeDes" name="nodeDes" />
+                                <br /><br />
+                                <div id="divareacond">@lng[Condição (opcional)]</div>
+                                @lng[sendo que no item]
+                                <br /><br />
+                                <a href="javascript:void(0);" onclick="javascript:fntArvoreSalto('cond');" class="link-paginacao">@lng[Clique para selecionar]</a><span id="nomenodocond"></span>
+                                <input type="hidden" id="nodeCond" name="nodeCond" />
+                                <br /><br />
+                                <div id="opcoes-perguntas-config" style="display:none;">
+                                    @lng[na pergunta]:<br />
+                                    <select name="selPerguntaConfig" id="selPerguntaConfig" onchange="javascript:fntPreBuscaOpcoes();"></select>
+                                    <br /><br />
+                                </div>
+                                @lng[a resposta deve ter sido igual a (selecione as opções)]
+                                <br /><br />
+                                <div id="opcoes-resposta-config">
+                                </div>
+                                <input type="button" name="btnSalvarDesvio" id="btnSalvarDesvio" value="Adicionar" class="btn-default" onclick="javascript:fntSalvaDesvio();" />
+                                <div id="divDesviosSalvos" class="campo">
+                                    <!--divDesviosSalvos-->
+                                </div>
+                            </div>
+                            <div id="tab-anexos">
+                                <p>@lng[Vincule aqui os conteúdos que o aluno poderá ler/consultar durante a visualização do item selecionado]</p>
+                                <label for="selConteudos">
+                                    @lng[Conteúdos]<br />
+                                    <select name="selConteudos" id="selConteudos">
+                                        <!--selConteudos-->
+                                    </select>
+                                </label>
+                                <br />
+                                <input type="button" name="btnVincularAnexoItem" id="btnVincularAnexoItem" value="Adicionar" class="btn-default" onclick="javascript:fntVincularAnexoitem();" />
+                                <p>@lng[Conteúdos já vinculados]</p>
+                                <div id="divAnexosSalvos" class="campo">
+                                    <!--ListaAnexosItem-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="divArvoreSalto"></div>
+            <div id="divArvoreExames"></div>
+        </div>
+    </body>
+</html>

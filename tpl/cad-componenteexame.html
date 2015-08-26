@@ -1,0 +1,19 @@
+        <div id="tudo-componente">
+            <form name="frmComponentes" id="frmComponentes" method="post">
+                <div>
+                    <input type="hidden" name="hdnCodigoExame" id="hdnCodigoExame" class="campo" value="<!--hdnCodigoExame-->" />
+                    <input type="hidden" name="hdnCodigoComp" id="hdnCodigoComp" class="campo" value="<!--hdnCodigoComp-->" />
+                    
+                    <h4>@lng[Componentes do exame]: <!--nomeexame--></h4>
+                    
+                    <label for="txtDescricao" id="lblDescricao" class="titulo-campo">
+                        @lng[Descrição] *<br />
+                        <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo campo requerido" value="<!--txtDescricao-->" title="@lng[Descrição do componente]" maxlength="200" />
+                    </label>
+                </div>
+            </form>
+            <div id="divtabela" style="overflow:auto;">
+                <!--tabela-->
+            </div>
+        </div>
+        

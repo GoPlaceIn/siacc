@@ -1,0 +1,25 @@
+        <h3>@lng[Cadastro de areas de conhecimento]</h3>
+        <form name="frmAreas" id="frmAreas" method="post" action="actgrvaarea.php">
+            <div>
+                <label for="txtCodigo" id="lblCodigo" class="titulo-campo">
+                    @lng[Código]<br />
+                    <input type="text" name="txtCodigo" id="txtCodigo" <!--readonly-->  class="campocurto" value="<!--txtCodigo-->" title="@lng[Código da area de conhecimento]" />
+                </label>
+                
+                <br /><br />
+
+                <label for="txtDescricao" id="lblDescricao" class="titulo-campo">
+                    @lng[Descrição]<br />
+                    <input type="text" name="txtDescricao" id="txtDescricao" class="campolongo" value="<!--txtDescricao-->" title="@lng[Descrição da classe de perguntas]" maxlength="100" />
+                </label>
+                
+                <br /><br />
+                
+                <label for="selAreaPai" id="lblAreaPai" class="titulo-campo">
+                    @lng[Área pai]<br />
+                    <select name="selAreaPai" id="selAreaPai">
+                        <!--selAreaPai-->
+                    </select>
+                </label>
+            </div>
+        </form>

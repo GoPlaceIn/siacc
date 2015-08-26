@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <title>Caso de estudo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="Stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css" />
+        <link rel="Stylesheet" type="text/css" href="css/aluno/estilo.css" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.aluno.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var largtela = $(window).width();
+                var largobj = $("#content").width();
+                var marginleft = parseInt(((largtela - largobj)/2), 10);
+
+                $("#content").css("margin-left", marginleft+"px");
+                fntFormataGridsResumo();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="sup">
+                <h4 style="float:left;">Resolução de caso de estudo UFCSPA</h4>
+                <a href="actlogoff.php" title="Sair do sistema"><img src="img/sair.png" title="Sair do sistema" alt="Sair do sistema" style="float:right;border:none;" /></a>
+                <a href="aluno.php" title="Início"><img src="img/home.png" style="float:right;border:none;" title="Início" alt="Início" /></a>
+            </div>
+            <br /><br />
+            <div class="sit-caso caso-nao-res">
+                <!--titulocaso-->
+            </div>
+            <p>
+                <strong><!--NomeUsuario--></strong>, seguem a seguir os dados da resolução do caso de estudo.
+            </p>
+            <div class="tit-item borda-inf">
+                Dados básicos
+            </div>
+            <table>
+                <tr>
+                    <td>Data de início do caso</td>
+                    <td class="dado"><!--DataInicial--></td>
+                </tr>
+                <tr>
+                    <td>Data de término do caso</td>
+                    <td class="dado"><!--DataFinal--></td>
+                </tr>
+                <tr>
+                    <td>Número de acessos necessários</td>
+                    <td class="dado"><!--NumAcessos--></td>
+                </tr>
+                <tr>
+                    <td>Etapas vistas</td>
+                    <td class="dado"><!--ConteudosVistos--></td>
+                </tr>
+            </table>
+            
+            <div class="tit-item borda-inf">
+                Trajetória
+            </div>
+            <!--ListaTrajeto-->
+
+            <div class="tit-item borda-inf">
+                Etapas interativas
+            </div>
+            <table>
+                <tr>
+                    <td>Número de etapas</td>
+                    <td class="dado"><!--NumEtapasInterativas--></td>
+                </tr>
+            </table>
+            <!--DescricaoInterativas-->
+<!--            <div class="tit-item borda-inf">
+                Nota da resolução
+            </div>
+            <span style="font-weight:bold;font-size:18pt"><!--DescricaoNota--></span><!--
+            <br />
+            Somam pontos na sua nota:<br />
+            - As alternativas <span style="color:#00AA00;font-weight:bold;">corretas</span> que você marcou<br />
+            - As alternativas <span style="color:#ff0000;font-weight:bold;">incorretas</span> que você não marcou
+-->        </div>
+    </body>
+</html>

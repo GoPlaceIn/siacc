@@ -1,4 +1,5 @@
 <?php
+include_once 'cls/Image.class.php';
 
 class ImgPaciente
 {
@@ -16,6 +17,15 @@ class ImgPaciente
 		
 		return $ret;
 	}
+
+
+	public static function SetImagem($foto, $nomeFoto)
+	{
+		
+						 
+               
+	}
+
 }
 
 ?>

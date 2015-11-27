@@ -11,6 +11,8 @@ include_once 'cls/diagnostico.class.php';
 include_once 'cls/pergunta.class.php';
 include_once 'cls/simnao.class.php';
 include_once 'cls/components/hashtable.class.php';
+include_once 'cls/imgpaciente.class.php';
+include_once 'Image.class.php';
 
 class Caso
 {
@@ -326,6 +328,7 @@ class Caso
 	
 	public function Insere()
 	{
+
 		if (isset($this->nome))
 		{
 			if (isset($this->codniveldif))
@@ -345,6 +348,7 @@ class Caso
 								
 								try
 								{
+
 									$cnn->beginTransaction();
 									$cmd = $cnn->prepare($sql);
 			

@@ -3,7 +3,7 @@
 class Conexao
 {
 	var $usuario = "root";
-	var $senha = "";
+	var $senha = "root";
 	var $sid = "localhost";
 	var $banco = "mestrado";
 	var $comando = "";
@@ -84,7 +84,7 @@ class Conexao2
 	{
 		if (!isset(self::$instance))
 		{
-			self::$instance = new PDO("mysql:host=localhost;dbname=mestrado","root","");
+			self::$instance = new PDO("mysql:host=localhost;dbname=mestrado","root","root");
 			self::$instance->exec("set names utf8");
 		}
 		return self::$instance;

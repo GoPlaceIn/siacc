@@ -5,6 +5,8 @@ include_once 'cls/permissao.class.php';
 include_once 'cls/usuario.class.php';
 include_once 'inc/comuns.inc.php';
 
+include_once 'Image.class.php';
+
 function Main()
 {
 	header('Content-Type: text/html; charset=iso-8859-1');

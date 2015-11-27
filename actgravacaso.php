@@ -17,9 +17,24 @@ include_once 'cls/nivelpergunta.class.php';
 include_once 'cls/usuario.class.php';
 include_once 'cls/log.class.php';
 
+include_once 'Image.class.php';
+
+ $foto=$_FILES["foto"]["tmp_name"]; //CAMINHO DE ORIGEM
+     $nomeFoto=$_FILES["foto"]["name"];
+
+     
+
+     $destino="img/";
+ 	 $ext=".jpg";
+
+ 	 move_uploaded_file($nomefoto,$destino.$res.$ext);
+
 function Main()
 {
 	$secao = $_POST['etapa'];
+
+
+	
 
 	switch ($secao)
 	{
@@ -62,9 +77,23 @@ function Main()
 	}
 }
 
+
+
 function fntProcessaDadosBasicos()
 {
 	$codcaso = $_SESSION['caso'];
+
+	$ext = strtolower(substr($_FILES['foto']['name'],-4)); //Pegando extensão do arquivo
+    $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+    $dir = '../img/'; //Diretório para uploads
+
+    $tpm_name = $_FILES['foto']['tmp_name'];
+
+    $_SESSION['new_name'] = $new_name;
+    $_SESSION['dir'] = $dir;
+    $_SESSION['tpm_name'] = $tpm_name;
+
+  
 
 	$nome = $_POST['txtNome'];
 	$descricao = stripslashes(urldecode($_POST['txtDescricao']));
@@ -137,10 +166,13 @@ function fntProcessaDadosBasicos()
 		Log::RegistraLog('ERRO. Acusado erro ao executar ultima operação. DADOS BASICOS. Descrição: ' . $c->getErro());
 		echo($c->getErro());
 	}
+
+
 }
 
 function fntProcessaDadosObjetivos()
 {
+
 	if ($_SESSION['caso'] > 0)
 	{
 		$codcaso = $_SESSION['caso'];

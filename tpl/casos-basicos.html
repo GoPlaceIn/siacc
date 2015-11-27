@@ -3,7 +3,7 @@
                     <a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > @lng[Dados básicos]
                 </div>
                 <br />
-                <form method="post" action="actgravacaso.php" id="frmcaso" style="clear:both;">
+                <form method="post" action="actgravacaso.php" enctype="multipart/form-data" id="frmcaso" style="clear:both;">
                     <div>
                         <input type="hidden" id="etapa" name="etapa" value="basicos" class="campo" />
                         
@@ -131,6 +131,16 @@
                                     </select>
                                 </label>
                             </div>
+
+                            <div class="coluna-campo">
+                                <label for="selImagem">
+                                    @lng[Imagem]<br />
+                                   <input type="file" name="foto"/>
+                                </label>
+                            </div>
+
+
+
                         </fieldset>
                         
                         <br /><br />

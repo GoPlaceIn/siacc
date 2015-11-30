@@ -16,6 +16,7 @@
         <script type="text/javascript" src="js/siacc.forms.js"></script>
         <script type="text/javascript" src="js/siacc.funcoes.js"></script>
         <script type="text/javascript" src="js/siacc.casos.js"></script>
+        <script type="text/javascript" src="js/siacc.instituicao.js"></script>
 
         
     </head>
@@ -24,7 +25,7 @@
         <div id="toolbar">
             <div class="cont-sup">
                 <ul>
-                    <li onclick="javascript:fntGravaEtapaCaso();" title="Salvar dados basicos">
+                    <li onclick="javascript:fntGravaInstituicao();" title="Salvar dados basicos">
                         <div class="toolbar-item">
                             <img src="img/salvar-reg.png" alt="Salvar Registro">
                             <br>
@@ -47,72 +48,72 @@
             <div id="divInstituicoes">
                 <label id="lblCodigo" for="txtCodigo">
                     @lng[Código]<br />
-                    <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="campocurto campo" title="@lng[Código da instituição (gerado pelo sistema)]" />
+                    <input type="text" name="txtCodigo" id="txtCodigo"  readonly="readonly" class="campocurto campo" title="@lng[Código da instituição (gerado pelo sistema)]" />
                 </label>
                 <br /><br />
                 <label id="lblNome" for="txtNomeCompleto">
                     @lng[Nome completo] *<br />
-                    <input type="text" name="txtNomeCompleto" id="txtNomeCompleto" value="<!--txtNomeCompleto-->" class="campolongo campo requerido" title="@lng[Nome completo da instituição de ensino]" />
+                    <input type="text" name="txtNomeCompleto" id="txtNomeCompleto"  class="campolongo campo requerido" title="@lng[Nome completo da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblSigla" for="txtSigla">
                     @lng[Sigla]<br />
-                    <input type="text" name="txtSigla" id="txtSigla" value="<!--txtSigla-->" class="campomedio campo" title="@lng[Sigla da instituição]" />
+                    <input type="text" name="txtSigla" id="txtSigla"  class="campomedio campo" title="@lng[Sigla da instituição]" />
                 </label>
                 <br /><br />
                 <label id="lblEndereco" for="txtEndereco">
                     @lng[Endereço] *<br />
-                    <input type="text" name="txtEndereco" id="txtEndereco" value="<!--txtEndereco-->" class="campolongo campo requerido" title="@lng[Endereço da instituição de ensino]" />
+                    <input type="text" name="txtEndereco" id="txtEndereco"  class="campolongo campo requerido" title="@lng[Endereço da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblComplemento" for="txtComplemento">
                     @lng[Complemento]<br />
-                    <input type="text" name="txtComplemento" id="txtComplemento" value="<!--txtComplemento-->" class="campomedio campo" title="@lng[Informações complementares do endereço da instituição de ensino]" />
+                    <input type="text" name="txtComplemento" id="txtComplemento"  class="campomedio campo" title="@lng[Informações complementares do endereço da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblNumero" for="txtNumero">
                     @lng[Número]<br />
-                    <input type="text" name="txtNumero" id="txtNumero" value="<!--txtNumero-->" class="campocurto campo" title="@lng[Número do endereço da instituição de ensino]" />
+                    <input type="text" name="txtNumero" id="txtNumero"  class="campocurto campo" title="@lng[Número do endereço da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblBairro" for="txtBairro">
                     @lng[Bairro]<br />
-                    <input type="text" name="txtBairro" id="txtBairro" value="<!--txtBairro-->" class="campolongo campo" title="@lng[Nome do bairro]" />
+                    <input type="text" name="txtBairro" id="txtBairro"  class="campolongo campo" title="@lng[Nome do bairro]" />
                 </label>
                 <br /><br />
                 <label id="lblCidade" for="txtCidade">
                     @lng[Cidade] *<br />
-                    <input type="text" name="txtCidade" id="txtCidade" value="<!--txtCidade-->" class="campolongo campo requerido" title="@lng[Nome completo da cidade]" />
+                    <input type="text" name="txtCidade" id="txtCidade"  class="campolongo campo requerido" title="@lng[Nome completo da cidade]" />
                 </label>
                 <br /><br />
                 <label id="lblCEP" for="txtCEP">
                     @lng[CEP] *<br />
-                    <input type="text" name="txtCEP" id="txtCEP" value="<!--txtCEP-->" class="campocurto campo requerido" title="@lng[CEP de correspondência]" />
+                    <input type="text" name="txtCEP" id="txtCEP"  class="campocurto campo requerido" title="@lng[CEP de correspondência]" />
                 </label>
                 <br /><br />
                 <label id="lblUF" for="selUF">
                     @lng[Estado] *<br />
-                    <!--selUF-->
+                   <input type="text" name="txtUF" id="txtUF"  class="campocurto campo requerido" title="uf" />
                 </label>
                 <br /><br />
                 <label id="lblPais" for="selPaises">
                     @lng[País] *<br />
-                    <!--selPaises-->
+                    <input type="text" name="txtPais" id="txtPais"  class="campocurto campo requerido" title="pais"/>
                 </label>
                 <br /><br />
                 <label id="lblFone" for="txtFoneContato">
                     @lng[Telefone] *<br />
-                    <input type="text" name="txtFoneContato" id="txtFoneContato" value="<!--txtFoneContato-->" class="campomedio campo requerido" title="@lng[Telefone da instituição de ensino]" />
+                    <input type="text" name="txtFoneContato" id="txtFoneContato"  class="campomedio campo requerido" title="@lng[Telefone da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblSite" for="txtSite">
                     @lng[Site] *<br />
-                    <input type="text" name="txtSite" id="txtSite" value="<!--txtSite-->" class="campolongo campo requerido" title="@lng[Site da instituição de ensino]" />
+                    <input type="text" name="txtSite" id="txtSite"  class="campolongo campo requerido" title="@lng[Site da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblEmail" for="txtEmail">
                     @lng[E-mail]<br />
-                    <input type="text" name="txtEmail" id="txtEmail" value="<!--txtEmail-->" class="campolongo campo" title="@lng[E-mail da instituição de ensino]" />
+                    <input type="text" name="txtEmail" id="txtEmail"  class="campolongo campo" title="@lng[E-mail da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblObrigaEmail" for="chkObrigaEmail">
@@ -122,7 +123,7 @@
                 <br /><br />
                 <label id="lblDominioEmail" for="txtDominioEmail">
                     @lng[Domínio dos e-mails] *<br />
-                    <input type="text" name="txtDominioEmail" id="txtDominioEmail" value="<!--txtDominioEmail-->" class="campomedio campo" title="@lng[E-mail da instituição de ensino]" />
+                    <input type="text" name="txtDominioEmail" id="txtDominioEmail"  class="campomedio campo" title="@lng[E-mail da instituição de ensino]" />
                 </label>
                 <br /><br />
                 <label id="lblAtivo" for="chkAtivo">
@@ -133,17 +134,17 @@
                     <legend>@lng[Dados do responsavel pelo sistema na instituição]</legend>
                     <label id="lblNomeResponsavel" for="txtNomeResponsavel">
                         @lng[Nome] *<br />
-                        <input type="text" name="txtNomeResponsavel" id="txtNomeResponsavel" value="<!--txtNomeResponsavel-->" class="campolongo campo requerido" title="@lng[Nome do responsavel pelo sistema]" />
+                        <input type="text" name="txtNomeResponsavel" id="txtNomeResponsavel"  class="campolongo campo requerido" title="@lng[Nome do responsavel pelo sistema]" />
                     </label>
                     <br /><br />
                     <label id="lblEmailResponsavel" for="txtEmailResponsavel">
                         @lng[E-mail] *<br />
-                        <input type="text" name="txtEmailResponsavel" id="txtEmailResponsavel" value="<!--txtEmailResponsavel-->" class="campolongo campo requerido" title="@lng[E-mail do responsavel pelo sistema]" />
+                        <input type="text" name="txtEmailResponsavel" id="txtEmailResponsavel"  class="campolongo campo requerido" title="@lng[E-mail do responsavel pelo sistema]" />
                     </label>
                     <br /><br />
                     <label id="lblFoneResponsavel" for="txtFoneResponsavel">
                         @lng[Telefone] *<br />
-                        <input type="text" name="txtFoneResponsavel" id="txtFoneResponsavel" value="<!--txtFoneResponsavel-->" class="campomedio campo requerido" title="@lng[Telefone do responsavel pelo sistema]" />
+                        <input type="text" name="txtFoneResponsavel" id="txtFoneResponsavel"  class="campomedio campo requerido" title="@lng[Telefone do responsavel pelo sistema]" />
                     </label>
                 </fieldset>
             </div>

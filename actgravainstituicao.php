@@ -6,6 +6,11 @@ include_once 'cls/log.class.php';
 
 function Main()
 {
+
+    echo"<script> alert('Dieguinhooo');
+                 
+		</script>";
+
 	$u = unserialize($_SESSION['usu']);
 	
 	$cod = $_POST['txtCodigo'];
@@ -17,8 +22,8 @@ function Main()
 	$bairro = $_POST['txtBairro'];
 	$cidade = $_POST['txtCidade'];
 	$cep = $_POST['txtCEP'];
-	$uf = $_POST['selUF'];
-	$pais = $_POST['selPaises'];
+	$uf = $_POST['txtUF'];
+	$pais = $_POST['txtPais'];
 	$fone = $_POST['txtFoneContato'];
 	$site = $_POST['txtSite'];
 	$email = $_POST['txtEmail'];
@@ -40,7 +45,7 @@ function Main()
 	{
 		$i = new Instituicao();
 		
-		if ($cod != "") { $i->setCodigo($cod); }
+		
 		if ($nomecomp != "") { $i->setNomeCompleto($nomecomp); }
 		if ($sigla != "") { $i->setSigla($sigla); }
 		if ($end != "") { $i->setEndereco($end); }
@@ -97,6 +102,8 @@ function Main()
 		echo($ex->getMessage());
 	}
 }
+
+
 
 Main();
 ?>

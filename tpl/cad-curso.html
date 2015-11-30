@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" >
+    <head>
+        <title>@lng[Cadastro Curso]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" type="text/css" href="css/padrao.css" />
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.4.custom.css"  />	
+        <link rel="stylesheet" type="text/css" href="css/jquery.multi-ddm.css" media="screen" />
+        <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="js/jquery.tinymce.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.multi-ddm.js"></script>
+        <script type="text/javascript" src="js/jquery.selectboxes.js"></script>
+        <script type="text/javascript" src="js/flowplayer-3.2.8.min.js"></script>
+		<script type="text/javascript" src="js/lang/lang.js"></script>
+        <script type="text/javascript" src="js/siacc.forms.js"></script>
+        <script type="text/javascript" src="js/siacc.funcoes.js"></script>
+        <script type="text/javascript" src="js/siacc.casos.js"></script>   
+    </head>
+    <body class="sem-borda">
+        <!--telatopo-->
+        <div id="toolbar">
+            <div class="cont-sup">
+                <ul>
+                    <!--itens-toolbar-->
+                </ul>
+            </div>
+        </div>
+        <div id="divConteudo">
+        <h3>@lng[Cadastro de Curso]</h3>
+        <form name="frmInstituicoes" id="frmInstituicoes" method="post" action="actgravacurso.php">
+            <div id="divInstituicoes">
+                <label id="lblCodigo" for="txtCodigo">
+                    @lng[Código]<br />
+                    <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="campocurto campo" title="@lng[Código da instituição (gerado pelo sistema)]" />
+                </label>
+                <br /><br />
+                <label id="lblAtivo" for="chkAtivo">
+                <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="campocurto campo" title="@lng[]" />
+                    @lng[Nome da Instituição]
+                </label>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

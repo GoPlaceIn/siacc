@@ -7,6 +7,7 @@ include_once 'cls/area.class.php';
 include_once 'cls/usuario.class.php';
 include_once 'cls/components/botao.class.php';
 include_once 'cls/log.class.php';
+include_once 'cls/curso.class.php';
 
 include_once 'inc/comuns.inc.php';
 

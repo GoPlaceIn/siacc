@@ -15,29 +15,43 @@
 		<script type="text/javascript" src="js/lang/lang.js"></script>
         <script type="text/javascript" src="js/siacc.forms.js"></script>
         <script type="text/javascript" src="js/siacc.funcoes.js"></script>
-        <script type="text/javascript" src="js/siacc.casos.js"></script>   
+        <script type="text/javascript" src="js/siacc.casos.js"></script> 
+        <script type="text/javascript" src="js/siacc.curso.js"></script>    
     </head>
     <body class="sem-borda">
         <!--telatopo-->
         <div id="toolbar">
             <div class="cont-sup">
                 <ul>
-                    <!--itens-toolbar-->
+                    <li onclick="javascript:fntGravaCurso();" title="Salvar dados basicos">
+                        <div class="toolbar-item">
+                            <img src="img/salvar-reg.png" alt="Salvar Registro">
+                            <br>
+                            <a href="javascript:void(0);">Salvar</a>
+                        <div>
+                    <li>
+                    <li onclick="javascript:fntTelaInicial();" title = "Voltar"> 
+                        <div class="toolbar-item">
+                            <img src="img/voltar-caso.png" alt="Voltar">
+                            <br>
+                            <a href="javascript:void(0);"> Voltar </a>
+                        <div>    
+                    </li>
                 </ul>
             </div>
         </div>
         <div id="divConteudo">
         <h3>@lng[Cadastro de Curso]</h3>
-        <form name="frmInstituicoes" id="frmInstituicoes" method="post" action="actgravacurso.php">
+        <form name="frmCurso" id="frmCurso" method="post" action="actgravacurso.php">
             <div id="divInstituicoes">
                 <label id="lblCodigo" for="txtCodigo">
-                    @lng[Código]<br />
-                    <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="campocurto campo" title="@lng[Código da instituição (gerado pelo sistema)]" />
+                @lng[Código]<br />
+                <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="campocurto campo" title="@lng[Código da instituição (gerado pelo sistema)]" />
                 </label>
                 <br /><br />
-                <label id="lblAtivo" for="chkAtivo">
-                <input type="text" name="txtCodigo" id="txtCodigo" value="<!--txtCodigo-->" readonly="readonly" class="campocurto campo" title="@lng[]" />
-                    @lng[Nome da Instituição]
+                <label id="lblAtivo" for="txtNomeCurso">
+                <input type="text" name="txtNomeCurso" id="txtNomeCurso" value="<!--txtNomeCurso-->" readonly="readonly" class="campocurto campo" title="@lng[Nome do Curso]" />
+                    @lng[Nome do Curso]
                 </label>
             </div>
         </form>

@@ -1,17 +1,16 @@
 <?php
 session_start();
-include_once 'cls/instituicao.class.php';
+include_once 'cls/curso.class.php';
 include_once 'cls/usuario.class.php';
 include_once 'cls/log.class.php';
 
 function Main()
 {
+
 	$u = unserialize($_SESSION['usu']);
 	
 	$cod = $_POST['txtCodigo'];
-	$nomecomp = $_POST['txtNomeCompleto'];
-	$sigla = $_POST['txtSigla'];
-	$end = $_POST['txtEndereco'];
+	$nomecomp = $_POST['txtNomeCurso'];
 
 	
 	$data = date("Y-m-d H:i:s");
@@ -21,13 +20,12 @@ function Main()
 	
 	try
 	{
-		$i = new Instituicao();
+		$i = new Curso();
 		
-		if ($cod != "") { $i->setCodigo($cod); }
+		
 		if ($nomecomp != "") { $i->setNomeCompleto($nomecomp); }
 		if ($sigla != "") { $i->setSigla($sigla); }
 
-	
 		
 		if ($cod == "")
 		{
@@ -61,6 +59,8 @@ function Main()
 		echo($ex->getMessage());
 	}
 }
+
+
 
 Main();
 ?>

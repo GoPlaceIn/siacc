@@ -47,8 +47,8 @@ class CadCurso
 	
 	public function Insere()
 	{
-		$sql  = "insert into mesinstituicao(NomeCompleto, Sigla, NomeResponsavel, EmailResponsavel, FoneResponsavel, Endereco, Complemento, Numero, Bairro, Cidade, UF, Pais, FoneContato, Site, Email, ObrigaEmail, DominioEmail, Ativo, DtCadastro, CodUsuario, CEP) ";
-		$sql .= "values(:pNomeCompleto, :pSigla, :pNomeResponsavel, :pEmailResponsavel, :pFoneResponsavel, :pEndereco, :pComplemento, :pNumero, :pBairro, :pCidade, :pUF, :pPais, :pFoneContato, :pSite, :pEmail, :pObrigaEmail, :pDominioEmail, :pAtivo, :pDtCadastro, :pCodUsuario, :pCEP)";
+		$sql  = "insert into mescurso(Curso) ";
+		$sql .= "values( :pNomeCurso)";
 		
 		$cnn = Conexao2::getInstance();
 		

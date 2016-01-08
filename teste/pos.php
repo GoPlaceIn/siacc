@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 	$texto = "regis <nome>leandro</nome> sebastiani";
 	
 	$tag = "nome";

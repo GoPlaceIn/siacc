@@ -1,4 +1,7 @@
 <?php 
+
+//--utf8_encode --
+
 // Tell me the root folder path.
 // You can also try this one
 // $HOME = $_SERVER["DOCUMENT_ROOT"];

@@ -1,7 +1,8 @@
 <?php
 
+//--utf8_encode --
 
-class Conexao
+ class Conexao
 {
 	public static $instance;
 

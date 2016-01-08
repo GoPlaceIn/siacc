@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 require_once 'cls/conexao.class.php';
 require_once 'inc/comuns.inc.php';
 

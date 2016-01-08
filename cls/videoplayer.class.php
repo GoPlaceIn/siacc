@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
   /* Class for use with PHP5 scripts only */
   
   
@@ -13,7 +14,7 @@
    * an email that I can check and modify the proposal this class. Thanks.
    *
    * Caso tenham alguma ideia sobre como melhorar esta classe, por favor
-   * enviem-me um e-mail que eu possa verificar a proposta e modificá-la
+   * enviem-me um e-mail que eu possa verificar a proposta e modificÃ¡-la
    * Obrigado
    *
    * (c) Douglas Borella Iaintsky 10/2007

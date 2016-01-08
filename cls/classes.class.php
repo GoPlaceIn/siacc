@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 require_once "conexao.class.php";
 
 class Classes
@@ -32,12 +33,12 @@ class Classes
 			}
 			else
 			{
-				throw new Exception("@lng[Código informado inválido]", 1009);
+				throw new Exception("@lng[CÃ³digo informado invÃ¡lido]", 1009);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Código não informado]", 1010);
+			throw new Exception("@lng[CÃ³digo nÃ£o informado]", 1010);
 		}
 	}
 
@@ -54,7 +55,7 @@ class Classes
 		}
 		else
 		{
-			throw new Exception("@lng[A descrição é obrigatória]", 1011);
+			throw new Exception("@lng[A descriÃ§Ã£o Ã© obrigatÃ³ria]", 1011);
 		}
 	}
 
@@ -76,10 +77,10 @@ class Classes
 		switch ($tipo)
 		{
 			case "lista":
-				$ret = "@lng[listagem de classificações das questões]";
+				$ret = "@lng[listagem de classificaÃ§Ãµes das questÃµes]";
 				break;
 			case "cadastro":
-				$ret = "@lng[cadastro de classificações das questões]";
+				$ret = "@lng[cadastro de classificaÃ§Ãµes das questÃµes]";
 		}
 		
 		return $ret;
@@ -129,7 +130,7 @@ class Classes
 		}
 		else
 		{
-			throw new Exception("@lng[Esta classificação de exercício não pode ser excluída pois está sendo utilizada.]", 1016);
+			throw new Exception("@lng[Esta classificaÃ§Ã£o de exercÃ­cio nÃ£o pode ser excluÃ­da pois estÃ¡ sendo utilizada.]", 1016);
 		}
 	}
 
@@ -158,7 +159,7 @@ class Classes
 		else
 		{
 			$cnn->Desconecta();
-			throw new Exception("@lng[Você deve informar uma descrição para a classe de perguntas]", 1015);
+			throw new Exception("@lng[VocÃª deve informar uma descriÃ§Ã£o para a classe de perguntas]", 1015);
 		}
 	}
 
@@ -197,18 +198,18 @@ class Classes
 			}
 			else
 			{
-				echo("@lng[Registro não encontrado]");
+				echo("@lng[Registro nÃ£o encontrado]");
 			}
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de edição de classes de perguntas.]";
+			$tpl = "@lng[Erro ao criar a tela de ediÃ§Ã£o de classes de perguntas.]";
 		}
 		return $tpl;
 	}
 
 	/**
-	 * Retorna uma string em formato de tabela com os registros de Grupos de usuários limitado pelo paginador.
+	 * Retorna uma string em formato de tabela com os registros de Grupos de usuÃ¡rios limitado pelo paginador.
 	 */
 	public function ListaTabela($pagina = 1, $nporpagina = 10)
 	{
@@ -221,9 +222,9 @@ class Classes
 		if (mysql_num_rows($rs) > 0)
 		{
 			$ret = Comuns::TopoTabelaListagem(
-				"Lista de Classificações de exercícios",
+				"Lista de ClassificaÃ§Ãµes de exercÃ­cios",
 				"ClassesPergunta",
-			array('Descrição', 'Ações')
+			array('DescriÃ§Ã£o', 'AÃ§Ãµes')
 			);
 				
 			while ($linha = mysql_fetch_array($rs))

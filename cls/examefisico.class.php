@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start(); 
 include_once 'inc/comuns.inc.php';
 include_once 'cls/conexao.class.php';
@@ -147,7 +148,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Caso clÌnico n„o informado]", 1000);
+			throw new Exception("@lng[Caso cl√≠nico n√£o informado]", 1000);
 		}
 	}
 	
@@ -159,7 +160,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Exame da cabeÁa n„o informado]", 1010);
+			throw new Exception("@lng[Exame da cabe√ßa n√£o informado]", 1010);
 		}
 	}
 	
@@ -171,7 +172,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Exame do pescoÁo n„o informado]", 1020);
+			throw new Exception("@lng[Exame do pesco√ßo n√£o informado]", 1020);
 		}
 	}
 	
@@ -183,7 +184,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Ausculta pulmonar n„o informada]", 1030);
+			throw new Exception("@lng[Ausculta pulmonar n√£o informada]", 1030);
 		}
 	}
 	
@@ -195,7 +196,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Ausculta cardiaca n„o informada]", 1040);
+			throw new Exception("@lng[Ausculta cardiaca n√£o informada]", 1040);
 		}
 	}
 	
@@ -207,7 +208,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Sinais vitais n„o informados]", 1050);
+			throw new Exception("@lng[Sinais vitais n√£o informados]", 1050);
 		}
 	}
 	
@@ -219,7 +220,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Exame da abdomem n„o informado]", 1060);
+			throw new Exception("@lng[Exame da abdomem n√£o informado]", 1060);
 		}
 	}
 	
@@ -231,7 +232,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Exame da pele n„o informado]", 1070);
+			throw new Exception("@lng[Exame da pele n√£o informado]", 1070);
 		}
 	}
 	
@@ -243,7 +244,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Exame das extremidades n„o informado]", 1080);
+			throw new Exception("@lng[Exame das extremidades n√£o informado]", 1080);
 		}
 	}
 	
@@ -255,7 +256,7 @@ class ExameFisico
 		}
 		else
 		{
-			throw new Exception("@lng[Estado geral n„o informado]", 1090);
+			throw new Exception("@lng[Estado geral n√£o informado]", 1090);
 		}
 	}
 	
@@ -264,7 +265,7 @@ class ExameFisico
 		if ((isset($p_cabeca)) && (!is_null($p_cabeca)))
 			$this->midcabeca = $p_cabeca;
 		else
-			throw new Exception("@lng[Midias vinculadas a cabeÁa n„o informadas]", 1090);
+			throw new Exception("@lng[Midias vinculadas a cabe√ßa n√£o informadas]", 1090);
 	}
 	
 	public function setMidiasPescoco($p_pescoco)
@@ -272,7 +273,7 @@ class ExameFisico
 		if ((isset($p_pescoco)) && (!is_null($p_pescoco)))
 			$this->midpescoco = $p_pescoco;
 		else
-			throw new Exception("@lng[Midias vinculadas ao pescoÁo n„o informadas]", 2000);
+			throw new Exception("@lng[Midias vinculadas ao pesco√ßo n√£o informadas]", 2000);
 	}
 	
 	public function setMidiasAuscultaPulmonar($p_auscpul)
@@ -280,7 +281,7 @@ class ExameFisico
 		if ((isset($p_auscpul)) && (!is_null($p_auscpul)))
 			$this->midauscpulmonar = $p_auscpul;
 		else
-			throw new Exception("@lng[Midias vinculadas a ausculta pulmonnar n„o informadas]", 2010);
+			throw new Exception("@lng[Midias vinculadas a ausculta pulmonnar n√£o informadas]", 2010);
 	}
 	
 	public function setMidiasAuscultaCardiaca($p_ausccar)
@@ -288,7 +289,7 @@ class ExameFisico
 		if ((isset($p_ausccar)) && (!is_null($p_ausccar)))
 			$this->midausccardiaca = $p_ausccar;
 		else
-			throw new Exception("@lng[Midias vinculadas a ausculta cardiaca n„o informadas]", 2010);
+			throw new Exception("@lng[Midias vinculadas a ausculta cardiaca n√£o informadas]", 2010);
 	}
 	
 	public function setMidiasSinaisVitais($p_sinvit)
@@ -296,7 +297,7 @@ class ExameFisico
 		if ((isset($p_sinvit)) && (!is_null($p_sinvit)))
 			$this->midsinaisvitais = $p_sinvit;
 		else
-			throw new Exception("@lng[Midias vinculadas aos sinais vitais n„o informadas]", 2010);
+			throw new Exception("@lng[Midias vinculadas aos sinais vitais n√£o informadas]", 2010);
 	}
 	
 	public function setMidiasAbdomen($p_abdomen)
@@ -304,7 +305,7 @@ class ExameFisico
 		if ((isset($p_abdomen)) && (!is_null($p_abdomen)))
 			$this->midabdomen = $p_abdomen;
 		else
-			throw new Exception("@lng[Midias vinculadas ao abdomen n„o informadas]", 2010);
+			throw new Exception("@lng[Midias vinculadas ao abdomen n√£o informadas]", 2010);
 	}
 	
 	public function setMidiasPele($p_pele)
@@ -312,7 +313,7 @@ class ExameFisico
 		if ((isset($p_pele)) && (!is_null($p_pele)))
 			$this->midpele = $p_pele;
 		else
-			throw new Exception("@lng[Midias vinculadas a pele n„o informadas]", 2010);
+			throw new Exception("@lng[Midias vinculadas a pele n√£o informadas]", 2010);
 	}
 	
 	public function setMidiasExtremidades($p_extremidades)
@@ -320,7 +321,7 @@ class ExameFisico
 		if ((isset($p_extremidades)) && (!is_null($p_extremidades)))
 			$this->midextremidades = $p_extremidades;
 		else
-			throw new Exception("@lng[Midias vinculadas as extremidades n„o informadas]", 2010);
+			throw new Exception("@lng[Midias vinculadas as extremidades n√£o informadas]", 2010);
 	}
 	
 	public function setMidiasEstadoGeral($p_estadogeral)
@@ -328,7 +329,7 @@ class ExameFisico
 		if ((isset($p_estadogeral)) && (!is_null($p_estadogeral)))
 			$this->midestadogeral = $p_estadogeral;
 		else
-			throw new Exception("@lng[Midias vinculadas ao estado geral n„o informadas]", 2020);
+			throw new Exception("@lng[Midias vinculadas ao estado geral n√£o informadas]", 2020);
 	}
 	
 	public function __construct()
@@ -399,7 +400,7 @@ class ExameFisico
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso clÌnico n„o informado]";
+			$this->msg_erro = "@lng[Caso cl√≠nico n√£o informado]";
 			return false;
 		}
 	}
@@ -467,7 +468,7 @@ class ExameFisico
 		}
 		else
 		{
-			$this->msg_erro = "Caso clÌnico n„o informado";
+			$this->msg_erro = "Caso cl√≠nico n√£o informado";
 			return false;
 		}
 	}

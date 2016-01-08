@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 function Main()
 {
 	$filename = "C:\\temp\\areas.txt";
@@ -33,7 +35,7 @@ function Main()
 		{
 			if ($mostrar)
 				if (is_null($linhas[2]))
-					echo("É nullo");
+					echo("Ã‰ nullo");
 				else
 					echo($linhas[2]);
 			

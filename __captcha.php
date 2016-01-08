@@ -1,4 +1,7 @@
 <?php
+
+//--utf8_encode --
+
 session_start();
 
 function Main()

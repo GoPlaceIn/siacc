@@ -1,7 +1,7 @@
 <?php
 
 	
-
+//--utf8_encode --
 ####################################################################################################################
 #Image.class.php
 #Biblioteca com métodos para redimencionar imagens

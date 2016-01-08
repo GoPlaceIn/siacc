@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'cls/log.class.php';
 include_once 'cls/components/combobox.php';

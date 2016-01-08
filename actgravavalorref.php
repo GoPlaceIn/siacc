@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/valref.class.php';
 
 function Main()

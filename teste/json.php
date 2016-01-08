@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 class Pessoa
 {
 	private $nome;

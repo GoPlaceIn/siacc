@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 require_once 'cls/conexao.class.php';
 require_once 'inc/comuns.inc.php';
 
@@ -28,12 +29,12 @@ class NivelPergunta
 			}
 			else
 			{
-				throw new Exception("@lng[Código informado inválido]", 1009);
+				throw new Exception("@lng[CÃ³digo informado invÃ¡lido]", 1009);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Código não informado]", 1010);
+			throw new Exception("@lng[CÃ³digo nÃ£o informado]", 1010);
 		}
 	}
 
@@ -45,7 +46,7 @@ class NivelPergunta
 		}
 		else
 		{
-			throw new Exception("@lng[A descrição é obrigatória]", 1011);
+			throw new Exception("@lng[A descriÃ§Ã£o Ã© obrigatÃ³ria]", 1011);
 		}
 	}
 
@@ -61,10 +62,10 @@ class NivelPergunta
 		switch ($tipo)
 		{
 			case "lista":
-				$ret = "listagem de níveis de dificuldade do sistema";
+				$ret = "listagem de nÃ­veis de dificuldade do sistema";
 				break;
 			case "cadastro":
-				$ret = "cadastro de níveis de dificuldade do sistema";
+				$ret = "cadastro de nÃ­veis de dificuldade do sistema";
 		}
 		
 		return $ret;
@@ -87,12 +88,12 @@ class NivelPergunta
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao inserir o nível de dificuldade.]", 1011);
+				throw new Exception("@lng[Erro ao inserir o nÃ­vel de dificuldade.]", 1011);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Descrição não informada]", 1012);
+			throw new Exception("@lng[DescriÃ§Ã£o nÃ£o informada]", 1012);
 		}
 	}
 
@@ -108,7 +109,7 @@ class NivelPergunta
 		else
 		{
 			$cnn->Desconecta();
-			throw new Exception("@lng[Erro ao excluir o nível de dificuldade]", 1013);
+			throw new Exception("@lng[Erro ao excluir o nÃ­vel de dificuldade]", 1013);
 		}
 	}
 
@@ -129,14 +130,14 @@ class NivelPergunta
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao atualizar a descrição do nível de dificuldade]", 1014);
+				throw new Exception("@lng[Erro ao atualizar a descriÃ§Ã£o do nÃ­vel de dificuldade]", 1014);
 			}
 
 		}
 		else
 		{
 			$cnn->Desconecta();
-			throw new Exception("@lng[Você deve informar uma descrição para o nível de dificuldade]", 1015);
+			throw new Exception("@lng[VocÃª deve informar uma descriÃ§Ã£o para o nÃ­vel de dificuldade]", 1015);
 		}
 	}
 
@@ -150,7 +151,7 @@ class NivelPergunta
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de cadastro de níveis de dificuldade].";
+			$tpl = "@lng[Erro ao criar a tela de cadastro de nÃ­veis de dificuldade].";
 		}
 		return $tpl;
 	}
@@ -172,18 +173,18 @@ class NivelPergunta
 			}
 			else
 			{
-				echo("@lng[Registro não encontrado]");
+				echo("@lng[Registro nÃ£o encontrado]");
 			}
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de cadastro de níveis de dificuldade].";
+			$tpl = "@lng[Erro ao criar a tela de cadastro de nÃ­veis de dificuldade].";
 		}
 		return $tpl;
 	}
 
 	/**
-	 * Retorna uma string em formato de tabela com os registros de Grupos de usuários limitado pelo paginador.
+	 * Retorna uma string em formato de tabela com os registros de Grupos de usuÃ¡rios limitado pelo paginador.
 	 */
 	public function ListaTabela($pagina = 1, $nporpagina = 10)
 	{
@@ -196,9 +197,9 @@ class NivelPergunta
 		if (mysql_num_rows($rs))
 		{
 			$ret = Comuns::TopoTabelaListagem(
-					"Lista de níveis de dificuldade do sistema",
+					"Lista de nÃ­veis de dificuldade do sistema",
 					"nivdif",
-					array('Descrição', 'Ações')
+					array('DescriÃ§Ã£o', 'AÃ§Ãµes')
 			);
 			
 			while ($linha = mysql_fetch_array($rs))
@@ -225,7 +226,7 @@ class NivelPergunta
 		}
 		else
 		{
-			$ret = "@lng[Nenhum nível de dificuldade cadastrado até o momento]";
+			$ret = "@lng[Nenhum nÃ­vel de dificuldade cadastrado atÃ© o momento]";
 		}
 
 		return $ret;
@@ -304,7 +305,7 @@ class NivelPergunta
 		return $nivel;
 	}
 	/**
-	 * Retorna um resultset com todas as permissões do sistema indicando se o grupo tem ou não aquela permissão.
+	 * Retorna um resultset com todas as permissÃµes do sistema indicando se o grupo tem ou nÃ£o aquela permissÃ£o.
 	 */
 }
 ?>

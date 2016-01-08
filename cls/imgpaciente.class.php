@@ -1,6 +1,5 @@
 <?php
-include_once 'cls/Image.class.php';
-
+//--utf8_encode --
 class ImgPaciente
 {
 	public static function SelectImagem($sel = 0)
@@ -17,15 +16,6 @@ class ImgPaciente
 		
 		return $ret;
 	}
-
-
-	public static function SetImagem($foto, $nomeFoto)
-	{
-		
-						 
-               
-	}
-
 }
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/log.class.php';
 
 class Upload
@@ -17,7 +18,7 @@ class Upload
 	
 	public function getExtensao()
 	{
-		// Recupera extensão do arquivo
+		// Recupera extensÃ£o do arquivo
 		preg_match("/\.(gif|bmp|png|jpg|jpeg|mp3|wma|wav|wmv|asx|flv|mov|swf|mpg|mpeg|mp4|rmvb|rmv|doc|docx|pdf|xls|xlsx|ppt|pptx){1}$/i", $this->arquivo["name"], $ext);
 		
 		return $ext[1];
@@ -107,7 +108,7 @@ class Upload
 		}
 		else
 		{
-			$this->status = "@lng[Arquivo não informado]";
+			$this->status = "@lng[Arquivo nÃ£o informado]";
 			return false;
 		}
 	}
@@ -116,8 +117,8 @@ class Upload
 	{
 		if(!eregi("^image\/(pjpeg|jpeg|png|gif)$", $mime_type))
 		{
-			Log::RegistraLog("ERRO: MIME Type do imagem enviado inválido: " . $mime_type);
-			$this->status = "@lng[Tipo de arquivo enviado inválido. Envie jpeg, gif, png]";
+			Log::RegistraLog("ERRO: MIME Type do imagem enviado invÃ¡lido: " . $mime_type);
+			$this->status = "@lng[Tipo de arquivo enviado invÃ¡lido. Envie jpeg, gif, png]";
 			return false;
 		}
 		else
@@ -133,8 +134,8 @@ class Upload
 		//audio/x-ms-wma
 		if(!eregi("^audio\/(mp3|wav|x-ms-wma)$", $mime_type))
 		{
-			Log::RegistraLog("ERRO: MIME Type do audio enviado inválido: " . $mime_type);
-			$this->status = "@lng[Tipo de arquivo enviado inválido. Envie mp3, wav e wma]";
+			Log::RegistraLog("ERRO: MIME Type do audio enviado invÃ¡lido: " . $mime_type);
+			$this->status = "@lng[Tipo de arquivo enviado invÃ¡lido. Envie mp3, wav e wma]";
 			return false;
 		}
 		else
@@ -149,7 +150,7 @@ class Upload
 		//video/x-ms-wmv
 		//video/x-flv
 		//application/x-shockwave-flash
-		//vídeo/x-ms-asf
+		//vÃ­deo/x-ms-asf
 		//video/quicktime
 		//video/mp4
 		
@@ -157,8 +158,8 @@ class Upload
 		{
 			if(!eregi("^application\/(x-shockwave-flash)$", $mime_type))
 			{
-				Log::RegistraLog("ERRO: MIME Type do vídeo enviado inválido: " . $mime_type);
-				$this->status = "@lng[Tipo de arquivo inválido. Envie mpg, mpeg, wmv, flv, asx, mov e swf]";
+				Log::RegistraLog("ERRO: MIME Type do vÃ­deo enviado invÃ¡lido: " . $mime_type);
+				$this->status = "@lng[Tipo de arquivo invÃ¡lido. Envie mpg, mpeg, wmv, flv, asx, mov e swf]";
 				return false;
 			}
 			else
@@ -184,8 +185,8 @@ class Upload
 		//application/vnd.openxmlformats-officedocument.presentationml.presentation
 		if(!eregi("^application\/(pdf|vnd.ms-excel|vnd.ms-powerpoint|x-dot|msword|vnd.openxmlformats-officedocument.wordprocessingml.document|vnd.openxmlformats-officedocument.spreadsheetml.sheet|vnd.openxmlformats-officedocument.presentationml.presentation)$", $mime_type))
 		{
-			Log::RegistraLog("ERRO: MIME Type do documento enviado inválido: " . $mime_type);
-			$this->status = "@lng[Tipo de arquivo inválido. Envie doc, docx, xls, xlsx, ppt, pptx e pdf]";
+			Log::RegistraLog("ERRO: MIME Type do documento enviado invÃ¡lido: " . $mime_type);
+			$this->status = "@lng[Tipo de arquivo invÃ¡lido. Envie doc, docx, xls, xlsx, ppt, pptx e pdf]";
 			return false;
 		}
 		else

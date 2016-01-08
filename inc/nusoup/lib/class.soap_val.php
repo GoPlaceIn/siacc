@@ -1,7 +1,7 @@
 <?php
 
 
-
+//--utf8_encode --
 
 /**
 * For creating serializable abstractions of native PHP types.  This class

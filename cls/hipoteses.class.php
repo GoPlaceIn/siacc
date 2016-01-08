@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'cls/simnao.class.php';
 include_once 'inc/comuns.inc.php';
@@ -60,7 +61,7 @@ class Hipoteses
 		}
 		else
 		{
-			throw new Exception("@lng[O caso não foi informado]", 999);
+			throw new Exception("@lng[O caso nÃ£o foi informado]", 999);
 		}
 	}
 
@@ -77,7 +78,7 @@ class Hipoteses
 		}
 		else
 		{
-			throw new Exception("@lng[A descrição é obrigatória]", 1000);
+			throw new Exception("@lng[A descriÃ§Ã£o Ã© obrigatÃ³ria]", 1000);
 		}
 	}
 
@@ -89,7 +90,7 @@ class Hipoteses
 		}
 		else
 		{
-			throw new Exception("@lng[Informe se esta hipótese diagnóstica está correta ou não]", 1001);
+			throw new Exception("@lng[Informe se esta hipÃ³tese diagnÃ³stica estÃ¡ correta ou nÃ£o]", 1001);
 		}
 	}
 
@@ -101,7 +102,7 @@ class Hipoteses
 		}
 		else
 		{
-			throw new Exception("@lng[A justificativa é obrigatória]", 1002);
+			throw new Exception("@lng[A justificativa Ã© obrigatÃ³ria]", 1002);
 		}
 	}
 
@@ -111,7 +112,7 @@ class Hipoteses
 	}
 	// fim set's --------------------------------------------------------
 
-	// funções ----------------------------------------------------------
+	// funÃ§Ãµes ----------------------------------------------------------
 	public function Insere()
 	{
 		try
@@ -152,25 +153,25 @@ class Hipoteses
 						}
 						else
 						{
-							$this->msg_erro = "@lng[Justificativa não informada]";
+							$this->msg_erro = "@lng[Justificativa nÃ£o informada]";
 							return false;
 						}
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Campo Correto não informado]";
+						$this->msg_erro = "@lng[Campo Correto nÃ£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Descrição da hipótese não informada]";
+					$this->msg_erro = "@lng[DescriÃ§Ã£o da hipÃ³tese nÃ£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Caso de estudo não informado]";
+				$this->msg_erro = "@lng[Caso de estudo nÃ£o informado]";
 				return false;
 			}
 		}
@@ -226,25 +227,25 @@ class Hipoteses
 						}
 						else
 						{
-							$this->msg_erro = "@lng[Justificativa não informada]";
+							$this->msg_erro = "@lng[Justificativa nÃ£o informada]";
 							return false;
 						}
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Campo Correto não informado]";
+						$this->msg_erro = "@lng[Campo Correto nÃ£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Descrição da hipótese não informada]";
+					$this->msg_erro = "@lng[DescriÃ§Ã£o da hipÃ³tese nÃ£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Caso de estudo não informado]";
+				$this->msg_erro = "@lng[Caso de estudo nÃ£o informado]";
 				return false;
 			}
 		}
@@ -359,9 +360,9 @@ class Hipoteses
 				}
 				
 				$tabela = Comuns::TopoTabelaListagem(
-					"Hipóteses cadastradas", 
+					"HipÃ³teses cadastradas", 
 					"hipoteses",
-					array("Nome", $labelResposta, "Ações")
+					array("Nome", $labelResposta, "AÃ§Ãµes")
 				);
 
 				while ($hipotese = $cmd->fetch(PDO::FETCH_OBJ))
@@ -382,7 +383,7 @@ class Hipoteses
 			}
 			else
 			{
-				$tabela = "@lng[Nenhuma hipótese cadastrada até o momento]";
+				$tabela = "@lng[Nenhuma hipÃ³tese cadastrada atÃ© o momento]";
 			}
 		}
 		catch (PDOException $ex)

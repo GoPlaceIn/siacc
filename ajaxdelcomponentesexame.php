@@ -1,4 +1,6 @@
 <?php
+
+//--utf8_encode --
 include_once 'inc/comuns.inc.php';
 include_once 'cls/componenteexame.class.php';
 

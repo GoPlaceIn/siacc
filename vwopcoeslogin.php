@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/usuario.class.php';
 include_once 'cls/conexao.class.php';
 include_once 'cls/grupo.class.php';

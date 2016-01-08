@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 require_once 'cls/caso.class.php';
 

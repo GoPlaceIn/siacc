@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 function curPageURL() {
 	$pageURL = 'http';
 	if ($_SERVER["HTTPS"] == "on") { $pageURL .= "s"; }

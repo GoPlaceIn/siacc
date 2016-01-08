@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'cls/tipoexame.class.php';
 include_once 'cls/simnao.class.php';
@@ -155,7 +156,7 @@ class Exame
 	// fim set's --------------------------------------------------------
 
 
-	// funÁıes ----------------------------------------------------------
+	// fun√ß√µes ----------------------------------------------------------
 	public function __construct()
 	{
 		$this->codcaso = 0;
@@ -224,43 +225,43 @@ class Exame
 								//}
 								//else
 								//{
-								//	$this->msg_erro = "N„o foi informado quando o exame ser· exibido";
+								//	$this->msg_erro = "N√£o foi informado quando o exame ser√° exibido";
 								//	return false;
 								//}
 							//}
 							//else
 							//{
-							//	$this->msg_erro = "Bateria n„o informada";
+							//	$this->msg_erro = "Bateria n√£o informada";
 							//	return false;
 							//}
 						}
 						else
 						{
-							$this->msg_erro = "@lng[Justificativa n„o informada]";
+							$this->msg_erro = "@lng[Justificativa n√£o informada]";
 							return false;
 						}
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Campo Correto n„o informado]";
+						$this->msg_erro = "@lng[Campo Correto n√£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Tipo de exame n„o informado]";
+					$this->msg_erro = "@lng[Tipo de exame n√£o informado]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[DescriÁ„o do exame n„o informado]";
+				$this->msg_erro = "@lng[Descri√ß√£o do exame n√£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso de estudo n„o informado]";
+			$this->msg_erro = "@lng[Caso de estudo n√£o informado]";
 			return false;
 		}
 	}
@@ -322,43 +323,43 @@ class Exame
 								//}
 								//else
 								//{
-								//	$this->msg_erro = "N„o foi informado quando o exame ser· exibido";
+								//	$this->msg_erro = "N√£o foi informado quando o exame ser√° exibido";
 								//	return false;
 								//}
 							//}
 							//else
 							//{
-							//	$this->msg_erro = "Bateria n„o informada";
+							//	$this->msg_erro = "Bateria n√£o informada";
 							//	return false;
 							//}
 						}
 						else
 						{
-							$this->msg_erro = "@lng[Justificativa n„o informada]";
+							$this->msg_erro = "@lng[Justificativa n√£o informada]";
 							return false;
 						}
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Campo correto n„o informado]";
+						$this->msg_erro = "@lng[Campo correto n√£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Tipo de exame n„o informado]";
+					$this->msg_erro = "@lng[Tipo de exame n√£o informado]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[DescriÁ„o n„o informada]";
+				$this->msg_erro = "@lng[Descri√ß√£o n√£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso de estudo n„o informado]";
+			$this->msg_erro = "@lng[Caso de estudo n√£o informado]";
 			return false;
 		}
 	}
@@ -442,7 +443,7 @@ class Exame
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Este exame est· sendo utilizado na montagem do caso. N„o pode ser excluÌdo.]";
+				$this->msg_erro = "@lng[Este exame est√° sendo utilizado na montagem do caso. N√£o pode ser exclu√≠do.]";
 				return false;
 			}
 		}
@@ -496,7 +497,7 @@ class Exame
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Registro n„o encontrado]";
+				$this->msg_erro = "@lng[Registro n√£o encontrado]";
 				return false;
 			}
 		}
@@ -543,7 +544,7 @@ class Exame
 				$tabela = Comuns::TopoTabelaListagem(
 					"Exames cadastrados", 
 					"exames",
-					array("DescriÁ„o", "Tipo", /*"Mostrar este exame",*/ $labelResposta, /*"Bateria",*/ "AÁıes")
+					array("Descri√ß√£o", "Tipo", /*"Mostrar este exame",*/ $labelResposta, /*"Bateria",*/ "A√ß√µes")
 				);
 
 				while ($exame = $cmd->fetch(PDO::FETCH_OBJ))
@@ -568,7 +569,7 @@ class Exame
 			}
 			else
 			{
-				$tabela = "@lng[Nenhum exame cadastrado atÈ o momento]";
+				$tabela = "@lng[Nenhum exame cadastrado at√© o momento]";
 			}
 		}
 		catch (PDOException $ex)
@@ -723,7 +724,7 @@ class Exame
 				$lstimgs = Comuns::TopoTabelaListagem(
 					"",
 					"lst" . $tipo,
-				array($descricao, "AÁıes")
+				array($descricao, "A√ß√µes")
 				);
 
 				while ($imagem = $cmd->fetch(PDO::FETCH_OBJ))
@@ -815,25 +816,25 @@ class Exame
 					}
 					else
 					{
-						$this->msg_erro = "@lng[DescriÁ„o do arquivo n„o informado]";
+						$this->msg_erro = "@lng[Descri√ß√£o do arquivo n√£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Caminho n„o informado]";
+					$this->msg_erro = "@lng[Caminho n√£o informado]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Exame n„o enontrado]";
+				$this->msg_erro = "@lng[Exame n√£o enontrado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso de estudo n„o encontrado]";
+			$this->msg_erro = "@lng[Caso de estudo n√£o encontrado]";
 			return false;
 		}
 	}
@@ -880,25 +881,25 @@ class Exame
 					}
 					else
 					{
-						$this->msg_erro = "@lng[DescriÁ„o do arquivo n„o informado]";
+						$this->msg_erro = "@lng[Descri√ß√£o do arquivo n√£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Caminho n„o informado]";
+					$this->msg_erro = "@lng[Caminho n√£o informado]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Exame n„o enontrado]";
+				$this->msg_erro = "@lng[Exame n√£o enontrado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso de estudo n„o encontrado]";
+			$this->msg_erro = "@lng[Caso de estudo n√£o encontrado]";
 			return false;
 		}
 	}
@@ -977,7 +978,7 @@ class Exame
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Item n„o encontrado]";
+				$this->msg_erro = "@lng[Item n√£o encontrado]";
 				return false;
 			}
 		}
@@ -990,11 +991,11 @@ class Exame
 	}
 	
 	/**
-	 * Apaga uma imagem do caso de estudo. Apaga no banco de dados e o arquivo fÌsico
-	 * @param $codcaso int : CÛdigo do caso de estudos
-	 * @param $codexame int : CÛdigo do exame
-	 * @param $coditem int : CÛdigo do item a ser excluido
-	 * @return bool : verdadeiro caso sucesso e falso caso contr·rio
+	 * Apaga uma imagem do caso de estudo. Apaga no banco de dados e o arquivo f√≠sico
+	 * @param $codcaso int : C√≥digo do caso de estudos
+	 * @param $codexame int : C√≥digo do exame
+	 * @param $coditem int : C√≥digo do item a ser excluido
+	 * @return bool : verdadeiro caso sucesso e falso caso contr√°rio
 	 * */
 	public function DetelaImagemExame($codcaso, $codexame, $coditem)
 	{
@@ -1182,7 +1183,7 @@ class Exame
 				}
 				else
 				{
-					$checks = "@lng[Nenhuma hipÛtese diagnÛstica cadastrada]";
+					$checks = "@lng[Nenhuma hip√≥tese diagn√≥stica cadastrada]";
 				}
 				return $checks;
 			}
@@ -1195,7 +1196,7 @@ class Exame
 		}
 		else
 		{
-			$checks = "Este Caso de estudo È do tipo Feedback instantaneo e por isso n„o possui relaÁıes";
+			$checks = "Este Caso de estudo √© do tipo Feedback instantaneo e por isso n√£o possui rela√ß√µes";
 			return $checks;
 		}
 	}
@@ -1350,12 +1351,12 @@ class Exame
 				$exameatual = null;
 				$componatual = null;
 				
-				$conteudo .= '<h4>@lng[LanÁar resultados do exame]</h4>';
+				$conteudo .= '<h4>@lng[Lan√ßar resultados do exame]</h4>';
 				$conteudo .= '<table>';
 				$conteudo .= '  <tr>';
 				$conteudo .= '    <th>@lng[Item]</th>';
 				$conteudo .= '    <th>@lng[Resultado]</th>';
-				$conteudo .= '    <th>@lng[ObservaÁ„o]</th>';
+				$conteudo .= '    <th>@lng[Observa√ß√£o]</th>';
 				$conteudo .= '    <th>&nbsp;</th>';
 				$conteudo .= '  </tr>';
 
@@ -1391,7 +1392,7 @@ class Exame
 	}
 
 	/**
-	 * Retorna um Array de objetos contendo CodComponente, NomeComponente, Valor e complemento quando o exame tiver componentes; CodExame, Descricao, Valor e Complemento quando o exame n„o tive componentes
+	 * Retorna um Array de objetos contendo CodComponente, NomeComponente, Valor e complemento quando o exame tiver componentes; CodExame, Descricao, Valor e Complemento quando o exame n√£o tive componentes
 	 * */
 	public function ListaRecordSetResultadosExamesLaboratoriais()
 	{
@@ -1656,7 +1657,7 @@ class Exame
 	{
 		if ((isset($this->codcaso)) && ($this->codcaso > 0))
 		{
-			// Verifica se o exame j· n„o foi processado
+			// Verifica se o exame j√° n√£o foi processado
 			$sql  = "select ExamesProcessados from mescaso ";
 			$sql .= "where Codigo = :pCodCaso";
 			
@@ -1673,10 +1674,10 @@ class Exame
 				
 				if (($status == 0) || ($status == 2))
 				{
-					// 0 È n„o processado e 2 È Reprocessado
+					// 0 √© n√£o processado e 2 √© Reprocessado
 					$cmd->closeCursor();
 					
-					// Busca a combinaÁ„o de agrupamentos para a exibiÁ„o dos resultados dos exames
+					// Busca a combina√ß√£o de agrupamentos para a exibi√ß√£o dos resultados dos exames
 					$sql  = "SELECT CodCaso, NumBateria, AgrupaComABateria, TipoReg, Exame ";
 					$sql .= "FROM( ";
 					$sql .= "	SELECT DISTINCT CodCaso ";
@@ -1774,7 +1775,7 @@ class Exame
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Os exames deste caso j· foram processados. Se deseja atualiza-los faÁa um reprocessamento e n„o um processamento]";
+					$this->msg_erro = "@lng[Os exames deste caso j√° foram processados. Se deseja atualiza-los fa√ßa um reprocessamento e n√£o um processamento]";
 					return false;
 				}
 			}
@@ -1787,7 +1788,7 @@ class Exame
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso n„o informado]";
+			$this->msg_erro = "@lng[Caso n√£o informado]";
 			return false;
 		}
 	}
@@ -1796,7 +1797,7 @@ class Exame
 	{
 		Log::RegistraLog("Reprocessou os exames do caso de estudo " . $this->codcaso);
 		
-		// deletar as ordenaÁıes j· criadas com os exames
+		// deletar as ordena√ß√µes j√° criadas com os exames
 		$sql  = "DELETE FROM mescasoordenacao ";
 		$sql .= "WHERE codcaso = :pCodCaso AND Prefixo = 'EXA' ";
 		$sql .= "AND Chave IN(SELECT Chave FROM mescasoexameschaves WHERE CodCaso = :pCodCaso); ";
@@ -1854,7 +1855,7 @@ class Exame
 			$this->msg_erro = $msg[2];
 			return false;
 		}
-		// deletar as chaves j· criadas
+		// deletar as chaves j√° criadas
 	}
 	
 	public static function ExamesJaProcessado($codcaso)
@@ -1969,7 +1970,7 @@ class Exame
 		$sql  = "select distinct excont.CodCaso ";
 		$sql .= "		,excont.NumBateria ";
 		$sql .= "		,excont.CodExame ";
-		$sql .= "		,case when excont.CodExame <> -1 then ex.Descricao else 'Nenhum expecÌfico' end as Exame ";
+		$sql .= "		,case when excont.CodExame <> -1 then ex.Descricao else 'Nenhum expec√≠fico' end as Exame ";
 		$sql .= "		,excont.CodConteudo ";
 		$sql .= "		,cont.Descricao ";
 		$sql .= "from mescasoexamesconteudos excont ";
@@ -1994,9 +1995,9 @@ class Exame
 			if ($cmd->rowCount() > 0)
 			{
 				$ret = Comuns::TopoTabelaListagem(
-					 "Conteudos j· vinculados aos exames",
+					 "Conteudos j√° vinculados aos exames",
 					 "tabContVinc",
-					 array(/*"N˙m. Bateria", */"Exame", "Conte˙do", "AÁıes")
+					 array(/*"N√∫m. Bateria", */"Exame", "Conte√∫do", "A√ß√µes")
 				);
 				
 				while ($linha = $cmd->fetch(PDO::FETCH_OBJ))
@@ -2014,7 +2015,7 @@ class Exame
 			}
 			else
 			{
-				$ret = "@lng[Nenhum documento criado atÈ agora]";
+				$ret = "@lng[Nenhum documento criado at√© agora]";
 			}
 			
 			return $ret;
@@ -2032,7 +2033,7 @@ class Exame
 		$sql  = "select distinct exmidia.CodCaso ";
 		$sql .= "		,exmidia.NumBateria ";
 		$sql .= "		,exmidia.CodExame ";
-		$sql .= "		,case when exmidia.CodExame <> -1 then ex.Descricao else 'Nenhum expecÌfico' end as Exame ";
+		$sql .= "		,case when exmidia.CodExame <> -1 then ex.Descricao else 'Nenhum expec√≠fico' end as Exame ";
 		$sql .= "		,exmidia.CodMidia ";
 		$sql .= "		,midia.Descricao ";
 		$sql .= "from mescasoexamesmidia exmidia ";
@@ -2057,9 +2058,9 @@ class Exame
 			if ($cmd->rowCount() > 0)
 			{
 				$ret = Comuns::TopoTabelaListagem(
-					 "MÌdias j· vinculadas aos exames",
+					 "M√≠dias j√° vinculadas aos exames",
 					 "tabMidVinc",
-					 array(/*"N˙m. Bateria", */"Exame", "MÌdia", "AÁıes")
+					 array(/*"N√∫m. Bateria", */"Exame", "M√≠dia", "A√ß√µes")
 				);
 				
 				while ($linha = $cmd->fetch(PDO::FETCH_OBJ))
@@ -2077,7 +2078,7 @@ class Exame
 			}
 			else
 			{
-				$ret = "@lng[Nenhuma mÌdia criada atÈ o momento]";
+				$ret = "@lng[Nenhuma m√≠dia criada at√© o momento]";
 			}
 			
 			return $ret;
@@ -2125,7 +2126,7 @@ class Exame
 			else
 			{
 				$msg = $cmd->errorInfo();
-				$this->msg_erro = "@lng[O conte˙do foi vinculado mas o seguinte erro ocorreu]: " . $msg[2] . ". Linha 1633";
+				$this->msg_erro = "@lng[O conte√∫do foi vinculado mas o seguinte erro ocorreu]: " . $msg[2] . ". Linha 1633";
 				return false;
 			}
 		}
@@ -2175,7 +2176,7 @@ class Exame
 			else
 			{
 				$msg = $cmd->errorInfo();
-				$this->msg_erro = "O conte˙do foi vinculado mas o seguinte erro ocorreu: " . $msg[2] . ". Linha 1633";
+				$this->msg_erro = "O conte√∫do foi vinculado mas o seguinte erro ocorreu: " . $msg[2] . ". Linha 1633";
 				return false;
 			}
 			*/
@@ -2222,7 +2223,7 @@ class Exame
 			else
 			{
 				$msg = $cmd->errorInfo();
-				$this->msg_erro = "@lng[O conte˙do foi desvinculado mas o seguinte erro ocorreu]: " . $msg[2] . ". Linha 1679";
+				$this->msg_erro = "@lng[O conte√∫do foi desvinculado mas o seguinte erro ocorreu]: " . $msg[2] . ". Linha 1679";
 				return false;
 			}
 		}
@@ -2271,7 +2272,7 @@ class Exame
 			else
 			{
 				$msg = $cmd->errorInfo();
-				$this->msg_erro = "O conte˙do foi desvinculado mas o seguinte erro ocorreu: " . $msg[2] . ". Linha 1679";
+				$this->msg_erro = "O conte√∫do foi desvinculado mas o seguinte erro ocorreu: " . $msg[2] . ". Linha 1679";
 				return false;
 			}
 			*/

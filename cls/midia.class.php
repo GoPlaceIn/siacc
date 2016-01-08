@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'inc/comuns.inc.php';
 
@@ -171,25 +172,25 @@ class Midia
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Tipo da mídia não informado]";
+						$this->msg_erro = "@lng[Tipo da mÃ­dia nÃ£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[URL da mídia não informada]";
+					$this->msg_erro = "@lng[URL da mÃ­dia nÃ£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Descrição não informada]";
+				$this->msg_erro = "@lng[DescriÃ§Ã£o nÃ£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso clínico não informado]";
+			$this->msg_erro = "@lng[Caso clÃ­nico nÃ£o informado]";
 			return false;
 		}
 	}
@@ -299,7 +300,7 @@ class Midia
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Nenhuma mídia cadastrada no sistema]";
+				$this->msg_erro = "@lng[Nenhuma mÃ­dia cadastrada no sistema]";
 				return false;
 			}
 		}
@@ -332,7 +333,7 @@ class Midia
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Nenhuma mídia cadastrada no sistema]";
+				$this->msg_erro = "@lng[Nenhuma mÃ­dia cadastrada no sistema]";
 				return false;
 			}
 		}

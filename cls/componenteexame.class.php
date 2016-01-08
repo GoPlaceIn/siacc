@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'inc/comuns.inc.php';
 
@@ -39,7 +40,7 @@ class Componente
 		}
 		else
 		{
-			throw new Exception("@lng[Exame n„o informado]", 1000);
+			throw new Exception("@lng[Exame n√£o informado]", 1000);
 		}
 	}
 	
@@ -51,7 +52,7 @@ class Componente
 		}
 		else
 		{
-			throw new Exception("@lng[CÛdigo do componente n„o informado]", 1010);
+			throw new Exception("@lng[C√≥digo do componente n√£o informado]", 1010);
 		}
 	}
 	
@@ -63,7 +64,7 @@ class Componente
 		}
 		else
 		{
-			throw new Exception("@lng[DescriÁ„o do componente n„o informado]", 1020);
+			throw new Exception("@lng[Descri√ß√£o do componente n√£o informado]", 1020);
 		}
 	}
 
@@ -112,13 +113,13 @@ class Componente
 			}
 			else
 			{
-				$this->msg_erro = "@lng[DescriÁ„o n„o informada]";
+				$this->msg_erro = "@lng[Descri√ß√£o n√£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Exame n„o informado]";
+			$this->msg_erro = "@lng[Exame n√£o informado]";
 			return false;
 		}
 	}
@@ -161,19 +162,19 @@ class Componente
 				}
 				else
 				{
-					$this->msg_erro = "@lng[DescriÁ„o n„o informada]";
+					$this->msg_erro = "@lng[Descri√ß√£o n√£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Componente n„o informado]";
+				$this->msg_erro = "@lng[Componente n√£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Exame n„o informado]";
+			$this->msg_erro = "@lng[Exame n√£o informado]";
 			return false;
 		}
 	}
@@ -212,13 +213,13 @@ class Componente
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Componente n„o informado]";
+				$this->msg_erro = "@lng[Componente n√£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Exame n„o informado]";
+			$this->msg_erro = "@lng[Exame n√£o informado]";
 			return false;
 		}
 	}

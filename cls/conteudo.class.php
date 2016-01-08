@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'inc/comuns.inc.php';
 include_once 'cls/log.class.php';
@@ -56,7 +57,7 @@ class Conteudo
 		}
 		else
 		{
-			throw new Exception("@lng[Código do caso não informado]", 1000);
+			throw new Exception("@lng[CÃ³digo do caso nÃ£o informado]", 1000);
 		}
 	}
 	
@@ -68,7 +69,7 @@ class Conteudo
 		}
 		else
 		{
-			throw new Exception("@lng[Código do conteúdo não informado]", 1010);
+			throw new Exception("@lng[CÃ³digo do conteÃºdo nÃ£o informado]", 1010);
 		}
 	}
 	
@@ -80,7 +81,7 @@ class Conteudo
 		}
 		else
 		{
-			throw new Exception("@lng[Descrição do conteúdo não informado]", 1020);
+			throw new Exception("@lng[DescriÃ§Ã£o do conteÃºdo nÃ£o informado]", 1020);
 		}
 	}
 	
@@ -92,7 +93,7 @@ class Conteudo
 		}
 		else
 		{
-			throw new Exception("@lng[Texto do conteúdo não informado]", 1020);
+			throw new Exception("@lng[Texto do conteÃºdo nÃ£o informado]", 1020);
 		}
 	}
 
@@ -141,19 +142,19 @@ class Conteudo
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Conteúdo não informado]";
+					$this->msg_erro = "@lng[ConteÃºdo nÃ£o informado]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Descrição não informada]";
+				$this->msg_erro = "@lng[DescriÃ§Ã£o nÃ£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Código do caso de estudo não informado]";
+			$this->msg_erro = "@lng[CÃ³digo do caso de estudo nÃ£o informado]";
 			return false;
 		}
 	}
@@ -195,25 +196,25 @@ class Conteudo
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Conteúdo não informado]";
+						$this->msg_erro = "@lng[ConteÃºdo nÃ£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Descrição do conteúdo não informada]";
+					$this->msg_erro = "@lng[DescriÃ§Ã£o do conteÃºdo nÃ£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Código do conteúdo não informado]";
+				$this->msg_erro = "@lng[CÃ³digo do conteÃºdo nÃ£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Código do caso de estudo não informado]";
+			$this->msg_erro = "@lng[CÃ³digo do caso de estudo nÃ£o informado]";
 			return false;
 		}
 	}
@@ -248,21 +249,21 @@ class Conteudo
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Código do conteúdo não informado]";
+				$this->msg_erro = "@lng[CÃ³digo do conteÃºdo nÃ£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Código do caso de estudo não informado]";
+			$this->msg_erro = "@lng[CÃ³digo do caso de estudo nÃ£o informado]";
 			return false;
 		}
 	}
 
 	/**
-	 * Retorna o conteúdo HTML cadastrado no banco de dados
-	 * @param codcaso int <p>Código do caso de estudo</p>
-	 * @param codconteudo mixed <p>Código do conteúdo ou chave do conteúdo</p>
+	 * Retorna o conteÃºdo HTML cadastrado no banco de dados
+	 * @param codcaso int <p>CÃ³digo do caso de estudo</p>
+	 * @param codconteudo mixed <p>CÃ³digo do conteÃºdo ou chave do conteÃºdo</p>
 	 * */
 	public function Carrega($codcaso, $codconteudo)
 	{
@@ -302,7 +303,7 @@ class Conteudo
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Registro não encontrado]";
+				$this->msg_erro = "@lng[Registro nÃ£o encontrado]";
 				return false;
 			}
 		}
@@ -332,7 +333,7 @@ class Conteudo
 			$tabela = Comuns::TopoTabelaListagem(
 				"Hipertexto", 
 				"contcad",
-				array("Conteúdo", "Dt. Cadastro", "Ações")
+				array("ConteÃºdo", "Dt. Cadastro", "AÃ§Ãµes")
 			);
 
 			while ($conteudo = $cmd->fetch(PDO::FETCH_OBJ))
@@ -384,7 +385,7 @@ class Conteudo
 					$tabela .= Comuns::TopoTabelaListagem(
 						($midia->TipoMidia), 
 						"contcad_" + $midia->CodTipo,
-						array("Tipo", "Descrição", "Dt. Cadastro", "Ações")
+						array("Tipo", "DescriÃ§Ã£o", "Dt. Cadastro", "AÃ§Ãµes")
 					);
 					$tababerta = true;
 				}
@@ -422,7 +423,7 @@ class Conteudo
 		
 		//else
 		//{
-		//	$tabela = "Nenhum conteúdo adicional cadastrado até o momento";
+		//	$tabela = "Nenhum conteÃºdo adicional cadastrado atÃ© o momento";
 		//}
 		
 		return $tabela;

@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class HashTable
 {
 	private $conteudo;

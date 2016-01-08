@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 include_once "conexao.class.php";
 include_once 'cls/usuario.class.php';
 include_once 'cls/tipopergunta.class.php';
@@ -75,7 +75,7 @@ class Pergunta
 	{
 		if (!isset($txt))
 		{
-			throw new Exception("@lng[VocÍ deve informar o texto da pergunta]", 0001);
+			throw new Exception("@lng[Voc√™ deve informar o texto da pergunta]", 0001);
 		}
 		$this->texto = $txt;
 	}
@@ -98,7 +98,7 @@ class Pergunta
 	{
 		if (!isset($at))
 		{
-			throw new Exception("@lng[Selecione se a pergunta estar· ativa ou n„o]", 0003);
+			throw new Exception("@lng[Selecione se a pergunta estar√° ativa ou n√£o]", 0003);
 		}
 		$this->ativo = $at;
 	}
@@ -112,7 +112,7 @@ class Pergunta
 	{
 		if (!isset($niv))
 		{
-			throw new Exception("@lng[Selecione o nÌvel de dificuldade da pergunta]", 0004);
+			throw new Exception("@lng[Selecione o n√≠vel de dificuldade da pergunta]", 0004);
 		}
 		$this->nivel = $niv;
 	}
@@ -200,7 +200,7 @@ class Pergunta
 			}
 			else
 			{
-				$this->msg_erro[] = "@lng[Erro inesperado ao criar o cÛdigo da pergunta.]";
+				$this->msg_erro[] = "@lng[Erro inesperado ao criar o c√≥digo da pergunta.]";
 				$cnn->rollBack();
 				return false;
 			}
@@ -217,13 +217,13 @@ class Pergunta
 	{
 		$diretorio_base = 'files/' . $this->codigo;
 
-		//Se o diretÛrio da pergunta n„o existe, ele È criado
+		//Se o diret√≥rio da pergunta n√£o existe, ele √© criado
 		if ( ! file_exists($diretorio_base) )
 		{
 			mkdir($diretorio_base);
 		}
 
-		// DiretÛrio dos itens de ajuda da pergunta
+		// Diret√≥rio dos itens de ajuda da pergunta
 		$diretorio_help = $diretorio_base . '/help';
 
 		if ( ! file_exists($diretorio_help) )
@@ -241,7 +241,7 @@ class Pergunta
 
 	/**
 	 * Grava o texto da pergunta no banco de dados
-	 * @return string : Retorna uma mensagem de alerta caso uma falha tenha ocorrido na gravaÁ„o
+	 * @return string : Retorna uma mensagem de alerta caso uma falha tenha ocorrido na grava√ß√£o
 	 * */
 	private function GravaTexto()
 	{
@@ -326,7 +326,7 @@ class Pergunta
 	{
 		if (!isset($codigo))
 		{
-			throw new Exception("@lng[CÛdigo inv·lido]", 0005);
+			throw new Exception("@lng[C√≥digo inv√°lido]", 0005);
 		}
 
 		$this->codigo = $codigo;
@@ -480,7 +480,7 @@ class Pergunta
 				{
 					$arquivo = isset($_FILES["realupload"]) ? $_FILES["realupload"] : false;
 		
-					// Se n„o veio o arquivo
+					// Se n√£o veio o arquivo
 					if ($arquivo == false)
 					{
 						$this->msg_erro[] = "@lng[Informe um arquivo para realizar o upload]";
@@ -489,17 +489,17 @@ class Pergunta
 		
 					if(!eregi("^image\/(pjpeg|jpeg|png|gif)$", $arquivo["type"]))
 					{
-						$this->msg_erro[] = "@lng[Tipo de arquivo enviado inv·lido. Envie jpeg, gif ou png]";
+						$this->msg_erro[] = "@lng[Tipo de arquivo enviado inv√°lido. Envie jpeg, gif ou png]";
 						return false;
 					}
 		
-					// Recupera extens„o do arquivo
+					// Recupera extens√£o do arquivo
 					preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $arquivo["name"], $ext);
 		
 					// Monta o nome final do arquivo
 					$img = 'files/perg/' . $this->getCodigo() . "/imgs/" . Comuns::CodigoUnico() . "." . $ext[1];
 		
-					// Verifica a existencia dos diretÛrios. Se n„o existirem, eles s„o criados
+					// Verifica a existencia dos diret√≥rios. Se n√£o existirem, eles s√£o criados
 					$this->CriaDiretorio();
 		
 					// Carrega o arquivo
@@ -511,7 +511,7 @@ class Pergunta
 				$img = "";
 			}
 
-			// Se deu tudo certo no upload ou pergunta È do tipo texto, faz a gravaÁ„o no banco de dados
+			// Se deu tudo certo no upload ou pergunta √© do tipo texto, faz a grava√ß√£o no banco de dados
 				
 			$sql  = "INSERT INTO mesalternativa(CodPergunta, Sequencia, Texto, Imagem, Correto, Explicacao, ExibirExplicacao, TipoConsequencia, ValorConsequencia, CodBinario, Origem) ";
 			$sql .= "SELECT :pCodPerg, :pSeq, :pTexto, :pImagem, :pCorreto, :pExplicacao, :pExibirExp, :pTipoConseq, :pValConseq, ";
@@ -680,7 +680,7 @@ class Pergunta
 					else
 					{
 						unset($this->msg_erro);
-						$this->msg_erro[] = "@lng[Os dados textuais foram atualizados porem o arquivo enviado n„o È uma imagem v·lida e a imagem antiga n„o foi substituÌda]";
+						$this->msg_erro[] = "@lng[Os dados textuais foram atualizados porem o arquivo enviado n√£o √© uma imagem v√°lida e a imagem antiga n√£o foi substitu√≠da]";
 					}
 				}
 			}
@@ -807,7 +807,7 @@ class Pergunta
 				}
 				else if ($acao == 3)
 				{
-					// Se for um apoio, exclui essas informaÁıes
+					// Se for um apoio, exclui essas informa√ß√µes
 					$sql = "DELETE FROM mesperguntaapoio WHERE Codigo = :pCodAcao;";
 				}
 					
@@ -820,8 +820,8 @@ class Pergunta
 
 			if ($this->maiorseq > $seq)
 			{
-				// Se existiam alternativas com sequencia mair que a que est· sendo excluida,
-				// atualiza essas sequencias, decrescendo seu cÛdigo.
+				// Se existiam alternativas com sequencia mair que a que est√° sendo excluida,
+				// atualiza essas sequencias, decrescendo seu c√≥digo.
 				$sql = "UPDATE mesalternativa SET Sequencia = Sequencia - 1 WHERE CodPergunta = :pCodPerg AND Sequencia > :pCodSeq;";
 
 				$q = $cnn->prepare($sql);
@@ -867,9 +867,9 @@ class Pergunta
 		if ($q->rowCount() > 0)
 		{
 			$ret = Comuns::TopoTabelaListagem(
-				"Lista de ExercÌcios",
+				"Lista de Exerc√≠cios",
 				"PerguntasCad",
-			array('DescriÁ„o', 'Autor', 'Classe', 'Tipo', 'Ativo', 'AÁıes')
+			array('Descri√ß√£o', 'Autor', 'Classe', 'Tipo', 'Ativo', 'A√ß√µes')
 			);
 
 			while ($rs = $q->fetch(PDO::FETCH_OBJ))
@@ -900,7 +900,7 @@ class Pergunta
 
 				$ret .= '    <a href="vwalternativas.php?p=' . $cod . '">' . Comuns::IMG_ACAO_OPCOES . '</a>';
 
-				// O Autor da pergunta È o ˙nico que pode excluir ela.
+				// O Autor da pergunta √© o √∫nico que pode excluir ela.
 				if ($this->usuario == $rs->CodAutor)
 				{
 					$ret .= '    <a href="javascript:void(0);" onclick="javascript:fntExcluirPergunta(' . $cod . ');">' . Comuns::IMG_ACAO_DELETAR . '</a>';
@@ -934,8 +934,8 @@ class Pergunta
 	 * @param $classe int: A classe a ser filtrada
 	 * @param $tipo int: O tipo de pergunta a ser filtrada
 	 * @param $string string: O texto a ser filtrado nas perguntas
-	 * @param $menos int: CÛdigo que deve ser eliminado da consulta
-	 * @param $usuario int: CÛdigo do usu·rio logado no sistema
+	 * @param $menos int: C√≥digo que deve ser eliminado da consulta
+	 * @param $usuario int: C√≥digo do usu√°rio logado no sistema
 	 * */
 	public function ListaPerguntasAtivas($classe = null, $tipo = null, $string = "", $menos = 0, $usuario)
 	{

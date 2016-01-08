@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once "cls/pergunta.class.php";
 include_once 'inc/comuns.inc.php';
 

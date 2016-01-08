@@ -1,7 +1,7 @@
 <?php
 
 
-
+//--utf8_encode --
 
 /**
 * transport class for sending/receiving data via HTTP and HTTPS

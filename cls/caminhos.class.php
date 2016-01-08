@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 include_once 'cls/components/botao.class.php';
 
@@ -7,7 +8,7 @@ class Caminhos
 	public static function MontaCaminhoDadosBasicos()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Dados básicos]';
+		$caminho .= '@lng[Dados bÃ¡sicos]';
 		
 		return $caminho;
 	}
@@ -23,7 +24,7 @@ class Caminhos
 	public static function MontaCaminhoConfiguracoes()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Configurações]';
+		$caminho .= '@lng[ConfiguraÃ§Ãµes]';
 		
 		return $caminho;
 	}
@@ -47,7 +48,7 @@ class Caminhos
 	public static function MontaCaminhoExameFisico()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Exame físico]';
+		$caminho .= '@lng[Exame fÃ­sico]';
 		
 		return $caminho;
 	}
@@ -55,7 +56,7 @@ class Caminhos
 	public static function MontaCaminhoHipoteses()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Hipóteses diagnósticas]';
+		$caminho .= '@lng[HipÃ³teses diagnÃ³sticas]';
 		
 		return $caminho;
 	}
@@ -101,7 +102,7 @@ class Caminhos
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntLoadTela(\'exames\');">@lng[Exames]</a> > ';
-		$caminho .= '@lng[Conteúdos vinculados]';
+		$caminho .= '@lng[ConteÃºdos vinculados]';
 		
 		return $caminho;
 	}
@@ -109,7 +110,7 @@ class Caminhos
 	public static function MontaCaminhoDiagnosticos()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Diagnósticos]';
+		$caminho .= '@lng[DiagnÃ³sticos]';
 			
 		return $caminho;
 	}
@@ -133,7 +134,7 @@ class Caminhos
 	public static function MontaCaminhoConteudos()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Conteúdos extras]';
+		$caminho .= '@lng[ConteÃºdos extras]';
 		
 		return $caminho;
 	}
@@ -141,7 +142,7 @@ class Caminhos
 	public static function MontaCaminhoExercicios()
 	{
 		$caminho .= '<a href="javascript:void(0);" onclick="javascript:fntTelaInicial();">@lng[Caso]</a> > ';
-		$caminho .= '@lng[Exercícios]';
+		$caminho .= '@lng[ExercÃ­cios]';
 		
 		return $caminho;
 	}

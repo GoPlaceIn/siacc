@@ -1,4 +1,7 @@
 <?php
+
+//--utf8_encode --
+
 include_once 'inc/nusoup/lib/nusoap.php';
 //include_once 'inc/nusoup/lib/class.nusoap_base.php';
 //include_once 'inc/nusoup/lib/class.soapclient.php';

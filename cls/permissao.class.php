@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 require_once 'conexao.class.php';
 require_once 'inc/comuns.inc.php';
 
@@ -36,12 +36,12 @@ class Permissao
 			}
 			else
 			{
-				throw new Exception("@lng[Código informado inválido]", 1009);
+				throw new Exception("@lng[CÃ³digo informado invÃ¡lido]", 1009);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Código não informádo]", 1010);
+			throw new Exception("@lng[CÃ³digo nÃ£o informÃ¡do]", 1010);
 		}
 	}
 
@@ -58,10 +58,10 @@ class Permissao
 		switch ($tipo)
 		{
 			case "lista":
-				$ret = "listagem de permissões do sistema";
+				$ret = "listagem de permissÃµes do sistema";
 				break;
 			case "cadastro":
-				$ret = "cadastro de permissões do sistema";
+				$ret = "cadastro de permissÃµes do sistema";
 		}
 		
 		return $ret;
@@ -84,12 +84,12 @@ class Permissao
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao inserir a permissão].", 1011);
+				throw new Exception("@lng[Erro ao inserir a permissÃ£o].", 1011);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Descrição não informada]", 1012);
+			throw new Exception("@lng[DescriÃ§Ã£o nÃ£o informada]", 1012);
 		}
 	}
 
@@ -105,7 +105,7 @@ class Permissao
 		else
 		{
 			$cnn->Desconecta();
-			throw new Exception("@lng[Erro ao excluir a permissão]", 1013);
+			throw new Exception("@lng[Erro ao excluir a permissÃ£o]", 1013);
 		}
 	}
 
@@ -126,14 +126,14 @@ class Permissao
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao atualizar a descrição da permissão]", 1014);
+				throw new Exception("@lng[Erro ao atualizar a descriÃ§Ã£o da permissÃ£o]", 1014);
 			}
 
 		}
 		else
 		{
 			$cnn->Desconecta();
-			throw new Exception("@lng[Você deve informar uma descrição para a permissão]", 1015);
+			throw new Exception("@lng[VocÃª deve informar uma descriÃ§Ã£o para a permissÃ£o]", 1015);
 		}
 	}
 
@@ -147,7 +147,7 @@ class Permissao
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de cadastro de permissões].";
+			$tpl = "@lng[Erro ao criar a tela de cadastro de permissÃµes].";
 		}
 		return $tpl;
 	}
@@ -169,12 +169,12 @@ class Permissao
 			}
 			else
 			{
-				echo("@lng[Registro não encontrado]");
+				echo("@lng[Registro nÃ£o encontrado]");
 			}
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de edição de permissões].";
+			$tpl = "@lng[Erro ao criar a tela de ediÃ§Ã£o de permissÃµes].";
 		}
 		return $tpl;
 	}
@@ -190,9 +190,9 @@ class Permissao
 		if (mysql_num_rows($rs))
 		{
 			$ret = Comuns::TopoTabelaListagem(
-					"Lista de Permissões do sistema",
+					"Lista de PermissÃµes do sistema",
 					"permissoessis",
-			array('Descrição', 'Ações')
+			array('DescriÃ§Ã£o', 'AÃ§Ãµes')
 			);
 				
 			while ($linha = mysql_fetch_array($rs))
@@ -216,7 +216,7 @@ class Permissao
 		}
 		else
 		{
-			$ret = "@lng[Nenhuma permissão cadastrado]";
+			$ret = "@lng[Nenhuma permissÃ£o cadastrado]";
 		}
 
 		return $ret;

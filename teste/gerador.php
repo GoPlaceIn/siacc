@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 function fntGeraPrivates($params)
 {
 	$ret = "";

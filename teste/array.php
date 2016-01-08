@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 $a[1] = "Regis <regisls@gmail.com>";
 //$a[2] = "Agathe <agathe@feevale.br>";
 

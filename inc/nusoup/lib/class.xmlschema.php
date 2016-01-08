@@ -1,7 +1,7 @@
 <?php
 
 
-
+//--utf8_encode --
 
 /**
 * parses an XML Schema, allows access to it's data, other utility methods.

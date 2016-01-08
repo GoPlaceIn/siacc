@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class ComboBox
 {
 	private $dataset;

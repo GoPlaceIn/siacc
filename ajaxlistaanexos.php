@@ -1,4 +1,6 @@
 <?php
+
+//--utf8_encode --
 session_start();
 include_once 'cls/exame.class.php';
 include_once 'inc/comuns.inc.php';

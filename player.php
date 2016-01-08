@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 include_once 'cls/videoplayer.class.php';
 include_once 'cls/audioplayer.class.php';

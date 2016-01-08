@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 require_once "cls/classes.class.php";
 
 function Main()

@@ -1,4 +1,6 @@
 <?php
+
+//--utf8_encode --
 include_once 'c/controlerUsuario.php';
 
 function Main()

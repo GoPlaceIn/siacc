@@ -1,4 +1,7 @@
 <?php
+
+//--utf8_encode --
+
 /*
 The NuSOAP project home is:
 http://sourceforge.net/projects/nusoap/

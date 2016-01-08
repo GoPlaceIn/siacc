@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class Conexao
 {
 	var $usuario = "root";

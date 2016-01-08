@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 function Main()
 {
 	$xml = new XMLReader();

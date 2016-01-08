@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 include_once '../cls/conexao.class.php';
 include_once '../inc/comuns.inc.php';
 
@@ -45,7 +47,7 @@ function Coleta($url)
 								$cmd->bindParam(":pExpressao", $valor, PDO::PARAM_STR);
 								$cmd->bindParam(":pGrupo", $grupo, PDO::PARAM_STR);
 								$cmd->execute();
-								echo("SUCESSO: Express„o " . $valor . " gravada com sucesso<br />");
+								echo("SUCESSO: Express√£o " . $valor . " gravada com sucesso<br />");
 							}
 						}
 						else

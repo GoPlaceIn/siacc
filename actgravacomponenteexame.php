@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/componenteexame.class.php';
 
 function Main()

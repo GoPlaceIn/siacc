@@ -1,9 +1,12 @@
 <?php
+
+//--utf8_encode --
+
 function Main()
 {
 	//echo( md5("kmvd96Ui_") );
 	
-	$texto = 'Meu gato pôs um ovo';
+	$texto = 'Meu gato pÃ´s um ovo';
 	$key = 'main katz hot an oi kalet';
 	$iv = '12345678';
 	

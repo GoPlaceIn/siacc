@@ -1,5 +1,7 @@
 <?php
 
+//--utf8_encode --
+
 if (isset($_REQUEST['par']))
 {
 	echo("isset = true");
@@ -12,7 +14,7 @@ if (is_null($_REQUEST['par']))
 
 if ($_REQUEST['par'])
 {
-	echo("<br />diretão");
+	echo("<br />diretÃ£o");
 }
 
 ?>

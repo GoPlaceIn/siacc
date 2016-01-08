@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'inc/comuns.inc.php';
 

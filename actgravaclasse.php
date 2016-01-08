@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 require_once 'inc/comuns.inc.php';
 require_once 'cls/classes.class.php';

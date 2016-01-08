@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 include_once 'cls/midia.class.php';
 include_once 'inc/comuns.inc.php';

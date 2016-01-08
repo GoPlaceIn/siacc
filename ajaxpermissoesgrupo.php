@@ -1,4 +1,6 @@
 <?php
+
+//--utf8_encode --
 session_start();
 require_once 'cls/grupo.class.php';
 

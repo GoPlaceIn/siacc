@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 
 include_once 'cls/conteudo.class.php';
@@ -148,7 +149,7 @@ class Montagem
 
 	public function ExcluiItem($item)
 	{
-		/* Verifica se o conte˙do j· n„o teve acesso por Alunos (grupos diferente de Administradores e Especialistas) */
+		/* Verifica se o conte√∫do j√° n√£o teve acesso por Alunos (grupos diferente de Administradores e Especialistas) */
 		$sqlpode  = "SELECT 1 AS Tem ";
 		$sqlpode .= "FROM mesresolucaovisconteudo ";
 		$sqlpode .= "INNER JOIN mesacessousuario ";
@@ -173,7 +174,7 @@ class Montagem
 		{
 			if ($cmdpode->rowCount() == 0)
 			{
-				/* Verifica se o item atual tem filhos para excluÌ-los primeiro */
+				/* Verifica se o item atual tem filhos para exclu√≠-los primeiro */
 				$sqlfilhos = "SELECT Chave FROM mescasomontagem where CodCaso = :pCodCaso AND CodMontagem = 1 AND ChavePai = :pChave;";
 				$cmdfilhos = $cnn->prepare($sqlfilhos);
 				$cmdfilhos->bindParam(":pCodCaso", $this->codcaso, PDO::PARAM_INT);
@@ -184,7 +185,7 @@ class Montagem
 				{
 					if ($cmdfilhos->rowCount() > 0)
 					{
-						Log::RegistraLog("DEBUG - Encontrou filhos. Vai chamar a funÁ„o novamente");
+						Log::RegistraLog("DEBUG - Encontrou filhos. Vai chamar a fun√ß√£o novamente");
 						self::ExcluiItem($cmdfilhos->fetchColumn());
 					}
 					
@@ -210,7 +211,7 @@ class Montagem
 						$cnn->beginTransaction();
 						
 						/* Transformar isso em recursividade */
-						/* Exclui as configuraÁıes dos itens */
+						/* Exclui as configura√ß√µes dos itens */
 						$sqldelconf  = "delete from mescasomontagemvalconfigs ";
 						$sqldelconf .= "where CodCaso = :pCodCaso ";
 						$sqldelconf .= "  and codmontagem = 1 ";
@@ -328,7 +329,7 @@ class Montagem
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Este item j· foi acessado por alunos. N„o È possÌvel exclui-lo.]";
+				$this->msg_erro = "@lng[Este item j√° foi acessado por alunos. N√£o √© poss√≠vel exclui-lo.]";
 				return false;
 			}
 		}
@@ -544,7 +545,7 @@ class Montagem
 		{
 			// imprime o item do menu
 			$ret .= '<li id="' . $arvoreItem['Organ'] . '_' . $arvoreItem['TipoCont'] . '_' . $arvoreItem['ContRef'] . '_' . $arvoreItem['Chave'] . '"><span>' . $arvoreItem['Descricao'] . '</span>';
-			// se o menu desta iteraÁ„o tiver submenus, chama novamente a funÁ„o
+			// se o menu desta itera√ß√£o tiver submenus, chama novamente a fun√ß√£o
 			if( isset( $todos[$chaveItem] ) ) self::ImprimeArvoreLista( $todos , $ret, $chaveItem , $nivel + 2, false);
 			// fecha o li do item do menu
 			$ret .= '</li>';
@@ -674,7 +675,7 @@ class Montagem
 		{
 			if ($cmd->rowCount() > 0)
 			{
-				$html  = Comuns::TopoTabelaListagem("", 'tabDesvios', array('Item', 'Destino', 'CondiÁ„o', 'Prior.', '&nbsp'));
+				$html  = Comuns::TopoTabelaListagem("", 'tabDesvios', array('Item', 'Destino', 'Condi√ß√£o', 'Prior.', '&nbsp'));
 				
 				while ($linha = $cmd->fetch(PDO::FETCH_OBJ))
 				{
@@ -717,7 +718,7 @@ class Montagem
 			}
 			else
 			{
-				$html = "@lng[Nenhuma configuraÁ„o salva atÈ o momento]";
+				$html = "@lng[Nenhuma configura√ß√£o salva at√© o momento]";
 			}
 		}
 		else
@@ -931,7 +932,7 @@ class Montagem
 		{
 			if ($cmd->rowCount() > 0)
 			{
-				$html = Comuns::TopoTabelaListagem("", "tabAnexos", array('DescriÁ„o', 'Tipo', 'AÁıes'));
+				$html = Comuns::TopoTabelaListagem("", "tabAnexos", array('Descri√ß√£o', 'Tipo', 'A√ß√µes'));
 				while ($linha = $cmd->fetch(PDO::FETCH_OBJ))
 				{
 					if ($linha->TipoConteudo == 'C')
@@ -1051,7 +1052,7 @@ class Montagem
 		$numReg = 0;
 		$optconteudos = '<option value="">@lng[Selecione]</option>';
 		
-		// Conte˙dos HTML
+		// Conte√∫dos HTML
 		$rsconteudos = $c->ListaRecordSet($this->codcaso);
 		if (!($rsconteudos===false))
 		{	
@@ -1077,11 +1078,11 @@ class Montagem
 			$optconteudos .= '</optgroup>';
 		}
 		
-		// VÌdeos
+		// V√≠deos
 		$rsconteudos = $m->ListaRecordSetPorTipo(Comuns::TIPO_MIDIA_VIDEO);
 		if (!($rsconteudos===false))
 		{
-			$optconteudos .= '<optgroup label="@lng[VÌdeo]">';
+			$optconteudos .= '<optgroup label="@lng[V√≠deo]">';
 			foreach ($rsconteudos as $item)
 			{
 				$numReg++;
@@ -1107,7 +1108,7 @@ class Montagem
 		$rsconteudos = $m->ListaRecordSetPorTipo(Comuns::TIPO_MIDIA_AUDIO);
 		if (!($rsconteudos===false))
 		{
-			$optconteudos .= '<optgroup label="@lng[¡udio]">';
+			$optconteudos .= '<optgroup label="@lng[√Åudio]">';
 			foreach ($rsconteudos as $item)
 			{
 				$numReg++;

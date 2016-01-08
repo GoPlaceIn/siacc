@@ -1,4 +1,6 @@
 <?php
+
+//--utf8_encode --
 session_start();
 include_once 'cls/usuario.class.php';
 include_once 'cls/conexao.class.php';
@@ -23,7 +25,7 @@ if (Comuns::EstaLogado())
 }
 else
 {
-	$msg = base64_encode("Você deve estar logado para acessar esta tela");
+	$msg = base64_encode("Voc?deve estar logado para acessar esta tela");
 	header("Location:index.php?m=" . $msg);
 }
 

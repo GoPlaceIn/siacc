@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 require_once 'cls/conexao.class.php';
 require_once 'inc/comuns.inc.php';
 
@@ -30,12 +31,12 @@ class TipoPergunta
 			}
 			else
 			{
-				throw new Exception("@lng[Código informado inválido]", 1009);
+				throw new Exception("@lng[CÃ³digo informado invÃ¡lido]", 1009);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Código não informado]", 1010);
+			throw new Exception("@lng[CÃ³digo nÃ£o informado]", 1010);
 		}
 	}
 
@@ -52,7 +53,7 @@ class TipoPergunta
 		}
 		else
 		{
-			throw new Exception("@lng[A descrição é obrigatória]", 1011);
+			throw new Exception("@lng[A descriÃ§Ã£o Ã© obrigatÃ³ria]", 1011);
 		}
 	}
 
@@ -78,7 +79,7 @@ class TipoPergunta
 		}
 		else
 		{
-			throw new Exception("@lng[Descrição não informada]", 1012);
+			throw new Exception("@lng[DescriÃ§Ã£o nÃ£o informada]", 1012);
 		}
 	}
 
@@ -115,14 +116,14 @@ class TipoPergunta
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao atualizar a descrição do tipo de pergunta]", 1014);
+				throw new Exception("@lng[Erro ao atualizar a descriÃ§Ã£o do tipo de pergunta]", 1014);
 			}
 
 		}
 		else
 		{
 			$cnn->Desconecta();
-			throw new Exception("@lng[Você deve informar uma descrição para o tipo de pergunta]", 1015);
+			throw new Exception("@lng[VocÃª deve informar uma descriÃ§Ã£o para o tipo de pergunta]", 1015);
 		}
 	}
 
@@ -158,7 +159,7 @@ class TipoPergunta
 			}
 			else
 			{
-				echo("@lng[Registro não encontrado]");
+				echo("@lng[Registro nÃ£o encontrado]");
 			}
 		}
 		else
@@ -184,7 +185,7 @@ class TipoPergunta
 			$ret = Comuns::TopoTabelaListagem(
 				"Lista de Tipos de pergunta",
 				"TiposPergunta",
-			array('Descrição', 'Ações')
+			array('DescriÃ§Ã£o', 'AÃ§Ãµes')
 			);
 				
 			while ($linha = mysql_fetch_array($rs))

@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class Email
 {
 	private $remetente;
@@ -41,7 +41,7 @@ class Email
 	}
 	
 	/**
-	 * Destinatario ou destinatarios que receberão o email
+	 * Destinatario ou destinatarios que receberÃ£o o email
 	 * @param 	array	$p_destinatario	Nome <email@dominio.com> ou somente email@dominio.com
 	 * @access	public 
 	 * */

@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class Etnia
 {
 	public static function SelectEtnia($sel = 0)

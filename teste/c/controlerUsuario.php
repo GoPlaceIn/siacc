@@ -1,4 +1,6 @@
 <?php
+//--utf8_encode --
+
 include_once './m/modelUsuario.php';
 include_once './v/viewUsuario.php';
 

@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class Botao
 {
 	public static function BotaoNovo($link, $title = null)

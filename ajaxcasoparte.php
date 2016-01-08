@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 session_start();
 include_once 'cls/caso.class.php';
 include_once 'cls/objetivo.class.php';

@@ -1,5 +1,8 @@
 <?php 
-$handle = fsockopen("time-b.timefreq.bldrdoc.gov", 13, $errno, $errstr); 
+
+//--utf8_encode --
+
+ $handle = fsockopen("time-b.timefreq.bldrdoc.gov", 13, $errno, $errstr); 
 if (!$handle) { 
 print "ERROR: $errno - $errstr<br>\n"; 
 } else { 

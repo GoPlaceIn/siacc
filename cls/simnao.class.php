@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class SimNao
 {
 	private $sim = 1;
@@ -20,12 +20,12 @@ class SimNao
 		if ($sel == 1)
 		{
 			$ret  = '<option selected value="1">@lng[SIM]</option>';
-			$ret .= '<option value="0">@lng[N√O]</option>';
+			$ret .= '<option value="0">@lng[N√ÉO]</option>';
 		}
 		else
 		{
 			$ret  = '<option value="1">@lng[SIM]</option>';
-			$ret .= '<option selected value="0">@lng[N√O]</option>';
+			$ret .= '<option selected value="0">@lng[N√ÉO]</option>';
 		}
 
 		return $ret;
@@ -38,7 +38,7 @@ class SimNao
 			case 1:
 				return "@lng[SIM]";
 			case 0:
-				return "@lng[N√O]";
+				return "@lng[N√ÉO]";
 		}
 	}
 }

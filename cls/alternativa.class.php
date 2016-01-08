@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 include_once 'conexao.class.php';
 
 class Alternativa

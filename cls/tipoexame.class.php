@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'cls/simnao.class.php';
 include_once 'inc/comuns.inc.php';
@@ -90,7 +91,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Código não informado]", 1000);
+			throw new Exception("@lng[CÃ³digo nÃ£o informado]", 1000);
 		}
 	}
 	
@@ -102,7 +103,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Descrição não informada]", 1010);
+			throw new Exception("@lng[DescriÃ§Ã£o nÃ£o informada]", 1010);
 		}
 	}
 	
@@ -114,7 +115,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Método não informado]", 1020);
+			throw new Exception("@lng[MÃ©todo nÃ£o informado]", 1020);
 		}
 	}
 	
@@ -126,7 +127,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Condição não informada]", 1030);
+			throw new Exception("@lng[CondiÃ§Ã£o nÃ£o informada]", 1030);
 		}
 	}
 	
@@ -138,7 +139,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Informações não informadas]", 1040);
+			throw new Exception("@lng[InformaÃ§Ãµes nÃ£o informadas]", 1040);
 		}
 	}
 	
@@ -150,7 +151,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Conservação não informada]", 1050);
+			throw new Exception("@lng[ConservaÃ§Ã£o nÃ£o informada]", 1050);
 		}
 	}
 
@@ -162,7 +163,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Informe se tem ou não componentes]", 1070);
+			throw new Exception("@lng[Informe se tem ou nÃ£o componentes]", 1070);
 		}
 	}
 	
@@ -174,7 +175,7 @@ class TipoExame
 		}
 		else
 		{
-			throw new Exception("@lng[Ativo não selecionado]", 1060);
+			throw new Exception("@lng[Ativo nÃ£o selecionado]", 1060);
 		}
 	}
 	
@@ -224,7 +225,7 @@ class TipoExame
 		return $ret;
 	}
 	
-	// Funções de banco --------------------
+	// FunÃ§Ãµes de banco --------------------
 	public function Inserir()
 	{
 		if (isset($this->descricao))
@@ -276,13 +277,13 @@ class TipoExame
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Informe se o exame tem componentes ou não]";
+				$this->msg_erro = "@lng[Informe se o exame tem componentes ou nÃ£o]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Descrição não informada]";
+			$this->msg_erro = "@lng[DescriÃ§Ã£o nÃ£o informada]";
 			return false;
 		}
 	}
@@ -338,19 +339,19 @@ class TipoExame
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Informe se o exame tem componentes ou não]";
+					$this->msg_erro = "@lng[Informe se o exame tem componentes ou nÃ£o]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Descrição não informada]";
+				$this->msg_erro = "@lng[DescriÃ§Ã£o nÃ£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Código não informado]";
+			$this->msg_erro = "@lng[CÃ³digo nÃ£o informado]";
 			return false;
 		}
 	}
@@ -381,7 +382,7 @@ class TipoExame
 		}
 		else
 		{
-			$this->msg_erro = "@lng[O código não foi informado]";
+			$this->msg_erro = "@lng[O cÃ³digo nÃ£o foi informado]";
 			return false;
 		}
 	}
@@ -524,10 +525,10 @@ class TipoExame
 			return false;
 		}
 	}
-	// Fim funções de banco ----------------
+	// Fim funÃ§Ãµes de banco ----------------
 	
 	
-	// Funções de tela ---------------------
+	// FunÃ§Ãµes de tela ---------------------
 	public function ListaTabela($pagina = 1, $nporpagina = 10, $usu = null, $filtros = "")
 	{
 		$ini = (($pagina * $nporpagina) - $nporpagina);
@@ -546,7 +547,7 @@ class TipoExame
 			$ret = Comuns::TopoTabelaListagem(
 				"Tipos de exames cadastrados",
 				"exames",
-				array('Descrição', 'Ativo', 'Ações')
+				array('DescriÃ§Ã£o', 'Ativo', 'AÃ§Ãµes')
 			);
 			
 			while ($rs = $cmd->fetch(PDO::FETCH_OBJ))
@@ -602,7 +603,7 @@ class TipoExame
 		}
 		else
 		{
-			$ret = "@lng[Nenhum item cadastrado até o momento]";
+			$ret = "@lng[Nenhum item cadastrado atÃ© o momento]";
 		}
 		
 		return $ret;
@@ -663,7 +664,7 @@ class TipoExame
 			}
 			else
 			{
-				echo("@lng[Registro não encontrado]");
+				echo("@lng[Registro nÃ£o encontrado]");
 			}
 		}
 		else
@@ -698,7 +699,7 @@ class TipoExame
 		return $opcoes;
 	}
 
-	// Fim funções de tela -----------------
+	// Fim funÃ§Ãµes de tela -----------------
 }
 
 ?>

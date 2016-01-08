@@ -1,4 +1,6 @@
 <?php
+
+//--utf8_encode --
 session_start();
 
 include_once 'cls/pergunta.class.php';

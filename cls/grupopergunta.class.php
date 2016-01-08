@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'inc/comuns.inc.php';
 
@@ -121,7 +122,7 @@ class GrupoPergunta
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Texto do agrupador não informado]";
+			$this->msg_erro = "@lng[Texto do agrupador nÃ£o informado]";
 			return false;
 		}
 	}
@@ -157,13 +158,13 @@ class GrupoPergunta
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Texto do agrupador não informado]";
+				$this->msg_erro = "@lng[Texto do agrupador nÃ£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Código do agrupador não informado]";
+			$this->msg_erro = "@lng[CÃ³digo do agrupador nÃ£o informado]";
 			return false;
 		}
 	}
@@ -195,7 +196,7 @@ class GrupoPergunta
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Código do agrupador não informado]";
+			$this->msg_erro = "@lng[CÃ³digo do agrupador nÃ£o informado]";
 			return false;
 		}
 	}
@@ -334,7 +335,7 @@ class GrupoPergunta
 			$ret = Comuns::TopoTabelaListagem(
 				"Lista de agrupadores de pergunta",
 				"AgrupPerg",
-			array('Texto', 'Ações')
+			array('Texto', 'AÃ§Ãµes')
 			);
 			
 			while ($linha = $cmd->fetch(PDO::FETCH_OBJ))

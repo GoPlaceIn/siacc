@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'inc/comuns.inc.php';
 
@@ -38,7 +39,7 @@ class Objetivo
 		}
 		else
 		{
-			throw new Exception("@lng[Caso n„o informado]", 1000);
+			throw new Exception("@lng[Caso n√£o informado]", 1000);
 		}
 	}
 	
@@ -50,7 +51,7 @@ class Objetivo
 		}
 		else
 		{
-			throw new Exception("@lng[Item n„o informado]", 1010);
+			throw new Exception("@lng[Item n√£o informado]", 1010);
 		}
 	}
 	
@@ -62,7 +63,7 @@ class Objetivo
 		}
 		else
 		{
-			throw new Exception("@lng[DescriÁ„o n„o informada]", 1020);
+			throw new Exception("@lng[Descri√ß√£o n√£o informada]", 1020);
 		}
 	}
 	
@@ -106,13 +107,13 @@ class Objetivo
 			}
 			else
 			{
-				$this->msg_erro = "@lng[DescriÁ„o n„o informada]";
+				$this->msg_erro = "@lng[Descri√ß√£o n√£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso n„o informado]";
+			$this->msg_erro = "@lng[Caso n√£o informado]";
 			return false;
 		}
 	}
@@ -151,19 +152,19 @@ class Objetivo
 				}
 				else
 				{
-					$this->msg_erro = "@lng[DescriÁ„o n„o informada]";
+					$this->msg_erro = "@lng[Descri√ß√£o n√£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Item n„o informado]";
+				$this->msg_erro = "@lng[Item n√£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso n„o informado]";
+			$this->msg_erro = "@lng[Caso n√£o informado]";
 			return false;
 		}
 	}
@@ -199,13 +200,13 @@ class Objetivo
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Item n„o informado]";
+				$this->msg_erro = "@lng[Item n√£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso n„o informado]";
+			$this->msg_erro = "@lng[Caso n√£o informado]";
 			return false;
 		}
 	}
@@ -247,13 +248,13 @@ class Objetivo
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Item n„o informado]";
+				$this->msg_erro = "@lng[Item n√£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso n„o informado]";
+			$this->msg_erro = "@lng[Caso n√£o informado]";
 			return false;
 		}	
 	}
@@ -279,7 +280,7 @@ class Objetivo
 					$ret .= Comuns::TopoTabelaListagem(
 						"Objetivos cadastrados",
 						"tabobjetivos",
-						array("Objetivo", "AÁıes")
+						array("Objetivo", "A√ß√µes")
 					);
 					
 					while ($objetivo = $cmd->fetch(PDO::FETCH_OBJ))
@@ -311,7 +312,7 @@ class Objetivo
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso n„o informado]";
+			$this->msg_erro = "@lng[Caso n√£o informado]";
 			return false;
 		}
 	}

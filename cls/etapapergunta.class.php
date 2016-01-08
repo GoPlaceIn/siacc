@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class EtapaPergunta
 {
 	private $tipo;
@@ -72,12 +72,12 @@ class EtapaPergunta
 				}
 				else
 				{
-					throw new Exception("@lng[Texto não informado]", 1001);
+					throw new Exception("@lng[Texto nÃ£o informado]", 1001);
 				}
 			}
 			else
 			{
-				throw new Exception("@lng[Tipo não informado]", 1000);
+				throw new Exception("@lng[Tipo nÃ£o informado]", 1000);
 			}
 		}
 		catch (Exception $ex)

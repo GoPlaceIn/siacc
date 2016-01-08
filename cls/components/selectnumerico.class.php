@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 class SelectNumerico
 {
 	public static function MontaSelect($NElementos, $NInicial = 1, $TextoInicial = "Selecione", $sel = -1)
@@ -14,5 +14,6 @@ class SelectNumerico
 		return $html;
 	}
 }
+
 
 ?>

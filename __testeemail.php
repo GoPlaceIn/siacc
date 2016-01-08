@@ -1,5 +1,5 @@
 <?php
-
+//--utf8_encode --
 include_once 'cls/email.class.php';
 
 function Main()

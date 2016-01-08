@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 include_once 'cls/conexao.class.php';
 include_once 'cls/simnao.class.php';
 include_once 'inc/comuns.inc.php';
@@ -58,7 +59,7 @@ class Diagnostico
 		}
 		else
 		{
-			throw new Exception("@lng[Caso não informado]", 1000);
+			throw new Exception("@lng[Caso nÃ£o informado]", 1000);
 		}
 	}
 	
@@ -70,7 +71,7 @@ class Diagnostico
 		}
 		else
 		{
-			throw new Exception("@lng[Diagnostico não informado]", 1010);
+			throw new Exception("@lng[Diagnostico nÃ£o informado]", 1010);
 		}
 	}
 	
@@ -82,7 +83,7 @@ class Diagnostico
 		}
 		else
 		{
-			throw new Exception("@lng[Descrição não informada]", 1020);
+			throw new Exception("@lng[DescriÃ§Ã£o nÃ£o informada]", 1020);
 		}
 	}
 	
@@ -94,7 +95,7 @@ class Diagnostico
 		}
 		else
 		{
-			throw new Exception("@lng[Campo Correto não informado]", 1030);
+			throw new Exception("@lng[Campo Correto nÃ£o informado]", 1030);
 		}
 	}
 	
@@ -106,7 +107,7 @@ class Diagnostico
 		}
 		else
 		{
-			throw new Exception("@lng[Justificativa não informada]", 1040);
+			throw new Exception("@lng[Justificativa nÃ£o informada]", 1040);
 		}
 	}
 	
@@ -118,7 +119,7 @@ class Diagnostico
 		}
 		else
 		{
-			throw new Exception("@lng[Complemento não informado]", 1050);
+			throw new Exception("@lng[Complemento nÃ£o informado]", 1050);
 		}
 	}
 	
@@ -172,25 +173,25 @@ class Diagnostico
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Justificativa não informada]";
+						$this->msg_erro = "@lng[Justificativa nÃ£o informada]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Campo Correto não informado]";
+					$this->msg_erro = "@lng[Campo Correto nÃ£o informado]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Descrição da hipótese não informada]";
+				$this->msg_erro = "@lng[DescriÃ§Ã£o da hipÃ³tese nÃ£o informada]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso de estudo não informado]";
+			$this->msg_erro = "@lng[Caso de estudo nÃ£o informado]";
 			return false;
 		}
 	}
@@ -240,31 +241,31 @@ class Diagnostico
 						}
 						else
 						{
-							$this->msg_erro = "@lng[Justificativa não informada]";
+							$this->msg_erro = "@lng[Justificativa nÃ£o informada]";
 							return false;
 						}
 					}
 					else
 					{
-						$this->msg_erro = "@lng[Campo Correto não informado]";
+						$this->msg_erro = "@lng[Campo Correto nÃ£o informado]";
 						return false;
 					}
 				}
 				else
 				{
-					$this->msg_erro = "@lng[Descrição não informada]";
+					$this->msg_erro = "@lng[DescriÃ§Ã£o nÃ£o informada]";
 					return false;
 				}
 			}
 			else
 			{
-				$this->msg_erro = "@lng[Diagnóstico não informado]";
+				$this->msg_erro = "@lng[DiagnÃ³stico nÃ£o informado]";
 				return false;
 			}
 		}
 		else
 		{
-			$this->msg_erro = "@lng[Caso de estudo não informado]";
+			$this->msg_erro = "@lng[Caso de estudo nÃ£o informado]";
 			return false;
 		}
 	}
@@ -354,9 +355,9 @@ class Diagnostico
 			}
 			
 			$tabela = Comuns::TopoTabelaListagem(
-				"Diagnósticos cadastradas", 
+				"DiagnÃ³sticos cadastradas", 
 				"diags",
-				array("Descrição", $labelResposta, "Ações")
+				array("DescriÃ§Ã£o", $labelResposta, "AÃ§Ãµes")
 			);
 
 			while ($diagnostico = $cmd->fetch(PDO::FETCH_OBJ))
@@ -377,7 +378,7 @@ class Diagnostico
 		}
 		else
 		{
-			$tabela = "@lng[Nenhum diagnóstico cadastrado até o momento]";
+			$tabela = "@lng[Nenhum diagnÃ³stico cadastrado atÃ© o momento]";
 		}
 		return $tabela;
 	}
@@ -519,7 +520,7 @@ class Diagnostico
 		}
 		else
 		{
-			$checks = "Este Caso de estudo é do tipo Feedback instantaneo e por isso não possui relações";
+			$checks = "Este Caso de estudo Ã© do tipo Feedback instantaneo e por isso nÃ£o possui relaÃ§Ãµes";
 			return $checks;
 		}
 	}	

@@ -1,4 +1,5 @@
 <?php
+//--utf8_encode --
 /**
  * @author Regis Leandro Sebastiani
  * @copyright Copyright (c) 2011 Regis Leandro Sebastiani
@@ -40,12 +41,12 @@ class Grupo
 			}
 			else
 			{
-				throw new Exception("@lng[CÛdigo informado inv·lido]", 1009);
+				throw new Exception("@lng[C√≥digo informado inv√°lido]", 1009);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[CÛdigo n„o inform·do]", 1010);
+			throw new Exception("@lng[C√≥digo n√£o inform√°do]", 1010);
 		}
 	}
 
@@ -62,7 +63,7 @@ class Grupo
 		}
 		else
 		{
-			throw new Exception("@lng[A descriÁ„o È obrigatÛria]", 1011);
+			throw new Exception("@lng[A descri√ß√£o √© obrigat√≥ria]", 1011);
 		}
 	}
 
@@ -81,10 +82,10 @@ class Grupo
 		switch ($tipo)
 		{
 			case "lista":
-				$ret = "@lng[listagem de grupos de usu·rios do sistema]";
+				$ret = "@lng[listagem de grupos de usu√°rios do sistema]";
 				break;
 			case "cadastro":
-				$ret = "@lng[cadastro de grupos de usu·rios do sistema]";
+				$ret = "@lng[cadastro de grupos de usu√°rios do sistema]";
 		}
 		
 		return $ret;
@@ -102,18 +103,18 @@ class Grupo
 			{
 				$this->codigo = $codigo;
 				$cnn->Desconecta();
-				Log::RegistraLog("Cadastrou novo grupo de usu·rios: " . $this->getDescricao() . ". CÛdigo: " . $this->getCodigo());
+				Log::RegistraLog("Cadastrou novo grupo de usu√°rios: " . $this->getDescricao() . ". C√≥digo: " . $this->getCodigo());
 				return true;
 			}
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao inserir o grupo de usu·rios].", 1011);
+				throw new Exception("@lng[Erro ao inserir o grupo de usu√°rios].", 1011);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[DescriÁ„o n„o informada]", 1012);
+			throw new Exception("@lng[Descri√ß√£o n√£o informada]", 1012);
 		}
 	}
 
@@ -137,7 +138,7 @@ class Grupo
 		}
 		else
 		{
-			throw new Exception("@lng[Grupo n„o informado]", 1024);
+			throw new Exception("@lng[Grupo n√£o informado]", 1024);
 		}
 	}
 
@@ -161,7 +162,7 @@ class Grupo
 		}
 		else
 		{
-			throw new Exception("@lng[Grupo n„o informado]", 1025);
+			throw new Exception("@lng[Grupo n√£o informado]", 1025);
 		}
 	}
 
@@ -186,7 +187,7 @@ class Grupo
 		}
 		else
 		{
-			throw new Exception("@lng[Grupo n„o informado]", 1024);
+			throw new Exception("@lng[Grupo n√£o informado]", 1024);
 		}
 	}
 
@@ -212,7 +213,7 @@ class Grupo
 		}
 		else
 		{
-			throw new Exception("@lng[Grupo n„o informado]", 1024);
+			throw new Exception("@lng[Grupo n√£o informado]", 1024);
 		}
 	}
 
@@ -231,12 +232,12 @@ class Grupo
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("ERRO @lng[ao excluir o grupo de usu·rios]", 1013);
+				throw new Exception("ERRO @lng[ao excluir o grupo de usu√°rios]", 1013);
 			}
 		}
 		else
 		{
-			throw new Exception("@lng[Este grupo de usu·rios n„o pode ser excluido pois existem usu·rios vinculados a ele].", 1014);
+			throw new Exception("@lng[Este grupo de usu√°rios n√£o pode ser excluido pois existem usu√°rios vinculados a ele].", 1014);
 		}
 	}
 
@@ -279,19 +280,19 @@ class Grupo
 			if ($cnn->Instrucao($sql, false))
 			{
 				$cnn->Desconecta();
-				Log::RegistraLog("Alterou o grupo de usu·rios " . $this->getCodigo() . " para " . $this->getDescricao());
+				Log::RegistraLog("Alterou o grupo de usu√°rios " . $this->getCodigo() . " para " . $this->getDescricao());
 				return true;
 			}
 			else
 			{
 				$cnn->Desconecta();
-				throw new Exception("@lng[Erro ao atualizar a descriÁ„o do grupo de usu·rios]", 1014);
+				throw new Exception("@lng[Erro ao atualizar a descri√ß√£o do grupo de usu√°rios]", 1014);
 			}
 
 		}
 		else
 		{
-			throw new Exception("@lng[VocÍ deve informar uma descriÁ„o para o grupo de usu·rios]", 1015);
+			throw new Exception("@lng[Voc√™ deve informar uma descri√ß√£o para o grupo de usu√°rios]", 1015);
 		}
 	}
 
@@ -331,7 +332,7 @@ class Grupo
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de cadastro de grupos de usu·rios].";
+			$tpl = "@lng[Erro ao criar a tela de cadastro de grupos de usu√°rios].";
 		}
 		return $tpl;
 	}
@@ -353,18 +354,18 @@ class Grupo
 			}
 			else
 			{
-				echo("@lng[Registro n„o encontrado]");
+				echo("@lng[Registro n√£o encontrado]");
 			}
 		}
 		else
 		{
-			$tpl = "@lng[Erro ao criar a tela de cadastro de ediÁ„o de grupos de usu·rio.]";
+			$tpl = "@lng[Erro ao criar a tela de cadastro de edi√ß√£o de grupos de usu√°rio.]";
 		}
 		return $tpl;
 	}
 
 	/**
-	 * Retorna uma string em formato de tabela com os registros de Grupos de usu·rios limitado pelo paginador.
+	 * Retorna uma string em formato de tabela com os registros de Grupos de usu√°rios limitado pelo paginador.
 	 */
 	public function ListaTabela($pagina = 1, $nporpagina = 10)
 	{
@@ -377,9 +378,9 @@ class Grupo
 		if (mysql_num_rows($rs))
 		{
 			$ret = Comuns::TopoTabelaListagem(
-				"Lista de Grupos de Usu·rios do sistema",
+				"Lista de Grupos de Usu√°rios do sistema",
 				"GruposUsu",
-			array('DescriÁ„o', 'AÁıes')
+			array('Descri√ß√£o', 'A√ß√µes')
 			);
 				
 			while ($linha = mysql_fetch_array($rs))
@@ -409,7 +410,7 @@ class Grupo
 		}
 		else
 		{
-			$ret = "@lng[Nenhuma grupo de usu·rios cadastrado]";
+			$ret = "@lng[Nenhuma grupo de usu√°rios cadastrado]";
 		}
 
 		return $ret;
@@ -437,7 +438,7 @@ class Grupo
 	}
 
 	/**
-	 * Retorna um resultset com todas as permissıes do sistema indicando se o grupo tem ou n„o aquela permiss„o.
+	 * Retorna um resultset com todas as permiss√µes do sistema indicando se o grupo tem ou n√£o aquela permiss√£o.
 	 */
 	public static function ListaPermissoesTodas($codgrupo)
 	{

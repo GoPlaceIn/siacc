@@ -1,4 +1,7 @@
 <?php
+
+//--utf8_encode --
+
 // Pull in the NuSOAP code
 require_once '../inc/nusoup/lib/nusoap.php';
 //require_once('../inc/nusoap/lib/nusoap.php');
